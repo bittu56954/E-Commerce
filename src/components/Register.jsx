@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Register.css';
 
 const Register = () => {
@@ -239,7 +240,7 @@ const Register = () => {
 
              
               <div className="register-footer-redirect-light">
-                <p>Already registered in the grid? <NavLink href="/login" className="login-gateway-link-light">Login to Dashboard Hub</NavLink></p>
+                <p>Already registered in the grid? <Link to="/login" className="login-gateway-link-light">Login to Dashboard Hub</Link></p>
               </div>
 
             </form>

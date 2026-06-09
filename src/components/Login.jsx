@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Login.css';
 
 const Login = () => {
@@ -156,7 +157,7 @@ const Login = () => {
 
            
             <div className="login-footer-redirect">
-              <p>New to the placement matrix? <NavLink href="/register" className="register-gateway-link">Register an Account Node</NavLink></p>
+              <p>New to the placement matrix? <Link to="/register" className="register-gateway-link">Register an Account Node</Link></p>
             </div>
           </form>
           

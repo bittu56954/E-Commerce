@@ -156,7 +156,7 @@ const Login = () => {
 
            
             <div className="login-footer-redirect">
-              <p>New to the placement matrix? <a href="/register" className="register-gateway-link">Register an Account Node</a></p>
+              <p>New to the placement matrix? <NavLink href="/register" className="register-gateway-link">Register an Account Node</NavLink></p>
             </div>
           </form>
           

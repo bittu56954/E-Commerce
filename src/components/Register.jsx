@@ -237,9 +237,9 @@ const Register = () => {
                 <span>Create Verified Account ⚡</span>
               </button>
 
-              {/* ROUTER ACCESS GATEWAY LINK */}
+             
               <div className="register-footer-redirect-light">
-                <p>Already registered in the grid? <a href="/login" className="login-gateway-link-light">Login to Dashboard Hub</a></p>
+                <p>Already registered in the grid? <NavLink href="/login" className="login-gateway-link-light">Login to Dashboard Hub</NavLink></p>
               </div>
 
             </form>

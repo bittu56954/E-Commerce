@@ -1,0 +1,415 @@
+/* ====================================================
+   🎨 PURE LIGHT WHITE MATRIX BASE CANVAS (LOGIN ARCH)
+   ==================================================== */
+.corporate-login-canvas.light-mode-matrix {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff; 
+    background-image: 
+        radial-gradient(at 0% 0%, #f8fafc 0, transparent 50%), 
+        radial-gradient(at 100% 100%, #f1f5f9 0, transparent 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Background Soft Atmosphere Blur Mesh Filters */
+.matrix-blur-mesh {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 1;
+}
+.mesh-alpha-login {
+    width: 550px;
+    height: 550px;
+    background: #e0e7ff; /* Soft Royal Indigo */
+    top: -5%;
+    right: -5%;
+}
+.mesh-beta-login {
+    width: 500px;
+    height: 500px;
+    background: #ffedd5; /* Soft Amber Orange */
+    bottom: -5%;
+    left: -5%;
+}
+
+/* ====================================================
+   🧱 GRID ARCHITECTURE (ANTI-SPACE SYSTEM IMPLEMENTED)
+   ==================================================== */
+.login-interface-wrapper {
+    width: 100%;
+    max-width: 1250px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Rigid mathematically equal column layout */
+    gap: 70px;
+    position: relative;
+    z-index: 5;
+    align-items: stretch; /* Forces both panels to be of absolute equal height */
+}
+
+/* ====================================================
+   🏢 LEFT SIDE PANEL (STRETCHED TO REMOVE ALL WHITE SPACES)
+   ==================================================== */
+.login-telemetry-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spreads layout nodes top-to-bottom perfectly */
+    color: #0f172a;
+    padding: 15px 0;
+}
+
+.login-badge-light {
+    display: inline-block;
+    background: #e0e7ff;
+    border: 1px solid #c7d2fe;
+    color: #4f46e5;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 7px 16px;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.login-title-light {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.2;
+    margin: 0 0 15px 0;
+    letter-spacing: -1.5px;
+    color: #1e293b;
+}
+
+.login-title-light span {
+    background: linear-gradient(135deg, #4f46e5 0%, #ea580c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-desc-light {
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0 0 20px 0;
+}
+
+/* 🔒 1. Security Infrastructure Perks Stack */
+.platform-security-perks {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.security-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.security-icon {
+    width: 44px;
+    height: 44px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    flex-shrink: 0;
+}
+
+.security-meta strong {
+    font-size: 15px;
+    color: #0f172a;
+    display: block;
+}
+
+.security-meta p {
+    font-size: 13px;
+    color: #64748b;
+    margin: 4px 0 0 0;
+    line-height: 1.45;
+}
+
+/* 📊 2. Live Platform Node Logs (Space Occupier) */
+.live-uptime-banner {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+    padding: 18px 22px;
+    margin-bottom: 30px;
+}
+
+.uptime-header {
+    font-size: 11px;
+    font-weight: 800;
+    color: #16a34a; /* Safe Operational Green */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.active-pulse-dot {
+    width: 7px;
+    height: 7px;
+    background-color: #16a34a;
+    border-radius: 50%;
+    display: inline-block;
+    animation: livePulse 1.5s infinite;
+}
+@keyframes livePulse {
+    0% { transform: scale(0.9); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.9); opacity: 0.6; }
+}
+
+.uptime-desc {
+    font-size: 13px;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* 🏢 3. Trusted Network Footers */
+.login-trusted-footer {
+    padding-top: 15px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.login-trusted-footer p {
+    font-size: 10px;
+    font-weight: 800;
+    color: #94a3b8;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.footer-logo-track {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-logo-track span {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+/* ====================================================
+   📑 RIGHT PANEL: COMPACT REGISTRATION FORM CONTAINER
+   ==================================================== */
+.login-clean-card-node {
+    background: #ffffff;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 24px;
+    padding: 45px;
+    box-shadow: 0 20px 40px -4px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form-header-light h2 {
+    font-size: 26px;
+    color: #0f172a;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.5px;
+}
+
+.login-form-header-light p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Tabs Panel Selectors Control */
+.login-portal-tabs-light {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #f1f5f9;
+    padding: 5px;
+    border-radius: 12px;
+    margin: 28px 0;
+    border: 1px solid #e2e8f0;
+}
+
+.login-tab-btn {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    padding: 12px;
+    font-size: 13.5px;
+    font-weight: 700;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.login-tab-btn.active-login-tab {
+    background: #ffffff;
+    color: #4f46e5;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
+}
+
+/* Core Form Blocks Input Architecture */
+.login-field-block-light {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.login-field-block-light label {
+    font-size: 11px;
+    font-weight: 800;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.login-field-block-light input {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    padding: 14px 18px;
+    border-radius: 12px;
+    color: #0f172a;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.login-field-block-light input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+}
+
+/* 🔘 REMEMBER DEVICES & LINKS SECTION */
+.login-utility-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.remember-me-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.remember-me-checkbox input {
+    cursor: pointer;
+    accent-color: #4f46e5;
+    width: 15px;
+    height: 15px;
+}
+
+.remember-me-checkbox span {
+    font-size: 13.5px;
+    color: #475569;
+}
+
+.forgot-password-link {
+    font-size: 13.5px;
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Core Action Control Trigger Buttons */
+.corporate-login-submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    transition: all 0.2s ease;
+}
+
+.corporate-login-submit-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3);
+}
+
+/* 🔗 ROUTER SYSTEM LINK REDIRECTS */
+.login-footer-redirect {
+    text-align: center;
+    margin-top: 25px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 20px;
+}
+
+.login-footer-redirect p {
+    font-size: 13.5px;
+    color: #64748b;
+    margin: 0;
+}
+
+.register-gateway-link {
+    color: #4f46e5;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.register-gateway-link:hover {
+    text-decoration: underline;
+}
+
+/* Toast Alerts Systems */
+.login-toast-success {
+    margin-top: 15px;
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    color: #065f46;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* ====================================================
+   📱 FLUID LIQUID RESPONSIVE GRID MEDIA QUERIES
+   ==================================================== */
+@media (max-width: 992px) {
+    .corporate-login-canvas.light-mode-matrix { padding: 50px 20px; }
+    .login-interface-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .login-telemetry-side { text-align: center; gap: 20px; }
+    .login-badge-light { margin: 0 auto; }
+    .platform-security-perks { max-width: 500px; margin: 0 auto; text-align: left; }
+    .live-uptime-banner { max-width: 500px; margin: 0 auto; text-align: left; width: 100%; }
+    .footer-logo-track { justify-content: center; }
+}
+
+@media (max-width: 576px) {
+    .login-title-light { font-size: 28px; }
+    .login-clean-card-node { padding: 30px 20px; }
+    .login-portal-tabs-light { grid-template-columns: 1fr; gap: 4px; }
+    .login-utility-row { flex-direction: column; gap: 12px; align-items: flex-start; }
+}

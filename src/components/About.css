@@ -1,0 +1,459 @@
+
+.about-ultimate-container {
+    width: 100%;
+    background-color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #2c3e50;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.ult-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.ult-section-header {
+    text-align: center;
+    margin-bottom: 70px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ult-section-header h2 {
+    font-size: 38px;
+    color: #0b0b52; 
+    font-weight: 800;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+.ult-section-header p {
+    color: #666666;
+    font-size: 16px;
+}
+
+
+.ult-about-hero {
+    background: linear-gradient(135deg, #a4bdf2 0%, #cbd9f7 100%); /* Blue color hue from home page */
+    padding: 150px 0 130px 0;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    text-align: center;
+}
+
+.ult-hero-content {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.ult-badge-tag {
+    background-color: rgba(11, 11, 82, 0.1);
+    color: #0b0b52;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.ult-hero-content h1 {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 25px;
+    text-shadow: 0px 4px 15px rgba(11, 11, 82, 0.1);
+}
+
+.ult-hero-content p {
+    font-size: 19px;
+    color: #1e315c;
+    margin-bottom: 50px;
+    opacity: 0.95;
+}
+
+
+.ult-hero-stats-strip {
+    display: flex;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(11, 11, 82, 0.08);
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.u-strip-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.u-strip-item strong {
+    font-size: 28px;
+    color: #0b0b52;
+    font-weight: 800;
+}
+
+.u-strip-item span {
+    font-size: 12px;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 5px;
+}
+
+.ult-about-dna {
+    padding: 130px 0 90px 0;
+}
+
+.u-dna-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.u-dna-card {
+    flex: 1;
+    background: #ffffff;
+    border: 1px solid #f0f4fc;
+    padding: 50px 35px;
+    border-radius: 24px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.005);
+    transition: all 0.3s ease;
+}
+
+.u-dna-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(11, 11, 82, 0.06);
+    border-color: #cbd9f7;
+}
+
+.u-dna-icon-box {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.u-dna-card h3 {
+    font-size: 22px;
+    color: #0b0b52;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.u-dna-card p {
+    font-size: 15px;
+    color: #555555;
+    line-height: 1.7;
+}
+
+
+.ult-leadership {
+    padding: 100px 0;
+    background-color: #f8faff;
+    border-radius: 50px;
+}
+
+.leader-profile-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(11, 11, 82, 0.04);
+    border: 1px solid #eaeaea;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.leader-avatar-zone {
+    flex: 0.7;
+    background: linear-gradient(135deg, #0b0b52 0%, #233d7b 100%);
+    height: 100%;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leader-emoji {
+    font-size: 90px;
+}
+
+.leader-info-zone {
+    flex: 1.3;
+    padding: 50px;
+}
+
+.leader-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a4fa8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.leader-info-zone h3 {
+    font-size: 32px;
+    color: #0b0b52;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.leader-bio {
+    font-size: 16px;
+    color: #555555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.leader-badges {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.leader-badges span {
+    background-color: #f0f4fc;
+    color: #0b0b52;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.ult-methodology {
+    padding: 120px 0;
+}
+
+.method-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.method-left {
+    flex: 1.2;
+}
+
+.method-left h2 {
+    font-size: 36px;
+    color: #0b0b52;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.method-left p {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 35px;
+}
+
+.method-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.method-step h4 {
+    font-size: 18px;
+    color: #0b0b52;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.method-step p {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 0;
+}
+
+.method-right {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+
+.u-tech-stack-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 360px;
+}
+
+.u-tech-node {
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+}
+
+.u-tech-node.tier-high { background-color: #0b0b52; color: #ffffff; }
+.u-tech-node.tier-mid { background-color: #1e3d82; color: #ffffff; }
+.u-tech-node.tier-shield { background-color: #3b60ba; color: #ffffff; }
+.u-tech-node.tier-base { background-color: #cbd9f7; color: #0b0b52; }
+
+
+.ult-about-timeline {
+    padding: 120px 0;
+    background-color: #f8faff;
+    border-radius: 50px;
+}
+
+.ult-timeline-tree {
+    position: relative;
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+}
+
+.ult-timeline-tree::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #cbd9f7;
+    transform: translateX(-50%);
+}
+
+.ult-timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.ult-timeline-item.u-left { left: 0; text-align: right; }
+.ult-timeline-item.u-right { left: 50%; text-align: left; }
+
+.u-timeline-badge {
+    position: absolute;
+    top: 25px;
+    width: 60px;
+    height: 30px;
+    background-color: #0b0b52;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.ult-timeline-item.u-left .u-timeline-badge { right: -30px; }
+.ult-timeline-item.u-right .u-timeline-badge { left: -30px; }
+
+.u-timeline-panel {
+    background: #ffffff;
+    border: 1px solid #f0f4fc;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+}
+
+.u-timeline-panel h4 {
+    font-size: 18px;
+    color: #0b0b52;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.u-timeline-panel p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+
+.ult-compliance {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.compliance-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.comp-box {
+    flex: 1;
+    background: #ffffff;
+    border-top: 4px solid #0b0b52;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.comp-box h4 {
+    font-size: 18px;
+    color: #0b0b52;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.comp-box p {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 992px) {
+    .u-dna-grid, .method-flex, .compliance-grid, .ult-hero-stats-strip {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .leader-profile-card {
+        flex-direction: column;
+    }
+
+    .leader-avatar-zone {
+        width: 100%;
+        min-height: 200px;
+        padding: 40px 0;
+    }
+
+    .ult-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .ult-timeline-tree::before {
+        left: 20px;
+    }
+
+    .ult-timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+        text-align: left !important;
+    }
+
+    .ult-timeline-item.u-right {
+        left: 0;
+    }
+
+    .ult-timeline-item.u-left .u-timeline-badge,
+    .ult-timeline-item.u-right .u-timeline-badge {
+        left: -10px;
+    }
+}

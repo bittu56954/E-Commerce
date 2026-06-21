@@ -95,3 +95,5 @@ app.listen(PORT, () => {
   console.log(`📂 PERSISTENCE: Local JSON Document Storage (data/*.json)`);
   console.log(`====================================================`);
 });
+
+export default app;

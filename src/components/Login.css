@@ -1,13 +1,9 @@
 /* ====================================================
-   🎨 PURE LIGHT WHITE MATRIX BASE CANVAS (LOGIN ARCH)
+   🎨 GLASSMORPHIC PREMIUM CANVAS (LOGIN ARCH)
    ==================================================== */
-.corporate-login-canvas.light-mode-matrix {
+.corporate-login-canvas {
     width: 100%;
     min-height: 100vh;
-    background-color: #ffffff; 
-    background-image: 
-        radial-gradient(at 0% 0%, #f8fafc 0, transparent 50%), 
-        radial-gradient(at 100% 100%, #f1f5f9 0, transparent 50%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,7 +11,7 @@
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Okra', 'Inter', sans-serif;
 }
 
 /* Background Soft Atmosphere Blur Mesh Filters */
@@ -30,48 +26,48 @@
 .mesh-alpha-login {
     width: 550px;
     height: 550px;
-    background: #e0e7ff; /* Soft Royal Indigo */
+    background: rgba(255, 107, 107, 0.25);
     top: -5%;
     right: -5%;
 }
 .mesh-beta-login {
     width: 500px;
     height: 500px;
-    background: #ffedd5; /* Soft Amber Orange */
+    background: rgba(226, 55, 68, 0.15);
     bottom: -5%;
     left: -5%;
 }
 
 /* ====================================================
-   🧱 GRID ARCHITECTURE (ANTI-SPACE SYSTEM IMPLEMENTED)
+   🧱 GRID ARCHITECTURE
    ==================================================== */
 .login-interface-wrapper {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1200px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Rigid mathematically equal column layout */
+    grid-template-columns: 1fr 1.1fr;
     gap: 70px;
     position: relative;
     z-index: 5;
-    align-items: stretch; /* Forces both panels to be of absolute equal height */
+    align-items: center;
 }
 
 /* ====================================================
-   🏢 LEFT SIDE PANEL (STRETCHED TO REMOVE ALL WHITE SPACES)
+   🏢 LEFT SIDE PANEL
    ==================================================== */
 .login-telemetry-side {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Spreads layout nodes top-to-bottom perfectly */
-    color: #0f172a;
+    gap: 30px;
+    color: #ffffff;
     padding: 15px 0;
 }
 
 .login-badge-light {
     display: inline-block;
-    background: #e0e7ff;
-    border: 1px solid #c7d2fe;
-    color: #4f46e5;
+    background: rgba(226, 55, 68, 0.15) !important;
+    border: 1px solid rgba(226, 55, 68, 0.3) !important;
+    color: #e23744 !important;
     font-size: 11px;
     font-weight: 800;
     padding: 7px 16px;
@@ -86,29 +82,36 @@
     font-weight: 900;
     line-height: 1.2;
     margin: 0 0 15px 0;
-    letter-spacing: -1.5px;
-    color: #1e293b;
+    letter-spacing: -1px;
+    color: #ffffff;
 }
 
 .login-title-light span {
-    background: linear-gradient(135deg, #4f46e5 0%, #ea580c 100%);
+    background: #e23744;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+html.light-mode .login-title-light {
+    color: #2d3436;
 }
 
 .login-desc-light {
     font-size: 15.5px;
     line-height: 1.6;
-    color: #475569;
+    color: rgba(255, 255, 255, 0.7);
     margin: 0 0 20px 0;
 }
 
-/* 🔒 1. Security Infrastructure Perks Stack */
+html.light-mode .login-desc-light {
+    color: #57606f;
+}
+
+/* Security Perks Stack */
 .platform-security-perks {
     display: flex;
     flex-direction: column;
     gap: 22px;
-    margin-bottom: 30px;
 }
 
 .security-item {
@@ -118,157 +121,93 @@
 }
 
 .security-icon {
-    width: 44px;
-    height: 44px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
+    width: 46px;
+    height: 46px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    font-size: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.1);
     flex-shrink: 0;
 }
 
+html.light-mode .security-icon {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+}
+
 .security-meta strong {
-    font-size: 15px;
-    color: #0f172a;
+    font-size: 16px;
+    color: #ffffff;
     display: block;
+    font-weight: 700;
+}
+
+html.light-mode .security-meta strong {
+    color: #2d3436;
 }
 
 .security-meta p {
-    font-size: 13px;
-    color: #64748b;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.6);
     margin: 4px 0 0 0;
     line-height: 1.45;
 }
 
-/* 📊 2. Live Platform Node Logs (Space Occupier) */
-.live-uptime-banner {
-    background: #f8fafc;
-    border: 1px dashed #cbd5e1;
-    border-radius: 16px;
-    padding: 18px 22px;
-    margin-bottom: 30px;
-}
-
-.uptime-header {
-    font-size: 11px;
-    font-weight: 800;
-    color: #16a34a; /* Safe Operational Green */
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
-
-.active-pulse-dot {
-    width: 7px;
-    height: 7px;
-    background-color: #16a34a;
-    border-radius: 50%;
-    display: inline-block;
-    animation: livePulse 1.5s infinite;
-}
-@keyframes livePulse {
-    0% { transform: scale(0.9); opacity: 0.6; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(0.9); opacity: 0.6; }
-}
-
-.uptime-desc {
-    font-size: 13px;
-    color: #475569;
-    margin: 0;
-    line-height: 1.5;
-}
-
-/* 🏢 3. Trusted Network Footers */
-.login-trusted-footer {
-    padding-top: 15px;
-    border-top: 1px solid #f1f5f9;
-}
-
-.login-trusted-footer p {
-    font-size: 10px;
-    font-weight: 800;
-    color: #94a3b8;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
-}
-
-.footer-logo-track {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.footer-logo-track span {
-    font-size: 12.5px;
-    font-weight: 700;
-    color: #cbd5e1;
+html.light-mode .security-meta p {
+    color: #57606f;
 }
 
 /* ====================================================
-   📑 RIGHT PANEL: COMPACT REGISTRATION FORM CONTAINER
+   📑 RIGHT PANEL: GLASSMORPHIC FORM CONTAINER
    ==================================================== */
 .login-clean-card-node {
-    background: #ffffff;
-    border: 1px solid rgba(226, 232, 240, 0.9);
+    background: rgba(25, 20, 35, 0.65);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 24px;
     padding: 45px;
-    box-shadow: 0 20px 40px -4px rgba(15, 23, 42, 0.05);
+    box-shadow: 0 24px 64px 0 rgba(0, 0, 0, 0.35);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 0.3s ease;
+}
+
+html.light-mode .login-clean-card-node {
+    background: rgba(255, 255, 255, 0.65);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 24px 64px 0 rgba(100, 100, 110, 0.12);
 }
 
 .login-form-header-light h2 {
-    font-size: 26px;
-    color: #0f172a;
+    font-size: 28px;
+    color: #ffffff;
     font-weight: 800;
     margin: 0 0 6px 0;
     letter-spacing: -0.5px;
 }
 
+html.light-mode .login-form-header-light h2 {
+    color: #2d3436;
+}
+
 .login-form-header-light p {
     font-size: 14px;
-    color: #64748b;
-    margin: 0;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 0 28px 0;
 }
 
-/* Tabs Panel Selectors Control */
-.login-portal-tabs-light {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: #f1f5f9;
-    padding: 5px;
-    border-radius: 12px;
-    margin: 28px 0;
-    border: 1px solid #e2e8f0;
+html.light-mode .login-form-header-light p {
+    color: #57606f;
 }
 
-.login-tab-btn {
-    background: transparent;
-    border: none;
-    color: #64748b;
-    padding: 12px;
-    font-size: 13.5px;
-    font-weight: 700;
-    border-radius: 9px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.login-tab-btn.active-login-tab {
-    background: #ffffff;
-    color: #4f46e5;
-    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.06);
-}
-
-/* Core Form Blocks Input Architecture */
+/* Form Fields Input Architecture */
 .login-field-block-light {
     display: flex;
     flex-direction: column;
@@ -279,28 +218,84 @@
 .login-field-block-light label {
     font-size: 11px;
     font-weight: 800;
-    color: #475569;
+    color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
+html.light-mode .login-field-block-light label {
+    color: #57606f;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon-inside {
+  position: absolute;
+  left: 16px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html.light-mode .input-icon-inside {
+  color: #a4b0be;
+}
+
+.input-with-icon input {
+  padding-left: 46px !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.password-toggle-eye {
+  position: absolute;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px;
+  color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+html.light-mode .password-toggle-eye {
+  color: #a4b0be;
+}
+
 .login-field-block-light input {
-    background: #ffffff;
-    border: 1.5px solid #e2e8f0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
     padding: 14px 18px;
     border-radius: 12px;
-    color: #0f172a;
+    color: #ffffff;
     font-size: 14px;
     outline: none;
     transition: all 0.2s ease;
 }
 
-.login-field-block-light input:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.08);
+html.light-mode .login-field-block-light input {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid #e2e8f0;
+    color: #2d3436;
 }
 
-/* 🔘 REMEMBER DEVICES & LINKS SECTION */
+.login-field-block-light input:focus {
+    border-color: #e23744;
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.15);
+}
+
+/* REMEMBER DEV & LINKS */
 .login-utility-row {
     display: flex;
     align-items: center;
@@ -317,99 +312,149 @@
 
 .remember-me-checkbox input {
     cursor: pointer;
-    accent-color: #4f46e5;
+    accent-color: #e23744;
     width: 15px;
     height: 15px;
 }
 
 .remember-me-checkbox span {
     font-size: 13.5px;
-    color: #475569;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+html.light-mode .remember-me-checkbox span {
+    color: #57606f;
 }
 
 .forgot-password-link {
     font-size: 13.5px;
-    color: #4f46e5;
+    color: #e23744;
     font-weight: 600;
     text-decoration: none;
+    cursor: pointer;
 }
 .forgot-password-link:hover {
-    text-decoration: underline;
+    color: #cb202d;
 }
 
-/* Core Action Control Trigger Buttons */
+/* Submit Control */
 .corporate-login-submit-btn {
     width: 100%;
-    background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    background: #e23744;
     color: #ffffff;
     border: none;
     padding: 15px;
-    font-size: 14.5px;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    box-shadow: 0 4px 15px rgba(226, 55, 68, 0.25);
     transition: all 0.2s ease;
+    font-family: 'Okra', 'Inter', sans-serif;
 }
 
-.corporate-login-submit-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3);
+.corporate-login-submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(238, 82, 83, 0.4);
 }
 
-/* 🔗 ROUTER SYSTEM LINK REDIRECTS */
+.corporate-login-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Router Link redirect */
 .login-footer-redirect {
     text-align: center;
     margin-top: 25px;
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
     padding-top: 20px;
+}
+
+html.light-mode .login-footer-redirect {
+    border-top: 1px solid #f1f5f9;
 }
 
 .login-footer-redirect p {
     font-size: 13.5px;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.5);
     margin: 0;
 }
 
+html.light-mode .login-footer-redirect p {
+    color: #747d8c;
+}
+
 .register-gateway-link {
-    color: #4f46e5;
+    color: #e23744;
     font-weight: 700;
     text-decoration: none;
     margin-left: 5px;
 }
 .register-gateway-link:hover {
-    text-decoration: underline;
-}
-
-/* Toast Alerts Systems */
-.login-toast-success {
-    margin-top: 15px;
-    background: #ecfdf5;
-    border: 1px solid #a7f3d0;
-    color: #065f46;
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 13px;
-    font-weight: 600;
+    color: #cb202d;
 }
 
 /* ====================================================
-   📱 FLUID LIQUID RESPONSIVE GRID MEDIA QUERIES
+   ⚠️ CLIENT-SIDE VALIDATION & FORM FEEDBACK STATES
+   ==================================================== */
+.auth-field-error {
+    color: #ff6b6b;
+    font-size: 11.5px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    animation: authErrorFadeIn 0.2s ease;
+}
+
+html.light-mode .auth-field-error {
+    color: #cb202d;
+}
+
+.input-with-icon.field-input-invalid input {
+    border-color: #ff6b6b !important;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.15) !important;
+}
+
+html.light-mode .input-with-icon.field-input-invalid input {
+    border-color: #cb202d !important;
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.1) !important;
+}
+
+.auth-btn-disabled {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: rgba(255, 255, 255, 0.25) !important;
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+html.light-mode .auth-btn-disabled {
+    background: #e2e8f0 !important;
+    color: #94a3b8 !important;
+}
+
+@keyframes authErrorFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ====================================================
+   📱 RESPONSIVE QUERIES
    ==================================================== */
 @media (max-width: 992px) {
-    .corporate-login-canvas.light-mode-matrix { padding: 50px 20px; }
+    .corporate-login-canvas { padding: 50px 20px; }
     .login-interface-wrapper { grid-template-columns: 1fr; gap: 40px; }
     .login-telemetry-side { text-align: center; gap: 20px; }
     .login-badge-light { margin: 0 auto; }
     .platform-security-perks { max-width: 500px; margin: 0 auto; text-align: left; }
-    .live-uptime-banner { max-width: 500px; margin: 0 auto; text-align: left; width: 100%; }
-    .footer-logo-track { justify-content: center; }
 }
 
 @media (max-width: 576px) {
-    .login-title-light { font-size: 28px; }
+    .login-title-light { font-size: 30px; }
     .login-clean-card-node { padding: 30px 20px; }
-    .login-portal-tabs-light { grid-template-columns: 1fr; gap: 4px; }
     .login-utility-row { flex-direction: column; gap: 12px; align-items: flex-start; }
 }

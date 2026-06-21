@@ -1,0 +1,274 @@
+[
+  {
+    "id": "log-1781843399239-kzngc",
+    "timestamp": "2026-06-19T04:29:59.239Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "testsec@domain.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1781843437618-ah0es",
+    "timestamp": "2026-06-19T04:30:37.618Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "testsec@domain.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1781847480427-7trcu",
+    "timestamp": "2026-06-19T05:38:00.429Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1781847580925-r3mv2",
+    "timestamp": "2026-06-19T05:39:40.925Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "Admin verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1781847946551-b9dmo",
+    "timestamp": "2026-06-19T05:45:46.551Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1781848801505-s7iqo",
+    "timestamp": "2026-06-19T06:00:01.505Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 2/5."
+  },
+  {
+    "id": "log-1781853624293-wh98h",
+    "timestamp": "2026-06-19T07:20:24.293Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1781853662775-48vch",
+    "timestamp": "2026-06-19T07:21:02.775Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1781858885356-f00ej",
+    "timestamp": "2026-06-19T08:48:05.356Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1781858885381-wvmv7",
+    "timestamp": "2026-06-19T08:48:05.381Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1781859020492-r4pqj",
+    "timestamp": "2026-06-19T08:50:20.492Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 3/5."
+  },
+  {
+    "id": "log-1781859025373-f2iwv",
+    "timestamp": "2026-06-19T08:50:25.373Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 4/5."
+  },
+  {
+    "id": "log-1781859061777-zoxlo",
+    "timestamp": "2026-06-19T08:51:01.777Z",
+    "action": "ACCOUNT_LOCKOUT",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Account locked for 15 minutes due to 5 consecutive password failures."
+  },
+  {
+    "id": "log-1781859136896-7mdt3",
+    "timestamp": "2026-06-19T08:52:16.896Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803112@gmail.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1781859185765-zm6ag",
+    "timestamp": "2026-06-19T08:53:05.765Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "krbittu803112@gmail.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1781861063555-sbyr6",
+    "timestamp": "2026-06-19T09:24:23.555Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu808110@gmail.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1781884866919-okj9v",
+    "timestamp": "2026-06-19T16:01:06.919Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1781884912592-x4o92",
+    "timestamp": "2026-06-19T16:01:52.592Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@likeyourshop.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782017592402-ikx03",
+    "timestamp": "2026-06-21T04:53:12.402Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782017828542-yxhpw",
+    "timestamp": "2026-06-21T04:57:08.542Z",
+    "action": "OTP_RESENT",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::1",
+    "details": "User requested new OTP pair."
+  },
+  {
+    "id": "log-1782017995369-bum8p",
+    "timestamp": "2026-06-21T04:59:55.369Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krajeet803110@gmail.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782018074294-ehd5b",
+    "timestamp": "2026-06-21T05:01:14.295Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803110@gmail.com",
+    "ip": "::1",
+    "details": "User requested new OTP pair."
+  },
+  {
+    "id": "log-1782019012041-9o4nm",
+    "timestamp": "2026-06-21T05:16:52.041Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "browsertest123@zomato.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782019045631-9wqgm",
+    "timestamp": "2026-06-21T05:17:25.631Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "browsertest123@zomato.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1782019197704-9dttl",
+    "timestamp": "2026-06-21T05:19:57.704Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "testotp@zomato.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782019217492-8ckxq",
+    "timestamp": "2026-06-21T05:20:17.492Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "testotp@zomato.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1782019302666-r2753",
+    "timestamp": "2026-06-21T05:21:42.666Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "testotp@zomato.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782019337270-qo8iy",
+    "timestamp": "2026-06-21T05:22:17.270Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "testotp@zomato.com",
+    "ip": "::1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1782019751366-vsbkj",
+    "timestamp": "2026-06-21T05:29:11.367Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782019769730-6dcrn",
+    "timestamp": "2026-06-21T05:29:29.730Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@zomato.com",
+    "ip": "::1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1782020462922-v19vr",
+    "timestamp": "2026-06-21T05:41:02.922Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782020469131-srdva",
+    "timestamp": "2026-06-21T05:41:09.131Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::1",
+    "details": "Failed password attempt 2/5."
+  },
+  {
+    "id": "log-1782021264819-n8ea8",
+    "timestamp": "2026-06-21T05:54:24.819Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782024128622-dagsw",
+    "timestamp": "2026-06-21T06:42:08.622Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "browsertest123@zomato.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  }
+]

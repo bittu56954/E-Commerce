@@ -1,70 +1,100 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css'; 
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer-section">
-      <div className="footer-container">
+    <footer className="lys-footer-node">
+      <div className="lys-footer-container">
         
-        
-        <div className="footer-column contact-col">
-          <h4>CONTACT</h4>
-          <div className="contact-info">
-            <div className="contact-item">
-              <span className="icon">✉️</span> 
-              <a href="mailto:info@indiaplacement.com">krbittu803110@gmail.com</a>
+        {/* Top Header Row: Zomato text and Country/Language selectors */}
+        <div className="lys-footer-top-row">
+          <div className="lys-footer-logo-block">
+            <span className="lys-footer-logo-text">zomato</span>
+          </div>
+          
+          <div className="lys-footer-selectors">
+            <div className="lys-selector-box">
+              <span>🇮🇳 India</span>
+              <span className="selector-arrow">▼</span>
             </div>
-            <div className="contact-item">
-              <span className="icon">📞</span>
-              <div>
-                +91 9905401908<br />
-                +91 7562863822
-              </div>
-            </div>
-            <div className="contact-item">
-              <span className="icon">📍</span>
-              <span>
-                #301/302, 3rd Floor, Saket<br />
-                Callopolis, Sarjapur Main Rd,<br />
-                Doddakannelli, Bengaluru,<br />
-                Karnataka 560035
-              </span>
+            <div className="lys-selector-box">
+              <span>🌐 English</span>
+              <span className="selector-arrow">▼</span>
             </div>
           </div>
         </div>
 
-     
-        <div className="footer-column footer-branding">
-          <div className="footer-logo-wrapper">
-            
-            <h2 className="brand-logo">
-              <span className="logo-icon"> <img src="https://img.magnific.com/free-vector/made-india-circular-sign-background-business-promotion_1017-45292.jpg?semt=ais_hybrid&w=740&q=80" alt="" height={'50px'} width={'80px'}/> </span> INDIA PLACEMENT
-            </h2>
-            <span className="tagline">RESPONSIBLE INNOVATION</span>
+        {/* Links Columns Grid */}
+        <div className="lys-footer-grid">
+          
+          <div className="lys-footer-col">
+            <h4>ABOUT ZOMATO</h4>
+            <ul>
+              <li><Link to="/about">Who We Are</Link></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#careers">Work With Us</a></li>
+              <li><a href="#investors">Investor Relations</a></li>
+              <li><a href="#fraud">Report Fraud</a></li>
+              <li><Link to="/contact">Contact Us</Link></li>
+            </ul>
           </div>
+
+          <div className="lys-footer-col">
+            <h4>ZOMAVERSE</h4>
+            <ul>
+              <li><Link to="/">zomato</Link></li>
+              <li><a href="#blinkit">Blinkit</a></li>
+              <li><a href="#feeding-india">Feeding India</a></li>
+              <li><a href="#hyperpure">Hyperpure</a></li>
+              <li><a href="#zoland">Zoland</a></li>
+            </ul>
+          </div>
+
+          <div className="lys-footer-col">
+            <h4>FOR RESTAURANTS</h4>
+            <ul>
+              <li><a href="#partner">Partner With Us</a></li>
+              <li><a href="#apps">Apps For You</a></li>
+            </ul>
+          </div>
+
+          <div className="lys-footer-col">
+            <h4>LEARN MORE</h4>
+            <ul>
+              <li><a href="#privacy">Privacy Policy</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#terms">Terms of Service</a></li>
+              <li><a href="#sitemap">Sitemap</a></li>
+            </ul>
+          </div>
+
+          <div className="lys-footer-col social-col">
+            <h4>SOCIAL LINKS</h4>
+            <div className="social-icon-row">
+              <a href="#facebook" className="social-icon">f</a>
+              <a href="#twitter" className="social-icon">t</a>
+              <a href="#instagram" className="social-icon">i</a>
+              <a href="#youtube" className="social-icon">y</a>
+            </div>
+            <div className="app-badge-stack">
+              <a href="#appstore" className="app-download-badge appstore-badge"></a>
+              <a href="#googleplay" className="app-download-badge playstore-badge"></a>
+            </div>
+          </div>
+
         </div>
 
-    
-        <div className="footer-column footer-links-col">
-          <h4>QUICK LINKS</h4>
-          <ul className="footer-links-list">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/dashboard">Dashboard</Link></li>
-            <li><Link to="/">Startup Studio</Link></li>
-            <li><Link to="/">Platforms & Partner Stack</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
-            <li><Link to="/">Careers</Link></li>
-            <li><Link to="/">Privacy Policy</Link></li>
-            <li><Link to="/">Terms & Condition</Link></li>
-          </ul>
+        {/* Separator Line */}
+        <hr className="lys-footer-divider" />
+
+        {/* Bottom copyright notice */}
+        <div className="lys-footer-bottom">
+          <p>
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2026-2027 © Zomato™ Ltd. All rights reserved. | Created with ❤️ by BITTU KUMAR
+          </p>
         </div>
 
-      </div>
-      
-      <div className="footer-bottom">
-        <p>© 2026 India Placement Private Limited. All rights reserved.|| Created by BITTU KUMAR</p>
       </div>
     </footer>
   );

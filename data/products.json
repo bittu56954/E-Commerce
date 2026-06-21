@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Classic Margherita Pizza",
+    "description": "Classic blend of fresh mozzarella, fresh basil, and sweet San Marzano tomato sauce on our sourdough crust.",
+    "price": 249,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600"
+  },
+  {
+    "id": "prod-2",
+    "name": "Pepperoni Feast Pizza",
+    "description": "Generous loads of premium spicy pepperoni slices, loaded mozzarella cheese, and Italian herbs overlay.",
+    "price": 399,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+  },
+  {
+    "id": "prod-3",
+    "name": "Spicy Paneer Tikka Pizza",
+    "description": "Marinated cottage cheese chunks, bell peppers, onions, spicy tandoori sauce, and fresh coriander.",
+    "price": 349,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600"
+  },
+  {
+    "id": "prod-4",
+    "name": "Double Cheese Margherita",
+    "description": "Extra loaded stringy mozzarella cheese over a double layer of rich herbs infused San Marzano tomato sauce.",
+    "price": 299,
+    "category": "Pizza",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-5",
+    "name": "Farmhouse Garden Veggie Pizza",
+    "description": "Crispy capsicum, sweet corn, sliced black olives, earthy mushrooms, red onions, and hot jalapenos.",
+    "price": 329,
+    "category": "Pizza",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+  },
+  {
+    "id": "prod-6",
+    "name": "Chicken Golden Delight Pizza",
+    "description": "Double layers of grilled golden chicken chunks, sweet pineapple slices, and extra mozzarella locks.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600"
+  },
+  {
+    "id": "prod-7",
+    "name": "Tandoori Paneer Pizza",
+    "description": "Spiced paneer cubes, red paprika, bell peppers, onions, layered over tandoori sauce and mozzarella base.",
+    "price": 359,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600"
+  },
+  {
+    "id": "prod-8",
+    "name": "Smoky BBQ Chicken Pizza",
+    "description": "Smoked shredded barbecue chicken, sweet red onions, fresh cilantro, cheddar and mozzarella cheese blend.",
+    "price": 399,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1594007654729-407ededc4963?q=80&w=600"
+  },
+  {
+    "id": "prod-9",
+    "name": "Chef's Spicy Meatball Pizza",
+    "description": "Spicy Italian lamb meatballs, caramelized onions, fresh garlic flakes, red chili flakes, and hot marinara.",
+    "price": 429,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600"
+  },
+  {
+    "id": "prod-10",
+    "name": "Fiery Jalapeno & Red Pepper Pizza",
+    "description": "Hot sliced jalapeno slices, roasted red bell peppers, paprika seasoning, onion rings, and spicy chili sauce.",
+    "price": 319,
+    "category": "Pizza",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?q=80&w=600"
+  },
+  {
+    "id": "prod-11",
+    "name": "Crispy Veg Aloo Tikki Burger",
+    "description": "Golden crispy potato patty, fresh iceberg lettuce, sliced tomatoes, onions, and our signature mayo blend.",
+    "price": 99,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600"
+  },
+  {
+    "id": "prod-12",
+    "name": "Ultimate Chicken Cheese Splash",
+    "description": "Flame-grilled succulent chicken breast, double cheddar cheese slices, caramelized onions, and smoky bbq dip.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600"
+  },
+  {
+    "id": "prod-13",
+    "name": "Double Grilled Paneer Burger",
+    "description": "Crispy grilled paneer slabs marinated in tikka spices, loaded with cream cheese, capsicum rings, and mint dressing.",
+    "price": 179,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=600"
+  },
+  {
+    "id": "prod-14",
+    "name": "Spicy Crunch Chicken Burger",
+    "description": "Crumb-coated extra crispy golden chicken breast patty, chipotle dressing, jalapenos, and iceberg lettuce.",
+    "price": 189,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=600"
+  },
+  {
+    "id": "prod-15",
+    "name": "Gourmet Mushroom Swiss Burger",
+    "description": "Hand-smashed veggie/mushroom patty, loaded sautéed button mushrooms, melted Swiss cheese, and garlic mayo.",
+    "price": 219,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600"
+  },
+  {
+    "id": "prod-16",
+    "name": "Classic American Lamb Burger",
+    "description": "Premium flame-broiled minced lamb patty, cheddar slices, pickle chips, sliced tomatoes, and house mustard sauce.",
+    "price": 249,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=600"
+  },
+  {
+    "id": "prod-17",
+    "name": "Cheesy Mozzarella Melt Burger",
+    "description": "Crunchy crumb-coated mozzarella core slab, fresh basil pesto, tomato slices, and balsamic mayonnaise drop.",
+    "price": 159,
+    "category": "Burger",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600"
+  },
+  {
+    "id": "prod-18",
+    "name": "Bacon & Cheddar Beef Burger",
+    "description": "Juicy flame-grilled beef/mutton patty, smoky bacon slices, double cheddar cheese, and signature smoke sauce.",
+    "price": 269,
+    "category": "Burger",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1582196016295-f8c894d37904?q=80&w=600"
+  },
+  {
+    "id": "prod-19",
+    "name": "Crispy Fish Fillet Burger",
+    "description": "Flaky golden fried fish fillet, rich caper tartar sauce, dill pickles, and soft buttered brioche bun.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600"
+  },
+  {
+    "id": "prod-20",
+    "name": "Vegan Beetroot & Quinoa Burger",
+    "description": "Healthy house-made beetroot, quinoa and black bean patty, avocado slices, lettuce, and vegan cashew garlic mayo.",
+    "price": 149,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1521305916504-4a1121188589?q=80&w=600"
+  },
+  {
+    "id": "prod-21",
+    "name": "Butter Paneer with Laccha Paratha",
+    "description": "Rich, creamy paneer gravy cooked in sweet tomato and butter sauce, served with hot crispy layered parathas.",
+    "price": 220,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-22",
+    "name": "Hakka Noodles with Chili Paneer",
+    "description": "Stir-fried indochinese eggless noodles tossed with bell peppers and green onions, served with dry chili paneer.",
+    "price": 180,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600"
+  },
+  {
+    "id": "prod-23",
+    "name": "Dal Makhani with Jeera Rice Combo",
+    "description": "Creamy black lentils slow-cooked overnight with spices and fresh butter, served with fragrant cumin basmati rice.",
+    "price": 199,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-24",
+    "name": "Shahi Kadhai Paneer & Butter Naan",
+    "description": "Spicy cottage cheese strips tossed with thick bell pepper slices and kadhai gravy, served with soft butter naan.",
+    "price": 249,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-25",
+    "name": "Hyderabadi Veg Biryani Handi",
+    "description": "Traditional aromatic basmati rice cooked on dum with assorted fresh vegetables, mint leaves, and biryani spices.",
+    "price": 219,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600"
+  },
+  {
+    "id": "prod-26",
+    "name": "Spicy Chicken Tikka Masala Combo",
+    "description": "Tandoor grilled chicken tikka chunks cooked in a thick spicy onion tomato gravy, served with butter naan.",
+    "price": 279,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-27",
+    "name": "Creamy Alfredo White Sauce Pasta",
+    "description": "Rich and creamy white sauce pasta tossed with butter, heavy garlic cream, broccoli florets, and sweet corn.",
+    "price": 189,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=600"
+  },
+  {
+    "id": "prod-28",
+    "name": "Sizzling Penne Arrabbiata Pasta",
+    "description": "Penne pasta tossed in dry hot olive oil, crushed garlic, fiery red peppers, sweet basil, and tangy tomato sauce.",
+    "price": 179,
+    "category": "Food",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1563379971899-660589a01cc3?q=80&w=600"
+  },
+  {
+    "id": "prod-29",
+    "name": "Wok-Tossed Chicken Fried Rice",
+    "description": "Premium jasmine rice wok-tossed with egg strips, seasoned shredded chicken, onions, and spicy soy garlic mix.",
+    "price": 199,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1603133872878-6966578417f5?q=80&w=600"
+  },
+  {
+    "id": "prod-30",
+    "name": "Chef's Special Chicken Lasagna",
+    "description": "Layered flat pasta sheet baked with minced chicken bolognese, fresh cream cheese sauce, and melted mozzarella top.",
+    "price": 239,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?q=80&w=600"
+  },
+  {
+    "id": "prod-31",
+    "name": "Mint Lime Mojito Cooler",
+    "description": "Classic cooling beverage made of fresh mint leaves, lime slices, carbonated water, and sweetened cane syrup.",
+    "price": 95,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-32",
+    "name": "Fresh Alphonso Mango Shake",
+    "description": "Creamy mango milkshake prepared with sweet pulpy Alphonso mangoes, fresh cold milk, and vanilla ice cream.",
+    "price": 120,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=600"
+  },
+  {
+    "id": "prod-33",
+    "name": "Iced Belgian Chocolate Frappe",
+    "description": "Rich blended beverage with dark Belgian chocolate syrup, ice cubes, cold milk, topped with whipped cream.",
+    "price": 149,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600"
+  },
+  {
+    "id": "prod-34",
+    "name": "Sizzling Berry Blast Mocktail",
+    "description": "Tangy blend of blueberry, raspberry and strawberry extracts, lime drop, carbonated club soda, and ice crush.",
+    "price": 110,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-35",
+    "name": "Creamy Avocado Matcha Shake",
+    "description": "Nutritious and thick energy shake blending ripe avocado pulp, Japanese green tea matcha, and raw honey.",
+    "price": 169,
+    "category": "Drinks",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=600"
+  },
+  {
+    "id": "prod-36",
+    "name": "Classic Cold Coffee with Ice Cream",
+    "description": "Double shot espresso blended with cold milk and sugar, topped with a scoop of premium vanilla ice cream.",
+    "price": 129,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600"
+  },
+  {
+    "id": "prod-37",
+    "name": "Royal Kesar Badam Milk",
+    "description": "Traditional chilled sweetened milk infused with premium Kashmiri saffron strands and crushed almonds.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=600"
+  },
+  {
+    "id": "prod-38",
+    "name": "Tangy Orange Sunrise Spritzer",
+    "description": "Refreshing carbonated cooler mixing fresh orange juice, grenadine drop, crushed ice, and lime slices.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=600"
+  },
+  {
+    "id": "prod-39",
+    "name": "Refreshing Watermelon Mint Cooler",
+    "description": "Freshly squeezed watermelon juice mixed with lime juice, cooling mint extracts, served over crushed ice.",
+    "price": 95,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1506252374453-ef5237291d9d?q=80&w=600"
+  },
+  {
+    "id": "prod-40",
+    "name": "Premium Darjeeling Iced Tea",
+    "description": "Chilled brewed black tea from Darjeeling gardens, sweetened and infused with fresh lemon wedges.",
+    "price": 89,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600"
+  },
+  {
+    "id": "prod-41",
+    "name": "Molten Chocolate Lava Cake",
+    "description": "Freshly baked warm chocolate cake with a delicious molten rich chocolate core filling.",
+    "price": 120,
+    "category": "Desserts",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600"
+  },
+  {
+    "id": "prod-42",
+    "name": "Gulab Jamun with Vanilla Ice Cream",
+    "description": "Two hot gulab jamuns dipped in rose syrup, paired perfectly with a scoop of premium vanilla ice cream.",
+    "price": 90,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-43",
+    "name": "Creamy Saffron Rasmalai",
+    "description": "Soft cottage cheese dumplings soaked in saffron milk syrup, garnished with pistachios and almonds.",
+    "price": 99,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-44",
+    "name": "Red Velvet Cheesecake Slice",
+    "description": "Delightful layered pastry combining red velvet biscuit crumb crust and a rich baked cream cheese layer.",
+    "price": 159,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600"
+  },
+  {
+    "id": "prod-45",
+    "name": "Walnut Brownie with Hot Fudge",
+    "description": "Fudgy walnut chocolate brownie slab served warm, topped with a scoop of chocolate ice cream and rich chocolate fudge.",
+    "price": 139,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600"
+  },
+  {
+    "id": "prod-46",
+    "name": "Classic New York Baked Cheesecake",
+    "description": "Authentic dense and rich baked cream cheese cake slice over a crunchy graham cracker base layer.",
+    "price": 169,
+    "category": "Desserts",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=600"
+  },
+  {
+    "id": "prod-47",
+    "name": "Fresh Strawberry Mousse Cup",
+    "description": "Light and airy sweet strawberry mousse whipped with fresh cream, strawberry chunks, and mint garnish.",
+    "price": 110,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=600"
+  },
+  {
+    "id": "prod-48",
+    "name": "Italian Tiramisu Pastry",
+    "description": "Traditional Italian dessert dessert cake layer with coffee-soaked ladyfingers, whipped mascarpone cheese, cocoa powder.",
+    "price": 149,
+    "category": "Desserts",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600"
+  },
+  {
+    "id": "prod-49",
+    "name": "Blueberry Glazed Waffle",
+    "description": "Freshly baked hot golden waffle topped with powdered sugar, sweet blueberry compote, and whipped cream.",
+    "price": 129,
+    "category": "Desserts",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-50",
+    "name": "Gourmet Mango Panna Cotta",
+    "description": "Chilled Italian dessert made of sweetened fresh cream, gelatin, layered with sweet Alphonso mango purée.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-51",
+    "name": "Garden Fresh Pesto Pizza",
+    "description": "Fragrant house basil pesto base topped with roasted zucchini, baby spinach, and fresh mozzarella.",
+    "price": 339,
+    "category": "Pizza",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-52",
+    "name": "Truffle Wild Mushroom Pizza",
+    "description": "Earthy portobello mushrooms sautéed in truffle oil, over garlic white sauce and rich fontina.",
+    "price": 419,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+  },
+  {
+    "id": "prod-53",
+    "name": "Gorgonzola & Balsamic Fig Pizza",
+    "description": "Dried Turkish figs, tangy gorgonzola cheese, caramelized red onions, and aged balsamic glaze.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600"
+  },
+  {
+    "id": "prod-54",
+    "name": "Neapolitan Margherita Special",
+    "description": "Authentic soft sourdough crust topped with San Marzano tomatoes, buffalo mozzarella, and fresh basil.",
+    "price": 289,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600"
+  },
+  {
+    "id": "prod-55",
+    "name": "Hot Honey & Spicy Pepperoni Pizza",
+    "description": "Spicy pepperoni slices layered over red sauce and finished with hot chili-infused honey.",
+    "price": 409,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+  },
+  {
+    "id": "prod-56",
+    "name": "Smoky Bacon Breakfast Pizza",
+    "description": "Smoky bacon strips, baby spinach, caramelized onions, sunnyside-up eggs, and white cheddar.",
+    "price": 369,
+    "category": "Pizza",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-57",
+    "name": "Mediterranean Olive & Feta Pizza",
+    "description": "Sliced black olives, artichoke hearts, cherry tomatoes, crumbled feta, and fresh oregano leaves.",
+    "price": 329,
+    "category": "Pizza",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+  },
+  {
+    "id": "prod-58",
+    "name": "Sweet Chilli Chicken Pizza",
+    "description": "Grilled chicken strips tossed in sweet chilli sauce, sweet pineapple, and red capsicum.",
+    "price": 399,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600"
+  },
+  {
+    "id": "prod-59",
+    "name": "Spinach & Creamy Ricotta Pizza",
+    "description": "Freshly chopped spinach, whipped ricotta cheese, roasted garlic flakes, and shaved parmesan.",
+    "price": 319,
+    "category": "Pizza",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600"
+  },
+  {
+    "id": "prod-60",
+    "name": "Roast Garlic Rosemary White Pizza",
+    "description": "Creamy ricotta and mozzarella base, topped with sliced roasted garlic, fresh rosemary, and olive oil.",
+    "price": 299,
+    "category": "Pizza",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600"
+  },
+  {
+    "id": "prod-61",
+    "name": "Fiorentina Egg & Spinach Pizza",
+    "description": "Garlic butter baby spinach, soft farm egg crack, shaved parmigiano, and tomato sauce crust.",
+    "price": 349,
+    "category": "Pizza",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+  },
+  {
+    "id": "prod-62",
+    "name": "Sun-Dried Tomato Pesto Pizza",
+    "description": "Rich sun-dried tomatoes, basil pesto sauce, fresh baby mozzarella balls, and roasted pine nuts.",
+    "price": 359,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-63",
+    "name": "Caramelized Onion & Goat Cheese Pizza",
+    "description": "Sweet slow-cooked red onions, rich goat cheese chunks, fresh thyme leaves, and mozzarella.",
+    "price": 379,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+  },
+  {
+    "id": "prod-64",
+    "name": "Chipotle Chicken Fajita Pizza",
+    "description": "Spiced chipotle chicken shreds, bell pepper strips, red onion rings, and cilantro crema drizzle.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600"
+  },
+  {
+    "id": "prod-65",
+    "name": "Spicy Salami & Jalapeno Pizza",
+    "description": "Artisanal spicy salami slices, pickled jalapeno peppers, chili flakes, and hot marinara.",
+    "price": 399,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600"
+  },
+  {
+    "id": "prod-66",
+    "name": "Tandoori Chicken Coriander Pizza",
+    "description": "Tandoori baked chicken chunks, red onion rings, fresh green chiles, and chopped cilantro leaves.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1594007654729-407ededc4963?q=80&w=600"
+  },
+  {
+    "id": "prod-67",
+    "name": "Balsamic Glaze Tomato Margherita",
+    "description": "Ripe vine tomato slices, mozzarella pearls, fresh basil pesto, finished with sweet balsamic glaze.",
+    "price": 319,
+    "category": "Pizza",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600"
+  },
+  {
+    "id": "prod-68",
+    "name": "Shredded Duck & Hoisin Pizza",
+    "description": "Pulled duck leg confit, green onion slivers, cucumber strips, hoisin sauce, and white sesame.",
+    "price": 449,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?q=80&w=600"
+  },
+  {
+    "id": "prod-69",
+    "name": "Artichoke Hearts & Red Pepper Pizza",
+    "description": "Marinated artichoke hearts, fire-roasted red bell peppers, baby spinach, and goat cheese.",
+    "price": 349,
+    "category": "Pizza",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-70",
+    "name": "Philly Cheesesteak Pizza",
+    "description": "Tender shaved sirloin steak, sautéed green peppers, caramelized onions, and provolone blend.",
+    "price": 429,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+  },
+  {
+    "id": "prod-71",
+    "name": "Carbonara Creamy Sauce Pizza",
+    "description": "Pancetta cubes, cracked egg yolk cream, shaved pecorino cheese, and freshly cracked black pepper.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600"
+  },
+  {
+    "id": "prod-72",
+    "name": "Vegan Cheesy Marinara Pizza",
+    "description": "Tangy tomato marinara sauce, roasted garlic, fresh basil, and dairy-free cashew mozzarella.",
+    "price": 319,
+    "category": "Pizza",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600"
+  },
+  {
+    "id": "prod-73",
+    "name": "Pulled Pork BBQ Feast Pizza",
+    "description": "Slow-cooked pulled pork, sweet BBQ sauce drizzle, red onions, and smoked gouda cheese.",
+    "price": 419,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+  },
+  {
+    "id": "prod-74",
+    "name": "Sweet Corn & Mushroom Truffle Pizza",
+    "description": "Sweet golden corn, sautéed wild mushrooms, fresh chives, and white truffle oil drops.",
+    "price": 369,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-75",
+    "name": "Peri Peri Chicken & Onion Pizza",
+    "description": "Spicy marinated peri peri chicken strips, red onion rings, capsicum, and hot peri peri mayo.",
+    "price": 389,
+    "category": "Pizza",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600"
+  },
+  {
+    "id": "prod-76",
+    "name": "Spicy Keema & Green Chilli Pizza",
+    "description": "Flavorful spiced minced mutton keema, sliced green chillies, red onions, and fresh coriander.",
+    "price": 419,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?q=80&w=600"
+  },
+  {
+    "id": "prod-77",
+    "name": "Cajun Seafood & Parsley Pizza",
+    "description": "Cajun-seasoned baby prawns, squid rings, chopped fresh parsley, garlic oil, and mozzarella.",
+    "price": 459,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1594007654729-407ededc4963?q=80&w=600"
+  },
+  {
+    "id": "prod-78",
+    "name": "Spiced Lamb & Mint Sauce Pizza",
+    "description": "Slow-cooked spiced lamb mince, crumbled feta, red onion, topped with refreshing mint yogurt sauce.",
+    "price": 439,
+    "category": "Pizza",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1544982503-9f984c14501a?q=80&w=600"
+  },
+  {
+    "id": "prod-79",
+    "name": "Prosciutto & Arugula Green Pizza",
+    "description": "Delicate prosciutto slices layered over mozzarella crust, topped with fresh baby arugula and olive oil.",
+    "price": 429,
+    "category": "Pizza",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?q=80&w=600"
+  },
+  {
+    "id": "prod-80",
+    "name": "Pesto Roasted Zucchini Pizza",
+    "description": "Sliced zucchini grilled in olive oil, over a rich nut-free basil pesto sauce and fresh mozzarella.",
+    "price": 339,
+    "category": "Pizza",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+  },
+  {
+    "id": "prod-81",
+    "name": "Double Smash Beef Burger",
+    "description": "Two crispy smashed beef patties, double cheddar cheese, grilled onions, and house smash sauce.",
+    "price": 259,
+    "category": "Burger",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600"
+  },
+  {
+    "id": "prod-82",
+    "name": "Crispy Jalapeno Cheddar Burger",
+    "description": "Flame-grilled patty, crunchy fried jalapenos, warm cheddar cheese sauce, and chipotle aioli.",
+    "price": 189,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600"
+  },
+  {
+    "id": "prod-83",
+    "name": "Flame-Grilled Teriyaki Burger",
+    "description": "Grilled beef/chicken patty, sweet teriyaki glaze, grilled pineapple slice, and sesame mayo.",
+    "price": 179,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=600"
+  },
+  {
+    "id": "prod-84",
+    "name": "Avocado Garlic Aioli Veg Burger",
+    "description": "Wholesome veggie patty, fresh avocado slices, tomato, alfalfa sprouts, and roasted garlic aioli.",
+    "price": 159,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=600"
+  },
+  {
+    "id": "prod-85",
+    "name": "Spicy Crispy Buffalo Chicken Burger",
+    "description": "Crumbed chicken breast dipped in buffalo hot sauce, blue cheese dressing, and celery slaw.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600"
+  },
+  {
+    "id": "prod-86",
+    "name": "Smoky Bacon Onion Ring Burger",
+    "description": "Grilled beef patty, crispy bacon strips, beer-battered onion rings, and sweet hickory BBQ sauce.",
+    "price": 229,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=600"
+  },
+  {
+    "id": "prod-87",
+    "name": "Gourmet Truffle Swiss Burger",
+    "description": "Beef patty, sautéed wild mushrooms in truffle oil, melted Swiss cheese, and truffle mayo.",
+    "price": 249,
+    "category": "Burger",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600"
+  },
+  {
+    "id": "prod-88",
+    "name": "Mediterranean Falafel Burger",
+    "description": "Crispy spiced falafel patty, hummus spread, sliced cucumber, tomatoes, and garlic tahini sauce.",
+    "price": 139,
+    "category": "Burger",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1582196016295-f8c894d37904?q=80&w=600"
+  },
+  {
+    "id": "prod-89",
+    "name": "Sweet Chilli Grilled Salmon Burger",
+    "description": "Premium salmon fillet grilled, sweet chili glaze, pickled ginger slaw, and wasabi mayonnaise.",
+    "price": 279,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600"
+  },
+  {
+    "id": "prod-90",
+    "name": "Texas BBQ Pulled Pork Burger",
+    "description": "Slow-cooked pulled pork, sweet honey BBQ sauce, creamy cabbage slaw, on a toasted brioche bun.",
+    "price": 219,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1521305916504-4a1121188589?q=80&w=600"
+  },
+  {
+    "id": "prod-91",
+    "name": "Spicy Chipotle Bean Veg Burger",
+    "description": "Black bean and sweet corn patty, pepper jack cheese, jalapeño slices, and spicy chipotle sauce.",
+    "price": 149,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600"
+  },
+  {
+    "id": "prod-92",
+    "name": "Classic Cheese Sliders Trio",
+    "description": "Three mini cheeseburgers featuring cheddar, pickles, ketchup, and mustard on soft toasted rolls.",
+    "price": 189,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600"
+  },
+  {
+    "id": "prod-93",
+    "name": "Smoked Turkey Clubhouse Burger",
+    "description": "Sliced smoked turkey breast, crispy bacon, Swiss cheese, leaf lettuce, tomato, and avocado mayo.",
+    "price": 179,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=600"
+  },
+  {
+    "id": "prod-94",
+    "name": "Korean Kimchi Spicy Burger",
+    "description": "Spiced pork/beef patty, warm melted cheddar, spicy cabbage kimchi, and gochujang garlic mayo.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=600"
+  },
+  {
+    "id": "prod-95",
+    "name": "Mac and Cheese Stuffed Burger",
+    "description": "Flame-grilled beef patty stuffed with creamy cheddar macaroni cheese, on a buttered bun.",
+    "price": 229,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600"
+  },
+  {
+    "id": "prod-96",
+    "name": "Hickory Smoke Mutton Burger",
+    "description": "Seasoned minced mutton patty, sliced red onions, melted cheddar, and hickory smoke house sauce.",
+    "price": 239,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=600"
+  },
+  {
+    "id": "prod-97",
+    "name": "Herb Butter Grilled Paneer Burger",
+    "description": "Cottage cheese slab grilled in herb butter, capsicum rings, lettuce, and coriander-mint mayo.",
+    "price": 169,
+    "category": "Burger",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600"
+  },
+  {
+    "id": "prod-98",
+    "name": "Chipotle Sweet Potato Veg Burger",
+    "description": "Crispy baked sweet potato and chickpea patty, sliced avocado, tomato, and chipotle crema.",
+    "price": 139,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1582196016295-f8c894d37904?q=80&w=600"
+  },
+  {
+    "id": "prod-99",
+    "name": "Sriracha Crispy Chicken Burger",
+    "description": "Panko-crumbed golden chicken breast patty, spicy sriracha honey glaze, pickles, and butter lettuce.",
+    "price": 189,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600"
+  },
+  {
+    "id": "prod-100",
+    "name": "Gorgonzola Caramelized Onion Burger",
+    "description": "Smashed beef patty, crumbled Italian gorgonzola cheese, slow-cooked caramelized onions, and mayo.",
+    "price": 219,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1521305916504-4a1121188589?q=80&w=600"
+  },
+  {
+    "id": "prod-101",
+    "name": "Curry Spiced Chickpea Vegan Burger",
+    "description": "Spiced chickpea and spinach patty, cucumber slices, red onion, and vegan coconut curry mayo.",
+    "price": 149,
+    "category": "Burger",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600"
+  },
+  {
+    "id": "prod-102",
+    "name": "Pesto Mozzarella Grilled Chicken Burger",
+    "description": "Grilled chicken breast, fresh basil pesto, melted mozzarella slice, and sun-dried tomato spread.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=600"
+  },
+  {
+    "id": "prod-103",
+    "name": "California Sunshine Burger",
+    "description": "Grilled patty, sunnyside-up egg, crispy bacon, avocado mash, cheddar, and honey mustard.",
+    "price": 229,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=600"
+  },
+  {
+    "id": "prod-104",
+    "name": "Southern Crispy Catfish Burger",
+    "description": "Southern-style cornmeal fried catfish fillet, lettuce, tomato, and tangy cajun tartar sauce.",
+    "price": 189,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?q=80&w=600"
+  },
+  {
+    "id": "prod-105",
+    "name": "Ultimate Double Cheese Beef Burger",
+    "description": "Two seasoned beef patties, double processed cheese layers, pickles, and classic burger sauce.",
+    "price": 249,
+    "category": "Burger",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=600"
+  },
+  {
+    "id": "prod-106",
+    "name": "Spicy Habanero Pepper Jack Burger",
+    "description": "Beef patty, melted pepper jack cheese, sliced fresh habaneros, and fiery ghost pepper aioli.",
+    "price": 209,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?q=80&w=600"
+  },
+  {
+    "id": "prod-107",
+    "name": "Lemon Herb Grilled Turkey Burger",
+    "description": "Minced turkey breast patty seasoned with lemon and herbs, leaf lettuce, and cranberry mayo.",
+    "price": 179,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600"
+  },
+  {
+    "id": "prod-108",
+    "name": "Maple Glazed Bacon Burger",
+    "description": "Grilled beef patty, thick-cut maple glazed bacon, double cheddar, and maple-mustard glaze.",
+    "price": 219,
+    "category": "Burger",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1582196016295-f8c894d37904?q=80&w=600"
+  },
+  {
+    "id": "prod-109",
+    "name": "Cheddar Cheese Pretzel Bun Burger",
+    "description": "Hand-pressed patty, sharp cheddar cheese sauce, caramelized onions, on a toasted pretzel bun.",
+    "price": 199,
+    "category": "Burger",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1512152272829-e3139592d56f?q=80&w=600"
+  },
+  {
+    "id": "prod-110",
+    "name": "Southwest Black Bean Burger",
+    "description": "Spiced black bean and sweet potato patty, roasted corn salsa, avocado, and tortilla strips.",
+    "price": 149,
+    "category": "Burger",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1521305916504-4a1121188589?q=80&w=600"
+  },
+  {
+    "id": "prod-111",
+    "name": "Chole Bhature Traditional Combo",
+    "description": "Two large puffed fried leavened breads, served with spicy chickpea curry, onions, and pickles.",
+    "price": 160,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-112",
+    "name": "Paneer Butter Masala & Naan",
+    "description": "Rich cottage cheese cooked in creamy sweet tomato and butter sauce, served with butter naan.",
+    "price": 240,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-113",
+    "name": "Veg Manchurian & Fried Rice",
+    "description": "Deep fried mixed vegetable balls in sweet, sour and hot manchurian sauce, with fried rice.",
+    "price": 199,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600"
+  },
+  {
+    "id": "prod-114",
+    "name": "Crispy Veg Spring Rolls Basket",
+    "description": "Six rolls stuffed with cabbage, carrot, and glass noodles, deep fried and served with sweet chili dip.",
+    "price": 130,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-115",
+    "name": "Paneer Tikka Kathi Roll Duo",
+    "description": "Two rolls featuring spiced paneer tikka cubes, sliced onions, mint green chutney, in soft flatbreads.",
+    "price": 150,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-116",
+    "name": "Spicy Schezwan Fried Rice",
+    "description": "Fried jasmine rice wok-tossed with green beans, carrots, spring onions, and hot schezwan sauce.",
+    "price": 169,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1603133872878-6966578417f5?q=80&w=600"
+  },
+  {
+    "id": "prod-117",
+    "name": "Steamed Veg Momos with Dip",
+    "description": "Eight steamed Tibetan-style vegetable dumplings served with spicy garlic sesame chili dipping sauce.",
+    "price": 120,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600"
+  },
+  {
+    "id": "prod-118",
+    "name": "Kadai Mushroom & Lachha Paratha",
+    "description": "Fresh button mushrooms tossed with thick bell peppers and kadai masala, with layered parathas.",
+    "price": 210,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-119",
+    "name": "Chana Masala with Jeera Rice",
+    "description": "Spicy chickpea curry cooked with raw onions, ginger and green chiles, served with cumin basmati rice.",
+    "price": 179,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-120",
+    "name": "Fettuccine Creamy Alfredo Pasta",
+    "description": "Rich white sauce pasta tossed with butter, heavy cream, garlic, and fresh broccoli florets.",
+    "price": 199,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?q=80&w=600"
+  },
+  {
+    "id": "prod-121",
+    "name": "Spicy Chicken Hakka Noodles",
+    "description": "Stir-fried noodles tossed with green bell peppers, spring onions, egg strips, and shredded chicken.",
+    "price": 210,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600"
+  },
+  {
+    "id": "prod-122",
+    "name": "Aloo Gobi Matar & Roti Combo",
+    "description": "Dry potato, cauliflower and green peas dish cooked in Indian spices, with three soft wheat rotis.",
+    "price": 150,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-123",
+    "name": "Creamy Spinach Cannelloni",
+    "description": "Rolled pasta sheets stuffed with chopped spinach, ricotta, baked under marinara and cheese.",
+    "price": 219,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1574894709920-11b28e7367e3?q=80&w=600"
+  },
+  {
+    "id": "prod-124",
+    "name": "Garlic Herb Breadsticks Basket",
+    "description": "Six warm breadsticks freshly baked with garlic butter, Italian herbs, served with marinara dip.",
+    "price": 110,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1563379971899-660589a01cc3?q=80&w=600"
+  },
+  {
+    "id": "prod-125",
+    "name": "Paneer Lababdar & Garlic Naan",
+    "description": "Paneer cubes in rich sweet-spicy tomato gravy cooked in butter, served with garlic naan bread.",
+    "price": 249,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-126",
+    "name": "Paneer Bhurji & Tandoori Roti",
+    "description": "Spiced scrambled cottage cheese cooked with onions, tomatoes and green chiles, with three rotis.",
+    "price": 220,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-127",
+    "name": "Veggie Stir Fry Brown Rice",
+    "description": "Healthy steamed brown rice stir-fried with carrots, broccoli, zucchini, and garlic soy seasoning.",
+    "price": 169,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1603133872878-6966578417f5?q=80&w=600"
+  },
+  {
+    "id": "prod-128",
+    "name": "Kashmiri Dum Aloo & Rice Combo",
+    "description": "Baby potatoes slow-cooked in rich Kashmiri red chili yogurt sauce, served with basmati rice.",
+    "price": 199,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-129",
+    "name": "Stir Fried Garlic Mushrooms",
+    "description": "Fresh white button mushrooms pan-tossed in olive oil with loads of chopped garlic and fresh parsley.",
+    "price": 159,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=600"
+  },
+  {
+    "id": "prod-130",
+    "name": "Classic Veg Fried Rice Bowl",
+    "description": "Fragrant jasmine rice wok-tossed with chopped carrots, green beans, cabbage, and light soy sauce.",
+    "price": 159,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1603133872878-6966578417f5?q=80&w=600"
+  },
+  {
+    "id": "prod-131",
+    "name": "Veg Penne Pesto Pasta",
+    "description": "Penne pasta tossed in fresh green basil pesto sauce, cherry tomatoes, and shaved parmigiano.",
+    "price": 189,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1563379971899-660589a01cc3?q=80&w=600"
+  },
+  {
+    "id": "prod-132",
+    "name": "Crispy Corn Chili Pepper",
+    "description": "Deep-fried sweet corn kernels tossed with diced bell peppers, spring onions, and green chiles.",
+    "price": 149,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-133",
+    "name": "Paneer Do Pyaza & Roti Combo",
+    "description": "Paneer cubes cooked with a double portion of onions in a semi-dry gravy, served with three rotis.",
+    "price": 219,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-134",
+    "name": "Hyderabadi Veg Dum Biryani",
+    "description": "Fragrant basmati rice layered with spiced vegetables, saffron milk, slow-cooked in dum style.",
+    "price": 230,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=600"
+  },
+  {
+    "id": "prod-135",
+    "name": "Rajma Masala & Steamed Rice",
+    "description": "Red kidney beans simmered in thick spicy onion-tomato gravy, served with steamed basmati rice.",
+    "price": 180,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-136",
+    "name": "Veggie Chow Mein Bowl",
+    "description": "Indo-Chinese stir-fried eggless noodles tossed with shredded cabbage, carrots, and spicy soy-chili sauce.",
+    "price": 159,
+    "category": "Food",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=600"
+  },
+  {
+    "id": "prod-137",
+    "name": "Peshawari Paneer & Naan Combo",
+    "description": "Cottage cheese chunks cooked in Peshawari spices and sweet cashew nut paste, served with soft naan.",
+    "price": 249,
+    "category": "Food",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-138",
+    "name": "Chili Garlic Potato Bites",
+    "description": "Twelve bite-sized crispy fried potato nuggets tossed in dry hot red chili flakes and chopped garlic.",
+    "price": 119,
+    "category": "Food",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-139",
+    "name": "Cheesy Garlic Naan Basket",
+    "description": "Soft flatbread stuffed with mozzarella cheese, brushed with garlic butter and fresh coriander.",
+    "price": 129,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600"
+  },
+  {
+    "id": "prod-140",
+    "name": "Dal Tadka with Laccha Paratha",
+    "description": "Yellow split pigeon peas tempered with cumin, red chilies, garlic, served with layered paratha.",
+    "price": 189,
+    "category": "Food",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?q=80&w=600"
+  },
+  {
+    "id": "prod-141",
+    "name": "Refreshing Classic Lemonade",
+    "description": "Refreshing fresh-squeezed lemon juice, cold water, sugar syrup, served over ice blocks.",
+    "price": 79,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-142",
+    "name": "Chilled Oreo Blast Shake",
+    "description": "Creamy milkshake blended with Oreo cookies, vanilla ice cream, topped with chocolate sauce.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600"
+  },
+  {
+    "id": "prod-143",
+    "name": "Strawberry Basil Cooler",
+    "description": "Fresh strawberries muddled with fresh basil leaves, lemon juice, club soda, and ice crush.",
+    "price": 119,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-144",
+    "name": "Cinnamon Honey Hot Latte",
+    "description": "Fresh espresso shot steamed with honey, milk, and a dusting of aromatic ground cinnamon.",
+    "price": 129,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600"
+  },
+  {
+    "id": "prod-145",
+    "name": "Matcha Coconut Iced Latte",
+    "description": "Chilled beverage with organic Japanese green tea matcha, creamy coconut milk, and syrup.",
+    "price": 149,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=600"
+  },
+  {
+    "id": "prod-146",
+    "name": "Lemon Mint Iced Tea Glass",
+    "description": "Brewed black tea chilled and blended with fresh lemon juice, sugar, and crushed mint leaves.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600"
+  },
+  {
+    "id": "prod-147",
+    "name": "Sparkling Cranberry Cooler",
+    "description": "Tart cranberry juice mixed with sweet ginger ale, lime squeeze, served over crushed ice.",
+    "price": 109,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-148",
+    "name": "Pomegranate Sunrise Spritzer",
+    "description": "Fresh pomegranate juice, carbonated club soda, orange slices, and mint leaves, ice-crushed.",
+    "price": 119,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=600"
+  },
+  {
+    "id": "prod-149",
+    "name": "Banana Peanut Butter Smoothie",
+    "description": "Nutritious smoothie blending ripe bananas, creamy peanut butter, Greek yogurt, and raw honey.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=600"
+  },
+  {
+    "id": "prod-150",
+    "name": "Iced Vanilla Caramel Macchiato",
+    "description": "Chilled espresso with cold milk, vanilla syrup, drizzled with sweet caramel sauce.",
+    "price": 149,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600"
+  },
+  {
+    "id": "prod-151",
+    "name": "Warm Spiced Hot Chocolate",
+    "description": "Creamy hot chocolate prepared with dark Belgian cocoa, raw honey, and warm winter spices.",
+    "price": 119,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600"
+  },
+  {
+    "id": "prod-152",
+    "name": "Chilled Irish Cream Cold Brew",
+    "description": "Slow-steeped cold brew coffee topped with a layer of sweet Irish cream flavored cold foam.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600"
+  },
+  {
+    "id": "prod-153",
+    "name": "Sparkling Blueberry Soda",
+    "description": "House-made sweet blueberry compote, carbonated club soda, lime juice, served with ice blocks.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-154",
+    "name": "Tangy Kiwi Lime Mocktail",
+    "description": "Muddled fresh kiwi, lime juice, mint leaves, carbonated soda, topped with kiwi slices.",
+    "price": 119,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-155",
+    "name": "Sweet Butterscotch Milkshake",
+    "description": "Rich milkshake blended with sweet butterscotch syrup, vanilla ice cream, and whipped cream.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600"
+  },
+  {
+    "id": "prod-156",
+    "name": "Traditional Chilled Sweet Lassi",
+    "description": "Traditional thick yogurt beverage blended sweet with sugar, cardamom, topped with cream.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=600"
+  },
+  {
+    "id": "prod-157",
+    "name": "Chilled Masala Butter Milk",
+    "description": "Refreshing buttermilk blended with chopped coriander, green chiles, ginger, and cumin powder.",
+    "price": 79,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=600"
+  },
+  {
+    "id": "prod-158",
+    "name": "Green Apple Ginger Cooler",
+    "description": "Crisp green apple syrup, fresh ginger juice, lime juice, club soda, served over ice.",
+    "price": 109,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-159",
+    "name": "Rose Milkshake with Almonds",
+    "description": "Chilled milk blended with sweet red rose syrup, vanilla ice cream, and slivered almonds.",
+    "price": 129,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=600"
+  },
+  {
+    "id": "prod-160",
+    "name": "Traditional Indian Masala Chai",
+    "description": "Hot brewed black tea simmered with milk, fresh ginger, cardamom, cloves, and black pepper.",
+    "price": 69,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1541658016709-82535e94bc69?q=80&w=600"
+  },
+  {
+    "id": "prod-161",
+    "name": "Double Espresso Hot Shot",
+    "description": "Two shots of freshly pulled espresso featuring rich golden crema, served steaming hot.",
+    "price": 89,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=600"
+  },
+  {
+    "id": "prod-162",
+    "name": "Chilled Peach Iced Tea",
+    "description": "Brewed black tea infused with sweet peach syrup, fresh lemon wedges, served over ice.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600"
+  },
+  {
+    "id": "prod-163",
+    "name": "Pineapple Coconut Virgin Colada",
+    "description": "Tropical mocktail blending fresh pineapple juice, sweet coconut cream, crushed ice blocks.",
+    "price": 129,
+    "category": "Drinks",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-164",
+    "name": "Raspberry Iced Lemonade",
+    "description": "Zesty fresh lemonade infused with sweet raspberry syrup and fresh whole raspberries.",
+    "price": 109,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-165",
+    "name": "Rich Chocolate Hazelnut Shake",
+    "description": "Creamy milkshake with Nutella spread, cocoa powder, vanilla ice cream, and chopped hazelnuts.",
+    "price": 149,
+    "category": "Drinks",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=600"
+  },
+  {
+    "id": "prod-166",
+    "name": "Spiced Mango Mint Cooler",
+    "description": "Sweet mango pulp blended with fresh mint leaves, lime juice, cumin powder, and soda water.",
+    "price": 119,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=600"
+  },
+  {
+    "id": "prod-167",
+    "name": "Sparkling Hibiscus Herbal Tea",
+    "description": "Chilled herbal tea brewed from dried hibiscus flowers, sweetened with raw honey over ice.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600"
+  },
+  {
+    "id": "prod-168",
+    "name": "Refreshing Cucumber Mint Spritzer",
+    "description": "Slices of fresh cucumber, mint leaves, lime juice, carbonated club soda, ice-crushed.",
+    "price": 99,
+    "category": "Drinks",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600"
+  },
+  {
+    "id": "prod-169",
+    "name": "Healthy Green Spinach Smoothie",
+    "description": "Nutritious shake with baby spinach leaves, green apple, cucumber, lemon juice, and honey.",
+    "price": 139,
+    "category": "Drinks",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1553530666-ba11a7da3888?q=80&w=600"
+  },
+  {
+    "id": "prod-170",
+    "name": "Ginger Honey Lemon Hot Tea",
+    "description": "Hot steeped black tea with fresh crushed ginger root, raw organic honey, and fresh lemon.",
+    "price": 79,
+    "category": "Drinks",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1497534446932-c925b458314e?q=80&w=600"
+  },
+  {
+    "id": "prod-171",
+    "name": "Warm Apple Pie with Ice Cream",
+    "description": "Freshly baked spiced apple pie featuring flaky pastry crust, with a scoop of vanilla ice cream.",
+    "price": 149,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-172",
+    "name": "Double Chocolate Donut Glazed",
+    "description": "Fluffy yeast-raised donut dipped in rich Belgian chocolate glaze, with chocolate sprinkles.",
+    "price": 89,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600"
+  },
+  {
+    "id": "prod-173",
+    "name": "Rich Caramel Custard Cup",
+    "description": "Velvety smooth baked egg custard dessert layered with sweet liquid caramel syrup sauce.",
+    "price": 99,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-174",
+    "name": "Traditional Saffron Kulfi",
+    "description": "Traditional dense and creamy Indian ice cream flavored with saffron, cardamom, and pistachios.",
+    "price": 89,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-175",
+    "name": "Warm Cinnamon Rolls Glazed",
+    "description": "Soft roll baked with ground cinnamon sugar, covered in warm cream cheese glaze frosting.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-176",
+    "name": "Vanilla Bean Creme Brulee",
+    "description": "Rich vanilla bean custard base topped with a contrasting layer of hardened caramelized sugar.",
+    "price": 159,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-177",
+    "name": "Rich Double Chocolate Sundae",
+    "description": "Scoops of double chocolate ice cream topped with hot chocolate fudge, nuts, and whipped cream.",
+    "price": 139,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600"
+  },
+  {
+    "id": "prod-178",
+    "name": "Mango Cardamom Cream Mousse",
+    "description": "Light airy mousse prepared with fresh Alphonso mango pulp, whipped cream, cardamoms.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1546173159-315724a31696?q=80&w=600"
+  },
+  {
+    "id": "prod-179",
+    "name": "Tangy Raspberry Sorbet Scoop",
+    "description": "Refreshing dairy-free frozen fruit sorbet scoop made with fresh sweet-sour raspberries.",
+    "price": 99,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-180",
+    "name": "Espresso Chocolate Mousse Cup",
+    "description": "Fluffy whipped dessert combining dark Belgian chocolate and freshly brewed espresso coffee.",
+    "price": 129,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?q=80&w=600"
+  },
+  {
+    "id": "prod-181",
+    "name": "Warm Waffle with Nutella Drizzle",
+    "description": "Freshly baked hot waffle dusted with icing sugar, loaded with rich hazelnut Nutella spread.",
+    "price": 139,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-182",
+    "name": "Assorted Premium Macarons Box",
+    "description": "Six colorful French almond flour cookie shells sandwiched with rich chocolate ganaches.",
+    "price": 199,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600"
+  },
+  {
+    "id": "prod-183",
+    "name": "Sweet Rose Syrup Baklava",
+    "description": "Crispy layers of filo pastry stuffed with chopped pistachios, sweetened with rose sugar syrup.",
+    "price": 159,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-184",
+    "name": "Rich Chocolate Fudge Brownie",
+    "description": "Fudgy, dense baked chocolate cake slab packed with dark chocolate chips, served warm.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600"
+  },
+  {
+    "id": "prod-185",
+    "name": "Chilled Pistachio Rasmalai Cup",
+    "description": "Soft cottage cheese patties soaked in pistachio saffron milk, served chilled in a cup.",
+    "price": 110,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-186",
+    "name": "Tangy Lemon Tart Pastry Slice",
+    "description": "Crisp buttery pastry shell filled with tangy cooked lemon curd, dusted with sugar glaze.",
+    "price": 129,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=600"
+  },
+  {
+    "id": "prod-187",
+    "name": "Decadent Red Velvet Pastry",
+    "description": "Layered sponge cake colored red-brown, filled with cream cheese frosting icing, chocolate chips.",
+    "price": 139,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600"
+  },
+  {
+    "id": "prod-188",
+    "name": "Chilled Blueberry Panna Cotta",
+    "description": "Creamy cooked gelatin pudding layered with sweet-tart blueberry puree, served chilled.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-189",
+    "name": "Creamy Vanilla Bread Pudding",
+    "description": "Baked dessert with bread cubes soaked in vanilla egg custard, served warm with caramel.",
+    "price": 129,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-190",
+    "name": "Sweet Coconut Rabri Bowl",
+    "description": "Traditional sweet condensed milk dish slow-cooked with fresh grated coconut shreds.",
+    "price": 109,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-191",
+    "name": "Traditional Hot Moong Dal Halwa",
+    "description": "Traditional warm sweet pudding made of yellow lentils slow-roasted in ghee with dry fruits.",
+    "price": 149,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-192",
+    "name": "Assorted Kaju Katli Sweet Box",
+    "description": "Ten traditional diamond-shaped cashew fudge sweets garnished with edible silver foil.",
+    "price": 179,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-193",
+    "name": "Moist Carrot Cake Pastry Slice",
+    "description": "Moist spiced cake layered with shredded sweet carrots, walnuts, and creamy frosting glaze.",
+    "price": 139,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1607958996333-41aef7caefaa?q=80&w=600"
+  },
+  {
+    "id": "prod-194",
+    "name": "Gourmet Italian Panna Cotta Slice",
+    "description": "Baked gelatin custard slice topped with raspberry glaze sauce, fresh mint leaves decoration.",
+    "price": 129,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  },
+  {
+    "id": "prod-195",
+    "name": "Crunchy Chocolate Chip Cookie Box",
+    "description": "Six fresh-baked thick cookies loaded with dark and milk Belgian chocolate chips, served warm.",
+    "price": 99,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=600"
+  },
+  {
+    "id": "prod-196",
+    "name": "Banana Split Ice Cream Sundae",
+    "description": "Three scoops of ice cream over a split banana, topped with chocolate sauce, whipped cream.",
+    "price": 159,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600"
+  },
+  {
+    "id": "prod-197",
+    "name": "Rich Dark Chocolate Truffle Paste",
+    "description": "Rich and decadent dark chocolate ganache truffles coated in dark Dutch cocoa powder.",
+    "price": 149,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=600"
+  },
+  {
+    "id": "prod-198",
+    "name": "Creamy Mango Rabri Bowl",
+    "description": "Chilled slow-reduced milk rabri folded with sweet mango pulp, garnished with nuts.",
+    "price": 120,
+    "category": "Desserts",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-199",
+    "name": "Sweet Malpua with Rabri Combo",
+    "description": "Two fried pancakes soaked in sweet sugar syrup, served warm with cold condensed milk rabri.",
+    "price": 159,
+    "category": "Desserts",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=600"
+  },
+  {
+    "id": "prod-200",
+    "name": "Chilled Fruit Custard Salad",
+    "description": "Chilled vanilla egg custard mixed with fresh apples, grapes, bananas, and pomegranates.",
+    "price": 119,
+    "category": "Desserts",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=600"
+  }
+]

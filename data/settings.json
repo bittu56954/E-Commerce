@@ -1,0 +1,19 @@
+{
+  "storeName": "zomato",
+  "currencySymbol": "₹",
+  "gstPercentage": 5,
+  "storeStatus": "Open",
+  "heroTitle": "Gourmet Platters, At Your Doorstep.",
+  "heroSubtitle": "Experience food delivery simplified. Browse gourmet recipes, apply premium discounts, and track cooking preparation streams live!",
+  "backgrounds": {
+    "home": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1600",
+    "about": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1600",
+    "contact": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1600",
+    "register": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1600",
+    "login": "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600",
+    "dashboard": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600",
+    "admin": "https://images.unsplash.com/photo-1490815685287-c24a72d74021?q=80&w=1600"
+  },
+  "_id": "6a376f35614924f1b8f15e36",
+  "__v": 0
+}

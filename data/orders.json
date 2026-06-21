@@ -1,0 +1,82 @@
+[
+  {
+    "id": "ord-1781805930029",
+    "createdAt": "2026-06-18T18:05:30.029Z",
+    "status": "Out for Delivery",
+    "userId": "1781805048722",
+    "items": [
+      {
+        "id": "prod-2",
+        "name": "Pepperoni Feast Pizza",
+        "price": 399,
+        "quantity": 3,
+        "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+      }
+    ],
+    "totalAmount": 1257,
+    "customerDetails": {
+      "name": "Bittu",
+      "phone": "9876543210",
+      "address": "Patna",
+      "notes": "on"
+    }
+  },
+  {
+    "id": "ord-1781842165090",
+    "createdAt": "2026-06-19T04:09:25.090Z",
+    "status": "Preparing",
+    "userId": "1781842134658",
+    "items": [
+      {
+        "id": "prod-3",
+        "name": "Spicy Paneer Tikka Pizza",
+        "price": 349,
+        "quantity": 3,
+        "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600"
+      }
+    ],
+    "totalAmount": 1099,
+    "customerDetails": {
+      "name": "bittu kumar",
+      "phone": "9905401906",
+      "address": "test12@gmail.com",
+      "notes": ""
+    }
+  },
+  {
+    "id": "ord-1782020374800",
+    "createdAt": "2026-06-21T05:39:34.800Z",
+    "status": "Pending",
+    "userId": "1781845221392",
+    "items": [
+      {
+        "id": "prod-2",
+        "name": "Pepperoni Feast Pizza",
+        "price": 399,
+        "quantity": 3,
+        "image": "https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600"
+      },
+      {
+        "id": "prod-1",
+        "name": "Classic Margherita Pizza",
+        "price": 249,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600"
+      }
+    ],
+    "totalAmount": 1780,
+    "customerDetails": {
+      "name": "Bittu Administrator",
+      "phone": "9905401908",
+      "address": "Bhilai, Chhattisgarh, Kurud Road, 490001",
+      "notes": ""
+    },
+    "couponApplied": null,
+    "paymentMethod": "COD",
+    "paymentStatus": "Pending",
+    "paymentDetails": {
+      "transactionId": null,
+      "methodType": "COD"
+    }
+  }
+]

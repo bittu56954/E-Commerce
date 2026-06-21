@@ -1,0 +1,204 @@
+/* Zomato - Global CSS Variables and Themes */
+:root {
+  --transition-speed: 0.3s;
+}
+
+html.dark-mode {
+  --bg-color-override: #121212;
+  --bg-card-override: rgba(28, 28, 28, 0.9);
+  --text-color-override: #ffffff;
+  --text-muted-override: #a0a0a0;
+  --border-color-override: rgba(255, 255, 255, 0.08);
+  --accent-color: #e23744;
+  --accent-secondary: #cb202d;
+  --table-tr-hover: rgba(226, 55, 68, 0.05);
+}
+
+html.light-mode {
+  --bg-color-override: #ffffff;
+  --bg-card-override: #ffffff;
+  --text-color-override: #1c1c1c;
+  --text-muted-override: #696969;
+  --border-color-override: #e8e8e8;
+  --accent-color: #e23744;
+  --accent-secondary: #cb202d;
+  --table-tr-hover: rgba(226, 55, 68, 0.03);
+}
+
+/* Global Transitions */
+* {
+  transition: background-color var(--transition-speed) ease, 
+              border-color var(--transition-speed) ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Okra', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html.dark-mode body {
+  background-color: var(--bg-color-override);
+  color: var(--text-color-override);
+}
+
+html.light-mode body {
+  background-color: var(--bg-color-override);
+  color: var(--text-color-override);
+}
+
+/* Common Global CSS overrides for Zomato E-Commerce */
+html.dark-mode .corporate-home-canvas,
+html.dark-mode .about-ultimate-container,
+html.dark-mode .corporate-contact-canvas,
+html.dark-mode .corporate-register-canvas,
+html.dark-mode .corporate-login-canvas,
+html.dark-mode .ultimate-dashboard-system,
+html.dark-mode .admin-panel-system {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+html.light-mode .corporate-home-canvas,
+html.light-mode .about-ultimate-container,
+html.light-mode .corporate-contact-canvas,
+html.light-mode .corporate-register-canvas,
+html.light-mode .corporate-login-canvas,
+html.light-mode .ultimate-dashboard-system,
+html.light-mode .admin-panel-system {
+  background: transparent !important;
+  color: #1c1c1c !important;
+}
+
+/* Form controls & Cards adaptation */
+html.dark-mode .login-clean-card-node,
+html.dark-mode .register-clean-card-node,
+html.dark-mode .glass-form-container-node,
+html.dark-mode .u-dna-card,
+html.dark-mode .leader-profile-card,
+html.dark-mode .comp-box,
+html.dark-mode .u-timeline-panel,
+html.dark-mode .metric-cube-card,
+html.dark-mode .split-panel-left,
+html.dark-mode .split-panel-right,
+html.dark-mode .admin-metric-card,
+html.dark-mode .admin-table-panel,
+html.dark-mode .dash-sidebar-node,
+html.dark-mode .growth-metric-card,
+html.dark-mode .infra-node-card-heavy,
+html.dark-mode .deep-infrastructure-logs-block,
+html.dark-mode .security-card-flat {
+  background: var(--bg-card-override) !important;
+  border-color: var(--border-color-override) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.light-mode .login-clean-card-node,
+html.light-mode .register-clean-card-node,
+html.light-mode .glass-form-container-node,
+html.light-mode .u-dna-card,
+html.light-mode .leader-profile-card,
+html.light-mode .comp-box,
+html.light-mode .u-timeline-panel,
+html.light-mode .metric-cube-card,
+html.light-mode .split-panel-left,
+html.light-mode .split-panel-right,
+html.light-mode .admin-metric-card,
+html.light-mode .admin-table-panel,
+html.light-mode .dash-sidebar-node,
+html.light-mode .growth-metric-card,
+html.light-mode .infra-node-card-heavy,
+html.light-mode .deep-infrastructure-logs-block,
+html.light-mode .security-card-flat {
+  background: var(--bg-card-override) !important;
+  border-color: var(--border-color-override) !important;
+  box-shadow: 0 10px 30px rgba(226, 55, 68, 0.05) !important;
+}
+
+/* Text adaptations */
+html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4,
+html.dark-mode .register-title-light, html.dark-mode .login-title-light {
+  color: #ffffff !important;
+}
+
+html.light-mode h1, html.light-mode h2, html.light-mode h3, html.light-mode h4,
+html.light-mode .register-title-light, html.light-mode .login-title-light {
+  color: #1c1c1c !important;
+}
+
+/* Form input styling overrides */
+html.dark-mode input, html.dark-mode select, html.dark-mode textarea {
+  background-color: rgba(20, 20, 20, 0.8) !important;
+  color: #ffffff !important;
+  border-color: var(--border-color-override) !important;
+}
+
+html.light-mode input, html.light-mode select, html.light-mode textarea {
+  background-color: #ffffff !important;
+  color: #1c1c1c !important;
+  border-color: var(--border-color-override) !important;
+}
+
+/* Tables and grids styling */
+html.dark-mode table, html.dark-mode th, html.dark-mode td,
+html.light-mode table, html.light-mode th, html.light-mode td {
+  border-color: var(--border-color-override) !important;
+}
+
+html.dark-mode th {
+  background-color: rgba(226, 55, 68, 0.15) !important;
+  color: #e23744 !important;
+}
+
+html.light-mode th {
+  background-color: rgba(226, 55, 68, 0.08) !important;
+  color: #e23744 !important;
+}
+
+html.dark-mode td, html.dark-mode tr {
+  color: #ffffff !important;
+}
+
+html.light-mode td, html.light-mode tr {
+  color: #1c1c1c !important;
+}
+
+html.dark-mode tr:hover {
+  background-color: var(--table-tr-hover) !important;
+}
+
+html.light-mode tr:hover {
+  background-color: var(--table-tr-hover) !important;
+}
+
+/* Buttons global customization to warm food accent colors */
+button, .primary-cta-btn, .corporate-register-submit-btn-light, .corporate-login-submit-btn, .corporate-submit-action-btn {
+  border-radius: 8px !important;
+}
+
+html.dark-mode .primary-cta-btn,
+html.dark-mode .corporate-register-submit-btn-light,
+html.dark-mode .corporate-login-submit-btn,
+html.dark-mode .corporate-submit-action-btn {
+  background: linear-gradient(135deg, #e23744 0%, #cb202d 100%) !important;
+  color: #ffffff !important;
+}
+
+html.light-mode .primary-cta-btn,
+html.light-mode .corporate-register-submit-btn-light,
+html.light-mode .corporate-login-submit-btn,
+html.light-mode .corporate-submit-action-btn {
+  background: linear-gradient(135deg, #e23744 0%, #cb202d 100%) !important;
+  color: #ffffff !important;
+}
+
+/* Sidebar dynamic styles */
+html.dark-mode .dash-sidebar-node {
+  background: rgba(20, 20, 20, 0.95) !important;
+  border-right-color: var(--border-color-override) !important;
+}
+
+html.light-mode .dash-sidebar-node {
+  background: #ffffff !important;
+  border-right-color: var(--border-color-override) !important;
+}

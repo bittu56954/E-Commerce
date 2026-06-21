@@ -1,18 +1,17 @@
-
+/* Support Portal Styling - Like Your Shop */
 .corporate-contact-canvas {
     width: 100%;
     min-height: 100vh;
-    background-color: #030712; 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 80px 40px;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
 }
-
 
 .branding-blur-mesh {
     position: absolute;
@@ -22,47 +21,48 @@
     pointer-events: none;
     z-index: 1;
 }
-.mesh-blue {
+
+.mesh-coral {
     width: 450px;
     height: 450px;
-    background: #2563eb;
+    background: #ff6b6b;
     top: -5%;
     left: -5%;
 }
+
 .mesh-orange {
     width: 500px;
     height: 500px;
-    background: #ea580c; 
+    background: #e23744; 
     bottom: -10%;
     right: -10%;
 }
 
-
 .placement-grid-container {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1240px;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 60px;
     position: relative;
     z-index: 5;
     align-items: start;
+    margin-bottom: 80px;
 }
-
 
 .company-telemetry-side {
     color: #ffffff;
     position: sticky;
-    top: 40px;
+    top: 100px;
 }
 
 .corporate-badge {
     display: inline-block;
-    background: rgba(234, 88, 12, 0.1);
-    border: 1px solid rgba(234, 88, 12, 0.3);
-    color: #f97316;
+    background: rgba(226, 55, 68, 0.12);
+    border: 1px solid rgba(226, 55, 68, 0.3);
+    color: #e23744;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 800;
     padding: 6px 14px;
     border-radius: 30px;
     letter-spacing: 1px;
@@ -70,24 +70,22 @@
 }
 
 .corporate-title {
-    font-size: 46px;
-    font-weight: 900;
+    font-size: 44px;
+    font-weight: 800;
     line-height: 1.15;
     margin: 0 0 20px 0;
     letter-spacing: -1px;
-    background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--text-color-override, #ffffff);
 }
 
 .corporate-desc {
     font-size: 16px;
     line-height: 1.6;
-    color: #94a3b8;
+    color: var(--text-muted-override, #cbd5e1);
     margin: 0 0 40px 0;
 }
 
-
+/* Stats metrics cubes */
 .placement-trust-metrics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -96,25 +94,26 @@
 }
 
 .trust-cube {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
+    border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
     padding: 20px 15px;
     border-radius: 16px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .trust-cube h3 {
     font-size: 24px;
     font-weight: 800;
     margin: 0 0 5px 0;
-    color: #f97316;
+    color: #e23744;
 }
 
 .trust-cube p {
     font-size: 12px;
-    color: #94a3b8;
+    color: var(--text-muted-override, #cbd5e1);
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 /* Gateways Cards */
@@ -133,8 +132,8 @@
 .gateway-icon {
     width: 46px;
     height: 46px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
+    border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -150,25 +149,25 @@
 
 .gateway-info span {
     font-size: 10px;
-    font-weight: 700;
-    color: #64748b;
+    font-weight: 800;
+    color: #e23744;
     letter-spacing: 0.5px;
 }
 
 .gateway-info strong {
-    font-size: 14px;
-    color: #e2e8f0;
+    font-size: 14.5px;
+    color: var(--text-color-override, #ffffff);
 }
 
-
+/* Ingress Form Container */
 .glass-form-container-node {
-    background: rgba(17, 24, 39, 0.7);
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 32px;
+    border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
+    border-radius: 28px;
     padding: 45px;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
 
 .form-title-block {
@@ -177,46 +176,45 @@
 
 .form-title-block h2 {
     font-size: 26px;
-    color: #ffffff;
+    color: var(--text-color-override, #ffffff);
     margin: 0 0 6px 0;
     font-weight: 800;
 }
 
 .form-title-block p {
-    font-size: 14px;
-    color: #94a3b8;
+    font-size: 14.5px;
+    color: var(--text-muted-override, #cbd5e1);
     margin: 0;
 }
-
 
 .portal-selector-tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background: rgba(0, 0, 0, 0.2);
-    padding: 6px;
+    background: rgba(0, 0, 0, 0.25);
+    padding: 5px;
     border-radius: 14px;
     margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.05));
 }
 
 .tab-btn {
     background: transparent;
     border: none;
-    color: #94a3b8;
+    color: var(--text-muted-override, #cbd5e1);
     padding: 12px;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 13.5px;
+    font-weight: 800;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .tab-btn.active-tab {
-    background: rgba(255, 255, 255, 0.08);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: rgba(226, 55, 68, 0.15);
+    color: #e23744;
+    border: 1px solid rgba(226, 55, 68, 0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
 
 .form-fluid-row {
     display: grid;
@@ -228,21 +226,13 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    margin-bottom: 22px;
-}
-
-.animated-fade-in {
-    animation: fieldFade 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-@keyframes fieldFade { 
-    from { opacity: 0; transform: translateY(6px); } 
-    to { opacity: 1; transform: translateY(0); } 
+    margin-bottom: 20px;
 }
 
 .form-field-block label {
     font-size: 11px;
-    font-weight: 700;
-    color: #94a3b8;
+    font-weight: 800;
+    color: #e23744;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -251,7 +241,7 @@
 .form-field-block select,
 .form-field-block textarea {
     background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1.5px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
     padding: 14px 18px;
     border-radius: 14px;
     color: #ffffff;
@@ -259,51 +249,45 @@
     outline: none;
     font-family: inherit;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
-
-.form-field-block select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='white'><path d='M7 10l5 5 5-5z'/></svg>");
-    background-repeat: no-repeat;
-    background-position: right 15px center;
-}
-
-.form-field-block select option {
-    background-color: #0f172a;
-    color: #ffffff;
+html.light-mode .form-field-block input,
+html.light-mode .form-field-block select,
+html.light-mode .form-field-block textarea {
+    background-color: #ffffff !important;
+    color: #2c160e !important;
 }
 
 .form-field-block input:focus,
 .form-field-block select:focus,
 .form-field-block textarea:focus {
-    border-color: #f97316;
-    background: rgba(255, 255, 255, 0.05);
-    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+    border-color: #e23744;
+    background: rgba(226, 55, 68, 0.04);
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.15);
 }
-
 
 .corporate-submit-action-btn {
     width: 100%;
-    background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+    background: linear-gradient(135deg, #e23744 0%, #cb202d 100%);
     color: #ffffff;
     border: none;
     padding: 16px;
     font-size: 14px;
-    font-weight: 700;
-    border-radius: 14px;
+    font-weight: 800;
+    border-radius: 30px;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
     margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(226, 55, 68, 0.25);
 }
 
 .corporate-submit-action-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(234, 88, 12, 0.35);
+    box-shadow: 0 10px 25px rgba(226, 55, 68, 0.45);
 }
 
-
+/* Success Card */
 .transmission-success-card {
     text-align: center;
     padding: 40px 10px;
@@ -312,44 +296,222 @@
 .success-icon-shield {
     width: 70px;
     height: 70px;
-    background: rgba(16, 185, 129, 0.1);
-    border: 2px solid #10b981;
-    color: #10b981;
+    background: rgba(46, 204, 113, 0.15);
+    border: 2px solid #2ecc71;
+    color: #2ecc71;
     border-radius: 50%;
-    font-size: 28px;
+    font-size: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px auto;
     font-weight: bold;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.3);
 }
 
 .transmission-success-card h2 {
     font-size: 24px;
-    color: #ffffff;
+    color: var(--text-color-override, #ffffff);
     margin: 0 0 12px 0;
 }
 
 .transmission-success-card p {
-    font-size: 14px;
-    color: #94a3b8;
+    font-size: 14.5px;
+    color: var(--text-muted-override, #cbd5e1);
     line-height: 1.6;
 }
 
+/* FAQ SECTION */
+.faq-accordion-section {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto 80px auto;
+    padding: 0 30px;
+}
 
+.support-section-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.support-section-header h2 {
+    font-size: 32px;
+    color: #e23744;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.support-section-header p {
+    color: var(--text-muted-override, #cbd5e1);
+    font-size: 15.5px;
+}
+
+.faq-list-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-accordion-item {
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
+    border: 1.5px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.faq-accordion-item:hover {
+    border-color: rgba(226, 55, 68, 0.3);
+    box-shadow: 0 4px 15px rgba(226, 55, 68, 0.05);
+}
+
+.faq-toggle-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+    color: var(--text-color-override, #ffffff);
+    font-size: 15px;
+    font-weight: 800;
+    text-align: left;
+    outline: none;
+}
+
+.faq-chevron {
+    font-size: 18px;
+    color: #e23744;
+    font-weight: bold;
+    transition: transform 0.25s ease;
+}
+
+.faq-body-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0, 1, 0, 1), padding 0.25s ease;
+    padding: 0 25px;
+}
+
+.faq-accordion-item.faq-open .faq-body-content {
+    max-height: 500px; /* Large enough threshold */
+    padding: 0 25px 20px 25px;
+    transition: max-height 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035), padding 0.3s ease;
+}
+
+.faq-body-content p {
+    margin: 0;
+    font-size: 14.5px;
+    color: var(--text-muted-override, #cccccc);
+    line-height: 1.6;
+}
+
+/* HELP GUIDES SECTION */
+.help-guides-section {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto 80px auto;
+    padding: 0 30px;
+}
+
+.guides-grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.guide-card {
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
+    border: 1.5px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: transform 0.25s ease;
+}
+
+.guide-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(226, 55, 68, 0.3);
+}
+
+.guide-icon {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.guide-card h4 {
+    margin: 0 0 15px 0;
+    color: #e23744;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.guide-card p {
+    font-size: 13.5px;
+    color: var(--text-muted-override, #cccccc);
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.guide-card p:last-child {
+    margin-bottom: 0;
+}
+
+/* POLICIES SECTION */
+.support-policies-section {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto 40px auto;
+    padding: 0 30px;
+}
+
+.policies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.policy-block {
+    background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
+    border: 1.5px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.policy-block h4 {
+    margin: 0 0 15px 0;
+    color: #e23744;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.policy-block p {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--text-muted-override, #cccccc);
+    line-height: 1.6;
+}
+
+/* RESPONSIVE LAYOUTS */
 @media (max-width: 1200px) {
     .placement-grid-container { gap: 40px; }
     .corporate-title { font-size: 38px; }
 }
 
 @media (max-width: 992px) {
-    .corporate-contact-canvas { padding: 60px 20px; }
     .placement-grid-container { grid-template-columns: 1fr; gap: 50px; }
     .company-telemetry-side { text-align: center; position: relative; top: 0; }
     .corporate-badge { margin: 0 auto 20px auto; }
     .placement-trust-metrics { max-width: 500px; margin: 0 auto 35px auto; }
     .office-gateways-stack { align-items: center; }
     .gateway-card { flex-direction: column; text-align: center; gap: 8px; }
+    .guides-grid-cards, .policies-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
 @media (max-width: 576px) {
@@ -357,6 +519,6 @@
     .corporate-title { font-size: 30px; }
     .placement-trust-metrics { grid-template-columns: 1fr; gap: 12px; }
     .form-fluid-row { grid-template-columns: 1fr; gap: 0; }
-    .glass-form-container-node { padding: 30px 20px; border-radius: 24px; }
+    .glass-form-container-node { padding: 30px 20px; border-radius: 20px; }
     .portal-selector-tabs { grid-template-columns: 1fr; gap: 6px; }
 }

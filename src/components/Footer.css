@@ -1,171 +1,251 @@
+/* ====================================================
+   🔴 LIKE YOUR SHOP EXACT REPLICA STYLE DECORATOR (FOOTER)
+   ==================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.lys-footer-node {
+    background: #f8f8f8;
+    color: #4f4f4f;
+    padding: 40px 0 25px 0;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+    border-top: 1px solid #e8e8e8;
 }
 
+html.dark-mode .lys-footer-node {
+    background: #1c1c1c;
+    color: #a0a0a0;
+    border-top-color: #2e2e2e;
+}
 
-.footer-section {
-    background-color: #ffffff; 
-    color: #333333;
-    padding: 60px 60px 30px 60px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-top: 1px solid #eaeaea;
+.lys-footer-container {
     width: 100%;
-    margin-top: auto; 
-   
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    box-shadow: 0px -5px 25px rgba(0, 0, 0, 0.03);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-
-.footer-container {
-    max-width: 1400px;
-    margin: 0 auto;
+/* Top Row: Like Your Shop wordmark and dropdown selectors */
+.lys-footer-top-row {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    gap: 30px;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.footer-column {
-    flex: 1;
+.lys-footer-logo-text {
+    font-size: 32px;
+    font-weight: 850;
+    color: #1c1c1c;
+    letter-spacing: -1.5px;
+    line-height: 1;
+    font-style: italic;
+    font-family: 'Okra', 'Inter', sans-serif;
 }
 
-
-.footer-column h4 {
-    color: #1a1a1a;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
+html.dark-mode .lys-footer-logo-text {
+    color: #ffffff;
 }
 
-
-.contact-col {
-    text-align: left;
-}
-
-.contact-info {
+.lys-footer-selectors {
     display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
-.contact-item {
+.lys-selector-box {
+    border: 1px solid #b5b5b5;
+    border-radius: 6px;
+    padding: 8px 14px;
     display: flex;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
+    gap: 10px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #1c1c1c;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+html.dark-mode .lys-selector-box {
+    background: #2b2b2b;
+    border-color: #3e3e3e;
+    color: #ffffff;
+}
+
+.selector-arrow {
+    font-size: 8px;
+    color: #4f4f4f;
+}
+
+html.dark-mode .selector-arrow {
+    color: #a0a0a0;
+}
+
+/* Links Columns Grid */
+.lys-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.lys-footer-col h4 {
     font-size: 14px;
-    color: #4a4a4a;
-    line-height: 1.5;
-}
-
-.contact-item a {
-    color: #4a4a4a;
-    text-decoration: none;
-}
-
-.contact-item .icon {
-    font-size: 16px;
-    color: #2b5a9e; 
-}
-
-
-.footer-branding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.footer-logo-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.brand-logo {
-    color: #1e4ea1; 
-    font-size: 26px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.tagline {
-    font-size: 10px;
-    color: #1e4ea1;
-    font-weight: 700;
-    letter-spacing: 2px;
-    margin-top: 4px;
+    font-weight: 600;
+    color: #1c1c1c;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
     text-transform: uppercase;
 }
 
-.footer-links-col {
-    text-align: right;
+html.dark-mode .lys-footer-col h4 {
+    color: #ffffff;
 }
 
-.footer-links-list {
+.lys-footer-col ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.lys-footer-col ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #696969;
+    transition: color 0.15s ease;
+}
+
+html.dark-mode .lys-footer-col ul li a {
+    color: #828282;
+}
+
+.lys-footer-col ul li a:hover {
+    color: #e23744;
+}
+
+html.dark-mode .lys-footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+/* Social icons column */
+.social-icon-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    background: #1c1c1c;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background 0.15s ease;
+}
+
+html.dark-mode .social-icon {
+    background: #ffffff;
+    color: #1c1c1c;
+}
+
+.social-icon:hover {
+    background: #e23744;
+    color: #ffffff;
+}
+
+/* App download badges */
+.app-badge-stack {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: white;
+    max-width: 140px;
 }
 
-.footer-links-list a {
-    text-decoration: none;
-    color: #555555;
-    font-size: 14px;
-    transition: color 0.2s ease;
+.app-download-badge {
+    display: block;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
-.footer-links-list a:hover {
-    color: #1e4ea1; 
+.appstore-badge {
+    background-image: url('https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=200'); /* Simulated badge graphics */
+    background-color: #1c1c1c;
+    border-radius: 6px;
+    border: 1px solid #4a4a4a;
 }
 
-
-.footer-bottom {
-    max-width: 1400px;
-    margin: 50px auto 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid #f0f0f0;
-    display: flex;
-    justify-content: flex-start; 
+.playstore-badge {
+    background-image: url('https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?q=80&w=200');
+    background-color: #1c1c1c;
+    border-radius: 6px;
+    border: 1px solid #4a4a4a;
 }
 
-.footer-bottom p {
-    font-size: 13px;
-    color: #888888;
+/* Divider Line */
+.lys-footer-divider {
+    border: none;
+    border-top: 1px solid #dfdfdf;
+    margin: 25px 0;
 }
 
+html.dark-mode .lys-footer-divider {
+    border-top-color: #2e2e2e;
+}
 
-@media (max-width: 992px) {
-    .footer-container {
+/* Bottom Row */
+.lys-footer-bottom p {
+    font-size: 11.5px;
+    color: #828282;
+    line-height: 1.6;
+    margin: 0;
+}
+
+html.dark-mode .lys-footer-bottom p {
+    color: #696969;
+}
+
+/* ====================================================
+   📱 RESPONSIVE BREAKPOINTS
+   ==================================================== */
+
+@media (max-width: 768px) {
+    .lys-footer-top-row {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .lys-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .social-col {
+        grid-column: span 2;
     }
 
-    .contact-col, .footer-links-col {
-        text-align: center;
+    .app-badge-stack {
+        flex-direction: row;
+        max-width: 100%;
     }
+}
 
-    .contact-item {
-        justify-content: center;
+@media (max-width: 480px) {
+    .lys-footer-grid {
+        grid-template-columns: 1fr;
     }
-
-    .footer-bottom {
-        justify-content: center;
-        text-align: center;
+    
+    .social-col {
+        grid-column: span 1;
     }
 }

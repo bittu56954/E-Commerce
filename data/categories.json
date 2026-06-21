@@ -1,0 +1,27 @@
+[
+  {
+    "id": "cat-1",
+    "name": "Pizza",
+    "icon": "🍕"
+  },
+  {
+    "id": "cat-2",
+    "name": "Burger",
+    "icon": "🍔"
+  },
+  {
+    "id": "cat-3",
+    "name": "Food",
+    "icon": "🍛"
+  },
+  {
+    "id": "cat-4",
+    "name": "Drinks",
+    "icon": "🥤"
+  },
+  {
+    "id": "cat-5",
+    "name": "Desserts",
+    "icon": "🍰"
+  }
+]

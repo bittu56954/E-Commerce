@@ -1,0 +1,521 @@
+/* OrderConfirmation.css */
+
+.lys-confirm-wrapper {
+  min-height: 90vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #120e1a 0%, #1a1528 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+  color: #ffffff;
+}
+
+.lys-confirm-loading, .lys-confirm-error {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #ffffff;
+}
+
+.lys-confirm-error span {
+  font-size: 48px;
+}
+
+/* Success Card */
+.lys-confirm-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animated Success Checkmark */
+.success-checkmark-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px auto;
+}
+
+.checkmark-circle {
+  stroke-dasharray: 166;
+  stroke-dashoffset: 166;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+  stroke: #e23744;
+  fill: none;
+  animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-svg {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: block;
+  stroke-width: 2;
+  stroke: #e23744;
+  stroke-miterlimit: 10;
+  box-shadow: inset 0px 0px 0px #e23744;
+  animation: fillAnimation .4s ease-in-out .4s forwards, scaleAnimation .3s ease-in-out .9s forwards;
+}
+
+.checkmark-check {
+  transform-origin: 50% 50%;
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+  100% { stroke-dashoffset: 0; }
+}
+
+@keyframes scaleAnimation {
+  0%, 100% { transform: none; }
+  50% { transform: scale3d(1.1, 1.1, 1); }
+}
+
+@keyframes fillAnimation {
+  100% { box-shadow: inset 0px 0px 0px 30px rgba(226, 55, 68, 0.15); }
+}
+
+.success-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: #e23744;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.5px;
+}
+
+.success-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+/* Order Meta Details */
+.confirm-order-meta {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13.5px;
+}
+
+.meta-row span {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.meta-row strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.badge-payment-mode {
+  color: #e23744 !important;
+}
+
+.badge-payment-status {
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.badge-payment-status.completed, .badge-payment-status.paid {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71 !important;
+}
+
+.badge-payment-status.pending {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f1c40f !important;
+}
+
+.tx-id-text {
+  font-family: monospace;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Action Buttons */
+.confirm-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.lys-confirm-btn {
+  flex: 1;
+  background: #e23744;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.lys-confirm-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(226, 55, 68, 0.3);
+}
+
+.lys-confirm-btn-secondary {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lys-confirm-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.confirm-back-home a {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.confirm-back-home a:hover {
+  color: #e23744;
+}
+
+/* ==========================================
+   INVOICE / RECEIPT STYLING (SCREEN/PRINT)
+   ========================================== */
+
+/* By default, we hide the printable invoice layout on screen, or make it look like a neat voucher card underneath */
+.lys-invoice-container {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 800px;
+  background: #ffffff;
+  color: #2c3e50;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.invoice-brand-title {
+  font-size: 28px;
+  font-weight: 900;
+  color: #e23744;
+  margin: 0 0 5px 0;
+  letter-spacing: -0.5px;
+}
+
+.invoice-company-details p {
+  margin: 2px 0;
+  font-size: 12.5px;
+  color: #7f8c8d;
+}
+
+.invoice-meta-details {
+  text-align: right;
+}
+
+.invoice-meta-details h1 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: 800;
+  color: #2c3e50;
+  letter-spacing: 1px;
+}
+
+.invoice-meta-details p {
+  margin: 3px 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.invoice-meta-details strong {
+  color: #2c3e50;
+}
+
+.invoice-divider {
+  border: none;
+  border-top: 1px solid #ecf0f1;
+  margin: 20px 0;
+}
+
+.invoice-billing-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.billing-to h3, .billing-from h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #95a5a6;
+  margin: 0 0 10px 0;
+}
+
+.billing-to p, .billing-from p {
+  margin: 3px 0;
+  font-size: 13.5px;
+  color: #34495e;
+}
+
+.billing-to .address-text {
+  color: #7f8c8d;
+  font-size: 13px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.driver-notes {
+  background: #fdf5eb;
+  border-left: 3px solid #e23744;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-top: 10px !important;
+  font-size: 12.5px !important;
+  color: #8a6d3b !important;
+}
+
+/* Items Table */
+.invoice-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.invoice-items-table th {
+  background: #f8f9fa;
+  color: #34495e;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 12px;
+  border-bottom: 2px solid #dee2e6;
+  text-align: left;
+}
+
+.invoice-items-table td {
+  padding: 12px;
+  border-bottom: 1px solid #dee2e6;
+  color: #2c3e50;
+  font-size: 13.5px;
+}
+
+.invoice-items-table tr:last-child td {
+  border-bottom: 2px solid #dee2e6;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* Summary Blocks */
+.invoice-summary-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 35px;
+}
+
+.invoice-notes-clause p {
+  font-size: 11px;
+  color: #95a5a6;
+  margin: 3px 0;
+  line-height: 1.4;
+}
+
+.invoice-notes-clause p strong {
+  color: #7f8c8d;
+}
+
+.invoice-totals-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.totals-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.totals-row.discount {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.totals-row.discount span:last-child {
+  color: #e74c3c;
+}
+
+.summary-total-divider {
+  border: none;
+  border-top: 1px solid #dee2e6;
+  margin: 5px 0;
+}
+
+.totals-row.grand-total {
+  font-size: 18px;
+  font-weight: 800;
+  color: #e23744;
+}
+
+.totals-row.grand-total span:last-child {
+  color: #e23744;
+}
+
+.invoice-footer-branding {
+  text-align: center;
+  border-top: 1px solid #ecf0f1;
+  padding-top: 15px;
+}
+
+.invoice-footer-branding p {
+  font-size: 11px;
+  color: #bdc3c7;
+  margin: 0;
+}
+
+/* Spinner */
+.lys-spinner {
+  border: 4px solid rgba(226, 55, 68, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left-color: #e23744;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ==========================================
+   🖨️ PRINT RULES (CRITICAL)
+   ========================================== */
+@media print {
+  body, html {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  /* Hide all container headers, cards, footers, buttons and other clutter */
+  .no-print, 
+  nav, 
+  footer, 
+  .confirm-actions, 
+  .confirm-back-home, 
+  .lys-confirm-card,
+  .success-checkmark-wrapper,
+  .success-title,
+  .success-subtitle,
+  .confirm-order-meta {
+    display: none !important;
+  }
+
+  .lys-confirm-wrapper {
+    background: none !important;
+    padding: 0 !important;
+    min-height: auto !important;
+  }
+
+  /* Make invoice print perfectly on page */
+  .lys-invoice-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-radius: 0 !important;
+  }
+
+  .invoice-brand-title {
+    color: #e23744 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .driver-notes {
+    background: #fcfcfc !important;
+    border-left: 3px solid #e23744 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .invoice-items-table th {
+    background: #f1f1f1 !important;
+    color: #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .totals-row.grand-total, 
+  .totals-row.grand-total span {
+    color: #000000 !important;
+    font-size: 19px !important;
+    font-weight: 900 !important;
+  }
+}

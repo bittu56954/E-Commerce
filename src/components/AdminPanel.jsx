@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import AnimatedBackground from './AnimatedBackground';
 import { triggerToast } from './Toast';
 import './AdminPanel.css';
 
 const AdminPanel = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [adminUser, setAdminUser] = useState(null);
   const [adminData, setAdminData] = useState({
     stats: { totalOrders: 0, totalRevenue: 0, pendingOrders: 0, completedOrders: 0, totalUsers: 0 },
@@ -15,9 +16,26 @@ const AdminPanel = () => {
   });
   const [productsList, setProductsList] = useState([]);
   const [categoriesList, setCategoriesList] = useState([]);
+  const [spotsList, setSpotsList] = useState([]);
   const [usersList, setUsersList] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSection] = useState(() => {
+    return (location.state && location.state.section) ? location.state.section : 'dashboard';
+  });
+
+  // Spot CRUD form state
+  const [spotFormOpen, setSpotFormOpen] = useState(false);
+  const [spotEditing, setSpotEditing] = useState(false);
+  const [spotForm, setSpotForm] = useState({
+    id: null,
+    type: 'dining',
+    name: '',
+    cuisine: '',
+    location: '',
+    rating: '4.0',
+    image: '',
+    price: '₹1,000 for two'
+  });
 
   // Store & Settings forms state
   const [settingsForm, setSettingsForm] = useState({
@@ -35,7 +53,15 @@ const AdminPanel = () => {
       login: '',
       dashboard: '',
       admin: ''
-    }
+    },
+    smtpHost: '',
+    smtpPort: 587,
+    smtpUser: '',
+    smtpPass: '',
+    smtpFromName: 'zomato Support',
+    twilioAccountSid: '',
+    twilioAuthToken: '',
+    twilioFromNumber: ''
   });
 
   // Product CRUD form state
@@ -112,6 +138,18 @@ const AdminPanel = () => {
     }
   };
 
+  const fetchSpotsList = async () => {
+    try {
+      const response = await fetch('/api/spots');
+      const data = await response.json();
+      if (response.ok) {
+        setSpotsList(data.spots || []);
+      }
+    } catch (error) {
+      console.error('Failed to load spots:', error);
+    }
+  };
+
   const fetchUsersList = async (token) => {
     try {
       const response = await fetch('/api/auth/users', {
@@ -162,6 +200,7 @@ const AdminPanel = () => {
         await fetchAdminData(token);
         await fetchProductsList();
         await fetchCategoriesList();
+        await fetchSpotsList();
         await fetchUsersList(token);
         await fetchSettings();
         setLoading(false);
@@ -173,6 +212,12 @@ const AdminPanel = () => {
       navigate('/login');
     }
   }, [navigate]);
+
+  useEffect(() => {
+    if (location.state && location.state.section) {
+      setActiveSection(location.state.section);
+    }
+  }, [location.state]);
 
   // Order status updates
   const handleUpdateStatus = async (orderId, newStatus) => {
@@ -437,9 +482,90 @@ const AdminPanel = () => {
     }
   };
 
+  // Spot CRUD handlers
+  const handleAddSpotClick = () => {
+    setSpotForm({ id: null, type: 'dining', name: '', cuisine: '', location: '', rating: '4.0', image: '', price: '₹1,000 for two' });
+    setSpotEditing(false);
+    setSpotFormOpen(true);
+  };
+
+  const handleEditSpotClick = (spot) => {
+    setSpotForm({ ...spot });
+    setSpotEditing(true);
+    setSpotFormOpen(true);
+  };
+
+  const handleSaveSpotSubmit = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem('token');
+    const csrfToken = localStorage.getItem('csrfToken');
+
+    if (!spotForm.type || !spotForm.name || !spotForm.cuisine || !spotForm.location || !spotForm.image || !spotForm.price) {
+      triggerToast('Please fill out all required spot details.', 'warning');
+      return;
+    }
+
+    try {
+      const url = spotForm.id ? `/api/spots/${spotForm.id}` : '/api/spots';
+      const method = spotForm.id ? 'PUT' : 'POST';
+
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+          'x-csrf-token': csrfToken
+        },
+        body: JSON.stringify(spotForm)
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        triggerToast(data.message || 'Spot saved successfully!', 'success');
+        setSpotFormOpen(false);
+        fetchSpotsList();
+      } else {
+        triggerToast(data.error || 'Failed to save spot.', 'error');
+      }
+    } catch (error) {
+      console.error('Error saving spot:', error);
+      triggerToast('Connection error. Failed to save spot.', 'error');
+    }
+  };
+
+  const handleDeleteSpotClick = async (id, name) => {
+    if (!window.confirm(`Are you sure you want to permanently delete the spot "${name}"?`)) {
+      return;
+    }
+
+    const token = localStorage.getItem('token');
+    const csrfToken = localStorage.getItem('csrfToken');
+
+    try {
+      const response = await fetch(`/api/spots/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'x-csrf-token': csrfToken
+        }
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        triggerToast(data.message || 'Spot deleted successfully.', 'success');
+        fetchSpotsList();
+      } else {
+        triggerToast(data.error || 'Failed to delete spot.', 'error');
+      }
+    } catch (error) {
+      console.error('Error deleting spot:', error);
+      triggerToast('Connection error during deletion.', 'error');
+    }
+  };
+
   // User Deletion Handler
   const handleDeleteUser = async (userId, name, email) => {
-    if (userId === 'admin' || email === 'admin@zomato.com') {
+    if (userId === 'admin' || email === 'admin@gmail.com') {
       triggerToast('Cannot delete the root administrator!', 'warning');
       return;
     }
@@ -519,18 +645,103 @@ const AdminPanel = () => {
   const orders = adminData.orders || [];
   const totalOrdersCount = orders.length;
   const pendingCount = orders.filter(o => o.status === 'Pending').length;
-  const preparingCount = orders.filter(o => o.status === 'Preparing').length;
-  const shippingCount = orders.filter(o => o.status === 'Out for Delivery').length;
+  const acceptedCount = orders.filter(o => o.status === 'Accepted' || o.status === 'Preparing').length;
+  const shippingCount = orders.filter(o => o.status === 'Shipped' || o.status === 'Out for Delivery').length;
   const deliveredCount = orders.filter(o => o.status === 'Delivered').length;
-  const cancelledCount = orders.filter(o => o.status === 'Cancelled').length;
-
-  const cookingOrPendingCount = pendingCount + preparingCount + shippingCount;
+  const rejectedCount = orders.filter(o => o.status === 'Rejected' || o.status === 'Cancelled').length;
+ 
+  const cookingOrPendingCount = pendingCount + acceptedCount + shippingCount;
   const totalRevenueVal = adminData.stats.totalRevenue || 0;
   const avgOrderValue = deliveredCount > 0 ? Math.round(totalRevenueVal / deliveredCount) : 0;
 
   return (
     <div className="admin-panel-system">
       <AnimatedBackground page="admin" />
+
+      {/* 1. FIXED VERTICAL SIDEBAR ON LEFT */}
+      <aside className="admin-sidebar-node">
+        <div className="admin-logo" style={{ fontSize: '24px', fontWeight: '850', color: '#e23744', fontStyle: 'italic', marginBottom: '30px', textAlign: 'center', fontFamily: 'var(--font-title)' }}>
+          zomato
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', flexGrow: 1 }}>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'dashboard' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('dashboard')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>📊</span> Analytics
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'orders' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('orders')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>📋</span> Customer Orders
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'inventory' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('inventory')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>🍔</span> Inventory
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'categories' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('categories')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>🏷️</span> Categories
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'spots' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('spots')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>📍</span> Dining & Nightlife
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'users' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('users')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>👥</span> User Registry
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'settings' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('settings')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>⚙️</span> Settings & Backdrop
+          </button>
+          <button 
+            className={`admin-tab-btn ${activeSection === 'contacts' ? 'is-active' : ''}`}
+            onClick={() => setActiveSection('contacts')}
+            style={{ textAlign: 'left', width: '100%', display: 'flex', alignItems: 'center', gap: '8px' }}
+          >
+            <span>✉️</span> Tickets ({adminData.contacts.length})
+          </button>
+        </div>
+        <div style={{ marginTop: 'auto', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <button 
+            onClick={() => navigate('/')} 
+            className="admin-tab-btn"
+            style={{ background: 'rgba(255,255,255,0.05)', color: 'var(--text-color-override)', textAlign: 'center', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
+          >
+            <span>🏠</span> View Storefront
+          </button>
+          <button 
+            onClick={() => {
+              localStorage.removeItem('token');
+              localStorage.removeItem('user');
+              navigate('/login');
+            }} 
+            className="admin-tab-btn"
+            style={{ background: 'rgba(226, 55, 68, 0.15)', color: '#e23744', textAlign: 'center', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px' }}
+          >
+            <span>🚪</span> Logout
+          </button>
+        </div>
+      </aside>
 
       <main className="admin-viewport-main">
         <header className="admin-top-header">
@@ -575,51 +786,7 @@ const AdminPanel = () => {
           </div>
         </section>
 
-        {/* Console Tab Links */}
-        <div className="admin-menu-tabs">
-          <button 
-            className={`admin-tab-btn ${activeSection === 'dashboard' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('dashboard')}
-          >
-            📊 Analytics
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'orders' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('orders')}
-          >
-            📋 Customer Orders
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'inventory' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('inventory')}
-          >
-            🍔 Inventory
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'categories' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('categories')}
-          >
-            🏷️ Categories
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'users' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('users')}
-          >
-            👥 User Registry
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'settings' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('settings')}
-          >
-            ⚙️ Settings & Backdrop
-          </button>
-          <button 
-            className={`admin-tab-btn ${activeSection === 'contacts' ? 'is-active' : ''}`}
-            onClick={() => setActiveSection('contacts')}
-          >
-            ✉️ Tickets ({adminData.contacts.length})
-          </button>
-        </div>
+        {/* Old Horizontal Console Tab Links removed to use vertical sidebar layout */}
 
         {/* Section Render Blocks */}
         <div className="admin-section-content">
@@ -683,17 +850,17 @@ const AdminPanel = () => {
 
                   {/* Preparing */}
                   <div className="chart-bar-row" style={{ display: 'grid', gridTemplateColumns: '120px 1fr 100px', alignItems: 'center', gap: '15px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: '700' }}>🍳 Preparing</span>
+                    <span style={{ fontSize: '13px', fontWeight: '700' }}>🍳 Accepted</span>
                     <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '5px', overflow: 'hidden' }}>
                       <div style={{
                         height: '100%',
                         background: 'linear-gradient(90deg, #3498db, #2980b9)',
-                        width: `${totalOrdersCount > 0 ? (preparingCount / totalOrdersCount) * 100 : 0}%`,
+                        width: `${totalOrdersCount > 0 ? (acceptedCount / totalOrdersCount) * 100 : 0}%`,
                         borderRadius: '5px',
                         transition: 'width 0.5s ease-out'
                       }}></div>
                     </div>
-                    <span style={{ fontSize: '13px', fontWeight: '800', textAlign: 'right' }}>{preparingCount} ({totalOrdersCount > 0 ? Math.round((preparingCount / totalOrdersCount) * 100) : 0}%)</span>
+                    <span style={{ fontSize: '13px', fontWeight: '800', textAlign: 'right' }}>{acceptedCount} ({totalOrdersCount > 0 ? Math.round((acceptedCount / totalOrdersCount) * 100) : 0}%)</span>
                   </div>
 
                   {/* Pending */}
@@ -713,7 +880,7 @@ const AdminPanel = () => {
 
                   {/* Shipping */}
                   <div className="chart-bar-row" style={{ display: 'grid', gridTemplateColumns: '120px 1fr 100px', alignItems: 'center', gap: '15px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: '700' }}>🛵 Shipping</span>
+                    <span style={{ fontSize: '13px', fontWeight: '700' }}>🛵 Shipped</span>
                     <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '5px', overflow: 'hidden' }}>
                       <div style={{
                         height: '100%',
@@ -728,17 +895,17 @@ const AdminPanel = () => {
 
                   {/* Cancelled */}
                   <div className="chart-bar-row" style={{ display: 'grid', gridTemplateColumns: '120px 1fr 100px', alignItems: 'center', gap: '15px' }}>
-                    <span style={{ fontSize: '13px', fontWeight: '700' }}>❌ Cancelled</span>
+                    <span style={{ fontSize: '13px', fontWeight: '700' }}>❌ Rejected</span>
                     <div style={{ height: '10px', background: 'rgba(255,255,255,0.05)', borderRadius: '5px', overflow: 'hidden' }}>
                       <div style={{
                         height: '100%',
                         background: 'linear-gradient(90deg, #e74c3c, #c0392b)',
-                        width: `${totalOrdersCount > 0 ? (cancelledCount / totalOrdersCount) * 100 : 0}%`,
+                        width: `${totalOrdersCount > 0 ? (rejectedCount / totalOrdersCount) * 100 : 0}%`,
                         borderRadius: '5px',
                         transition: 'width 0.5s ease-out'
                       }}></div>
                     </div>
-                    <span style={{ fontSize: '13px', fontWeight: '800', textAlign: 'right' }}>{cancelledCount} ({totalOrdersCount > 0 ? Math.round((cancelledCount / totalOrdersCount) * 100) : 0}%)</span>
+                    <span style={{ fontSize: '13px', fontWeight: '800', textAlign: 'right' }}>{rejectedCount} ({totalOrdersCount > 0 ? Math.round((rejectedCount / totalOrdersCount) * 100) : 0}%)</span>
                   </div>
 
                 </div>
@@ -799,10 +966,10 @@ const AdminPanel = () => {
                           <td><strong>{order.id}</strong></td>
                           <td>{new Date(order.createdAt).toLocaleString()}</td>
                           <td>
-                            <strong>{order.customerDetails.name}</strong> <br/>
-                            <small>{order.customerDetails.phone}</small> <br/>
-                            <small style={{ display: 'inline-block', maxWidth: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{order.customerDetails.address}</small>
-                            {order.customerDetails.notes && (
+                            <strong>{order.customerDetails?.name || 'Guest'}</strong> <br/>
+                            <small>{order.customerDetails?.phone || 'No Phone'}</small> <br/>
+                            <small style={{ display: 'inline-block', maxWidth: '200px', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{order.customerDetails?.address || 'No Address'}</small>
+                            {order.customerDetails?.notes && (
                               <div style={{ fontSize: '11px', color: '#e23744', marginTop: '4px' }}>📝 Notes: "{order.customerDetails.notes}"</div>
                             )}
                           </td>
@@ -850,10 +1017,10 @@ const AdminPanel = () => {
                               }}
                             >
                               <option value="Pending" style={{background:'#2d3436'}}>📝 Pending</option>
-                              <option value="Preparing" style={{background:'#2d3436'}}>🍳 Preparing</option>
-                              <option value="Out for Delivery" style={{background:'#2d3436'}}>🛵 Out for Delivery</option>
+                              <option value="Accepted" style={{background:'#2d3436'}}>✅ Accepted</option>
+                              <option value="Shipped" style={{background:'#2d3436'}}>🛵 Shipped</option>
                               <option value="Delivered" style={{background:'#2d3436'}}>😋 Delivered</option>
-                              <option value="Cancelled" style={{background:'#2d3436'}}>❌ Cancelled</option>
+                              <option value="Rejected" style={{background:'#2d3436'}}>❌ Rejected</option>
                             </select>
                           </td>
                           <td>
@@ -1089,6 +1256,165 @@ const AdminPanel = () => {
             </div>
           )}
 
+          {/* 4B. SPOTS MANAGEMENT (DINING & NIGHTLIFE) */}
+          {activeSection === 'spots' && (
+            <div className="admin-table-panel animated-fade-in">
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px' }}>
+                <h3>Dining Out & Nightlife Outlets</h3>
+                <button className="add-product-btn" onClick={handleAddSpotClick}>
+                  ➕ Add New Dining/Nightlife Spot
+                </button>
+              </div>
+
+              {spotFormOpen && (
+                <div className="product-form-modal">
+                  <div className="product-modal-card">
+                    <h4>{spotEditing ? '📝 Modify Outlet Spot Details' : '➕ Register New Dining/Nightlife Outlet'}</h4>
+                    <form onSubmit={handleSaveSpotSubmit}>
+                      <div className="form-grid-2">
+                        <div className="form-field-group">
+                          <label>Outlet Name *</label>
+                          <input 
+                            type="text" 
+                            placeholder="e.g. The Bier Library"
+                            value={spotForm.name} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, name: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                        <div className="form-field-group">
+                          <label>Section Type *</label>
+                          <select 
+                            value={spotForm.type}
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, type: e.target.value }))}
+                            required
+                          >
+                            <option value="dining">Dining Out</option>
+                            <option value="nightlife">Nightlife & Clubs</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div className="form-grid-2">
+                        <div className="form-field-group">
+                          <label>Cuisine/Offerings *</label>
+                          <input 
+                            type="text" 
+                            placeholder="e.g. Continental, Finger Food, Brewery"
+                            value={spotForm.cuisine} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, cuisine: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                        <div className="form-field-group">
+                          <label>Price Range (e.g. '₹1,500 for two') *</label>
+                          <input 
+                            type="text" 
+                            placeholder="₹1,500 for two"
+                            value={spotForm.price} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, price: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-grid-3">
+                        <div className="form-field-group">
+                          <label>Location Coordinates/Area *</label>
+                          <input 
+                            type="text" 
+                            placeholder="e.g. Koramangala, Bengaluru"
+                            value={spotForm.location} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, location: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                        <div className="form-field-group">
+                          <label>Customer Rating *</label>
+                          <input 
+                            type="text" 
+                            placeholder="e.g. 4.6"
+                            value={spotForm.rating} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, rating: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                        <div className="form-field-group">
+                          <label>Banner Image URL *</label>
+                          <input 
+                            type="url" 
+                            placeholder="https://images.unsplash.com/..."
+                            value={spotForm.image} 
+                            onChange={(e) => setSpotForm(prev => ({ ...prev, image: e.target.value }))}
+                            required 
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-action-buttons">
+                        <button type="button" className="form-cancel-btn" onClick={() => setSpotFormOpen(false)}>Cancel</button>
+                        <button type="submit" className="form-submit-btn">Save Outlet Spot</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              )}
+
+              <div className="admin-table-wrapper">
+                <table className="admin-data-table">
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Outlet Name</th>
+                      <th>Section Type</th>
+                      <th>Cuisine</th>
+                      <th>Location</th>
+                      <th>Price</th>
+                      <th>Rating</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {spotsList.map(spot => (
+                      <tr key={spot.id}>
+                        <td>
+                          <img 
+                            src={spot.image} 
+                            alt={spot.name} 
+                            style={{ width: '50px', height: '40px', objectFit: 'cover', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.1)' }}
+                          />
+                        </td>
+                        <td><strong>{spot.name}</strong></td>
+                        <td>
+                          <span style={{
+                            padding: '4px 8px',
+                            borderRadius: '12px',
+                            fontSize: '11px',
+                            fontWeight: '700',
+                            background: spot.type === 'dining' ? 'rgba(52, 152, 219, 0.15)' : 'rgba(155, 89, 182, 0.15)',
+                            color: spot.type === 'dining' ? '#3498db' : '#9b59b6'
+                          }}>
+                            {spot.type === 'dining' ? '🍽️ Dining Out' : '🍷 Nightlife'}
+                          </span>
+                        </td>
+                        <td>{spot.cuisine}</td>
+                        <td>{spot.location}</td>
+                        <td>{spot.price}</td>
+                        <td>⭐ <strong>{spot.rating}</strong></td>
+                        <td>
+                          <div style={{ display: 'flex', gap: '8px' }}>
+                            <button onClick={() => handleEditSpotClick(spot)} className="action-btn-edit" style={{ background: '#e23744', color: '#fff', border: 'none', padding: '6px 12px', borderRadius: '6px', fontSize: '12px', fontWeight: '700', cursor: 'pointer' }}>Edit</button>
+                            <button onClick={() => handleDeleteSpotClick(spot.id, spot.name)} className="action-btn-delete" style={{ padding: '6px 12px', fontSize: '12px' }}>Delete</button>
+                          </div>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+
           {/* 5. USER REGISTRY DIRECTORY */}
           {activeSection === 'users' && (
             <div className="admin-table-panel animated-fade-in">
@@ -1127,7 +1453,7 @@ const AdminPanel = () => {
                           </span>
                         </td>
                         <td>
-                          {usr.id !== 'admin' && usr.email !== 'admin@zomato.com' ? (
+                          {usr.id !== 'admin' && usr.email !== 'admin@gmail.com' ? (
                             <button onClick={() => handleDeleteUser(usr.id, usr.name, usr.email)} className="action-btn-delete">
                               Delete
                             </button>
@@ -1298,6 +1624,100 @@ const AdminPanel = () => {
                         onChange={(e) => handleBackgroundChange('admin', e.target.value)}
                         placeholder="https://..."
                       />
+                    </div>
+
+                  </div>
+                </div>
+
+                {/* Credentials & Gateway configurations */}
+                <div className="settings-card-sub" style={{ background: 'rgba(0,0,0,0.15)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', marginBottom: '30px' }}>
+                  <h4 style={{ color: '#e23744', marginTop: 0, marginBottom: '15px', fontSize: '14px', textTransform: 'uppercase' }}>📡 SMTP Email & Twilio SMS Gateways (OTP Delivery Configuration)</h4>
+                  <p style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.6)', marginTop: '-10px', marginBottom: '20px' }}>
+                    Configure these settings so that verification OTPs are sent to registering and logging-in users' own email addresses and mobile numbers. If empty, the system defaults to Ethereal sandbox test mode.
+                  </p>
+                  
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+                    
+                    {/* SMTP Config */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                      <h5 style={{ margin: '0 0 5px 0', color: 'rgba(255,255,255,0.85)', fontSize: '13px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '5px' }}>📧 SMTP Server (Email)</h5>
+                      <div className="form-field-group">
+                        <label>SMTP Server Host</label>
+                        <input 
+                          type="text" 
+                          value={settingsForm.smtpHost || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, smtpHost: e.target.value }))}
+                          placeholder="e.g. smtp.gmail.com"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>SMTP Port</label>
+                        <input 
+                          type="number" 
+                          value={settingsForm.smtpPort || 587}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, smtpPort: Number(e.target.value) }))}
+                          placeholder="e.g. 587 or 465"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>SMTP Username (Email)</label>
+                        <input 
+                          type="text" 
+                          value={settingsForm.smtpUser || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, smtpUser: e.target.value }))}
+                          placeholder="e.g. support@yourdomain.com"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>SMTP Password / App Key</label>
+                        <input 
+                          type="password" 
+                          value={settingsForm.smtpPass || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, smtpPass: e.target.value }))}
+                          placeholder="••••••••"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>SMTP Sender Display Name</label>
+                        <input 
+                          type="text" 
+                          value={settingsForm.smtpFromName || 'zomato Support'}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, smtpFromName: e.target.value }))}
+                          placeholder="e.g. zomato Support"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Twilio Config */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
+                      <h5 style={{ margin: '0 0 5px 0', color: 'rgba(255,255,255,0.85)', fontSize: '13px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '5px' }}>📱 Twilio Gateway (SMS)</h5>
+                      <div className="form-field-group">
+                        <label>Twilio Account SID</label>
+                        <input 
+                          type="text" 
+                          value={settingsForm.twilioAccountSid || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, twilioAccountSid: e.target.value }))}
+                          placeholder="ACxxxxxxxxxxxxxxxxxxxxxxxx"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>Twilio Auth Token</label>
+                        <input 
+                          type="password" 
+                          value={settingsForm.twilioAuthToken || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, twilioAuthToken: e.target.value }))}
+                          placeholder="••••••••"
+                        />
+                      </div>
+                      <div className="form-field-group">
+                        <label>Twilio Sender Phone Number</label>
+                        <input 
+                          type="text" 
+                          value={settingsForm.twilioFromNumber || ''}
+                          onChange={(e) => setSettingsForm(prev => ({ ...prev, twilioFromNumber: e.target.value }))}
+                          placeholder="+1xxxxxxxxxx"
+                        />
+                      </div>
                     </div>
 
                   </div>

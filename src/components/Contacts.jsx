@@ -121,7 +121,7 @@ const Contacts = () => {
 
         {/* Support info side */}
         <div className="company-telemetry-side">
-          <div className="corporate-badge">👔 ZOMATO SUPPORT DESK</div>
+          <div className="corporate-badge">👔 LIKE YOUR FOOD SUPPORT DESK</div>
           <h1 className="corporate-title">Get in Touch with our Support Desk</h1>
           <p className="corporate-desc">
             Have questions regarding checkouts, kitchen status, corporate catering bookings, or allergen guidelines? Drop us a ticket, and our satisfaction panel will reach out.
@@ -156,7 +156,7 @@ const Contacts = () => {
               <span className="gateway-icon">✉️</span>
               <div className="gateway-info">
                 <span>CATERING OFFICE</span>
-                <strong>catering@zomato.com</strong>
+                <strong>catering@likeyourfood.com</strong>
               </div>
             </div>
           </div>

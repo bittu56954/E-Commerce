@@ -1,149 +1,176 @@
-/* Shop Manager Admin Panel - Like Your Shop */
+/* ====================================================
+   🔴 ZOMATO PREMIUM STYLING (ADMIN DASHBOARD)
+   ==================================================== */
 
 .admin-panel-system {
   display: flex;
   min-height: 100vh;
   width: 100%;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  color: var(--text-color-override, #ffffff);
-  box-sizing: border-box;
+  background-color: var(--bg-color-override);
+  color: var(--text-color-override);
 }
 
+/* 1. FIXED MODERN SIDEBAR */
+.admin-sidebar-node {
+  width: 260px;
+  background-color: var(--bg-sidebar-override) !important;
+  border-right: 1.5px solid var(--border-color-override) !important;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  box-shadow: none !important;
+}
+
+/* 2. MAIN VIEWPORT LAYOUT */
 .admin-viewport-main {
-  flex: 1;
-  padding: 40px;
-  max-width: 1280px;
-  margin: 0 auto;
-  z-index: 1;
+  flex-grow: 1;
+  margin-left: 260px;
+  padding: 40px 48px;
+  min-height: 100vh;
+  max-width: 1200px;
 }
 
 .admin-top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
-  padding-bottom: 20px;
+  border-bottom: 1.5px solid var(--border-color-override);
+  padding-bottom: 24px;
   margin-bottom: 30px;
 }
 
 .admin-top-header h1 {
   font-size: 28px;
   font-weight: 800;
-  margin: 0 0 5px 0;
-  letter-spacing: -0.5px;
-  color: #e23744;
+  margin: 0 0 4px 0;
+  color: var(--primary-color);
 }
 
 .admin-top-header p {
   margin: 0;
   font-size: 14px;
-  color: var(--text-muted-override, #a4bdf2);
+  color: var(--text-muted-override);
 }
 
 .root-indicator {
-  background-color: rgba(226, 55, 68, 0.15);
-  color: #e23744;
-  padding: 8px 16px;
-  border-radius: 20px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-sm);
   font-size: 12px;
   font-weight: 700;
-  border: 1px solid rgba(226, 55, 68, 0.3);
-  letter-spacing: 1px;
+  border: 1.5px solid rgba(255, 63, 86, 0.25);
+  letter-spacing: 0.5px;
 }
 
-/* Stats Ribbon */
+/* Stats analytics grid */
 .admin-stats-ribbon {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
   margin-bottom: 40px;
 }
 
 .admin-metric-card {
-  background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
-  border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
-  border-radius: 16px;
-  padding: 20px;
+  background-color: var(--bg-card-override);
+  border: 1px solid var(--border-color-override);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
   display: flex;
   align-items: center;
   gap: 20px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-spring);
 }
 
 .admin-metric-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(226, 55, 68, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .card-badge {
-  font-size: 32px;
+  font-size: 28px;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: var(--border-radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 52px;
+  height: 52px;
 }
 
 .admin-metric-card div p {
-  margin: 0 0 5px 0;
+  margin: 0 0 4px 0;
   font-size: 13px;
-  color: var(--text-muted-override, #cccccc);
+  color: var(--text-muted-override);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .admin-metric-card div strong {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
+  font-family: var(--font-title);
+  color: var(--text-color-override);
 }
 
-/* Tabs */
+/* Tabs list selectors */
 .admin-menu-tabs {
   display: flex;
-  gap: 15px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
-  padding-bottom: 15px;
+  gap: 12px;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid var(--border-color-override);
+  padding-bottom: 16px;
+  overflow-x: auto;
 }
 
 .admin-tab-btn {
   background: transparent;
   border: none;
-  color: var(--text-color-override, #ffffff);
-  opacity: 0.6;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 10px 20px;
+  color: var(--text-muted-override);
+  font-size: 14.5px;
+  font-weight: 600;
+  padding: 10px 18px;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-spring);
+  white-space: nowrap;
 }
 
 .admin-tab-btn:hover {
-  opacity: 0.9;
-  background: rgba(255, 255, 255, 0.05);
+  background-color: var(--table-tr-hover);
+  color: var(--text-color-override);
 }
 
 .admin-tab-btn.is-active {
-  opacity: 1;
-  background: rgba(226, 55, 68, 0.15);
-  color: #e23744;
-  border: 1px solid rgba(226, 55, 68, 0.3);
+  background-color: var(--primary-light) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(255, 63, 86, 0.2) !important;
 }
 
-/* Table styles */
+/* Table layout panel wrapper */
 .admin-table-panel {
-  background: var(--bg-card-override, rgba(20, 20, 50, 0.55));
-  border: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
-  border-radius: 16px;
-  padding: 25px;
+  background-color: var(--bg-card-override);
+  border: 1px solid var(--border-color-override);
+  border-radius: var(--border-radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
 }
 
 .admin-table-panel h3 {
   margin: 0 0 20px 0;
-  font-size: 20px;
-  font-weight: 800;
-  color: #e23744;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color-override);
 }
 
 .admin-table-wrapper {
@@ -154,277 +181,180 @@
 .admin-data-table {
   width: 100%;
   border-collapse: collapse;
-  text-align: left;
 }
 
 .admin-data-table th {
-  background: rgba(226, 55, 68, 0.08);
-  color: #e23744;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 15px;
-  border-bottom: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.1));
+  background-color: var(--table-tr-hover);
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 14px 16px;
+  border-bottom: 1.5px solid var(--border-color-override);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .admin-data-table td {
-  padding: 15px;
-  border-bottom: 1px solid var(--border-color-override, rgba(255, 255, 255, 0.05));
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color-override);
   font-size: 14px;
-  color: var(--text-color-override, #ffffff);
+  color: var(--text-color-override);
 }
 
 .admin-data-table tr:hover {
-  background: var(--table-tr-hover, rgba(255, 255, 255, 0.02));
+  background-color: var(--table-tr-hover);
 }
 
 .admin-data-table td small {
-  color: var(--text-muted-override, #94a3b8);
+  color: var(--text-muted-override);
 }
 
 .table-actions {
   display: flex;
-  gap: 10px;
+  gap: 8px;
 }
 
+/* Deletion buttons and edits styles */
 .action-btn-delete {
   padding: 6px 12px;
-  background-color: rgba(235, 77, 75, 0.15);
-  color: #eb4d4b;
-  border: 1px solid rgba(235, 77, 75, 0.3);
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
   font-size: 12px;
   font-weight: 700;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: var(--transition-spring);
 }
 
 .action-btn-delete:hover {
-  background-color: rgba(235, 77, 75, 0.3);
+  background-color: #ef4444 !important;
+  color: #ffffff !important;
 }
 
-/* Animations */
-.animated-fade-in {
-  animation: fadeIn 0.4s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .admin-top-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-  
-  .admin-menu-tabs {
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .admin-tab-btn {
-    width: 100%;
-    text-align: left;
-  }
-}
-
-/* Add Product Button */
-.add-product-modal-btn {
-  background: linear-gradient(135deg, #e23744 0%, #cb202d 100%);
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
+.action-btn-edit {
+  padding: 6px 12px;
+  background-color: var(--primary-light) !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(255, 63, 86, 0.25) !important;
+  font-size: 12px;
   font-weight: 700;
-  font-size: 13.5px;
+  border-radius: 6px;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(226, 55, 68, 0.2);
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: var(--transition-spring);
 }
 
-.add-product-modal-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(226, 55, 68, 0.35);
+.action-btn-edit:hover {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
 }
 
-/* Product form container card inside inventory management */
-.product-form-backdrop {
-  margin-bottom: 30px;
-  animation: slideDown 0.3s ease-out forwards;
-}
-
-.product-form-card {
-  background: rgba(0, 0, 0, 0.20);
-  border: 1px dashed rgba(226, 55, 68, 0.3);
-  padding: 25px;
-  border-radius: 16px;
-}
-
-html.dark-mode .product-form-card {
-  background: rgba(255, 255, 255, 0.02);
-}
-
-.product-form-card h4 {
-  margin: 0 0 20px 0;
-  font-size: 16px;
-  font-weight: 800;
-  color: #e23744;
-}
-
-.form-group-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-bottom: 15px;
-}
-
-.form-field-group {
+/* Order Details collapsibles in Admin panel */
+.admin-order-expanded-card {
+  background-color: var(--bg-color-override);
+  border: 1.5px solid var(--border-color-override);
+  border-radius: var(--border-radius-sm);
+  padding: 16px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-bottom: 15px;
-}
-
-.form-field-group label {
-  font-size: 11px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.5px;
-}
-
-html.light-mode .form-field-group label {
-  color: #57606f;
-}
-
-.form-field-group input,
-.form-field-group select,
-.form-field-group textarea {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1.5px solid rgba(255, 255, 255, 0.1);
-  padding: 12px 16px;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 13.5px;
-  outline: none;
-  font-family: inherit;
-  box-sizing: border-box;
-}
-
-html.light-mode .form-field-group input,
-html.light-mode .form-field-group select,
-html.light-mode .form-field-group textarea {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1.5px solid #e2e8f0;
-  color: #2d3436;
-}
-
-.form-field-group input:focus,
-.form-field-group select:focus,
-.form-field-group textarea:focus {
-  border-color: #e23744;
-  box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.15);
-}
-
-.form-action-buttons {
-  display: flex;
-  justify-content: flex-end;
   gap: 12px;
-  margin-top: 20px;
 }
 
-.form-cancel-btn {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 700;
+/* Operations log streams */
+.deep-infrastructure-logs-block {
+  padding: 20px;
+  border-radius: var(--border-radius-sm);
+  font-family: monospace;
   font-size: 13px;
-  cursor: pointer;
+  background-color: var(--bg-sidebar-override) !important;
+  border-color: var(--border-color-override) !important;
 }
 
-html.light-mode .form-cancel-btn {
-  border: 1px solid #cbd5e1;
-  color: #57606f;
+/* Stats visual graphs bars */
+.stats-chart-visual-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  height: 200px;
+  border-bottom: 2px solid var(--border-color-override);
+  padding-bottom: 10px;
+  margin-top: 30px;
 }
 
-.form-cancel-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
+.chart-visual-bar-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+  justify-content: flex-end;
 }
 
-html.light-mode .form-cancel-btn:hover {
-  background: #f1f5f9;
+.chart-bar-fill {
+  width: 100%;
+  max-width: 44px;
+  background: var(--primary-gradient);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.6s ease-out;
+  box-shadow: 0 2px 8px rgba(255, 63, 86, 0.2);
 }
 
-.form-submit-btn {
-  background: #e23744;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 13px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(226, 55, 68, 0.25);
-  transition: all 0.2s ease;
+.chart-bar-lbl {
+  font-size: 11px;
+  color: var(--text-muted-override);
+  font-weight: 600;
 }
 
-.form-submit-btn:hover {
-  background: #cb202d;
-  box-shadow: 0 6px 18px rgba(226, 55, 68, 0.35);
+/* Forms layout and config panels inside admin panel */
+.admin-form-group-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+.admin-form-control-node {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-form-control-node label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-color-override);
+}
+
+.admin-form-control-node input,
+.admin-form-control-node select,
+.admin-form-control-node textarea {
+  width: 100%;
+}
+
+/* Responsiveness overrides */
+@media (max-width: 992px) {
+  .admin-sidebar-node {
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
-  to {
-    opacity: 1;
-    max-height: 1000px;
+  
+  .admin-sidebar-node.mobile-open {
+    transform: translateX(0);
+  }
+  
+  .admin-viewport-main {
+    margin-left: 0;
+    padding: 30px 20px;
   }
 }
 
-/* Operational Telemetry log lines styling */
-.log-line.warn {
-  color: #e23744;
+@media (max-width: 768px) {
+  .admin-stats-ribbon {
+    grid-template-columns: 1fr;
+  }
+  .admin-form-group-grid {
+    grid-template-columns: 1fr;
+  }
 }
-.log-line.info {
-  color: #00ffcc;
-}
-.log-line.error {
-  color: #eb4d4b;
-}
-
-/* Metric Subcards grid */
-.metric-subcard {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.metric-subcard:hover {
-  transform: translateY(-2px);
-  background-color: rgba(255, 255, 255, 0.04) !important;
-}
-
-/* Horizontal charts bar-fill animations */
-.chart-bar-row:hover .bar-fill {
-  filter: brightness(1.2);
-}
-
-.disabled-btn {
-  opacity: 0.5;
-  cursor: not-allowed !important;
-  background: #636e72 !important;
-  box-shadow: none !important;
-}
-

@@ -37,11 +37,22 @@ const UserSchema = new mongoose.Schema({
   id: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  phone: { type: String, required: true },
-  currentLocation: { type: String, required: true },
+  phone: { type: String, default: "" },
+  currentLocation: { type: String, default: "" },
   password: { type: String, required: true },
   isAdmin: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
+  gender: { type: String, default: "" },
+  parentName: { type: String, default: "" },
+  college: { type: String, default: "" },
+  course: { type: String, default: "" },
+  regNo: { type: String, default: "" },
+  year: { type: String, default: "" },
+  paymentPreference: { type: String, default: "COD" },
+  bankAccountHolder: { type: String, default: "" },
+  bankName: { type: String, default: "" },
+  bankAccountNumber: { type: String, default: "" },
+  bankIfscCode: { type: String, default: "" },
   
   // Security properties
   isVerified: { type: Boolean, default: false },
@@ -105,8 +116,19 @@ const CategorySchema = new mongoose.Schema({
   icon: { type: String, default: '🍽️' }
 });
 
+const SpotSchema = new mongoose.Schema({
+  id: { type: String, required: true, unique: true },
+  type: { type: String, required: true }, // 'dining' or 'nightlife'
+  name: { type: String, required: true },
+  cuisine: { type: String, required: true },
+  location: { type: String, required: true },
+  rating: { type: String, default: "4.0" },
+  image: { type: String, required: true },
+  price: { type: String, required: true }
+});
+
 const SettingsSchema = new mongoose.Schema({
-  storeName: { type: String, default: 'zomato' },
+  storeName: { type: String, default: 'Like Your Food' },
   currencySymbol: { type: String, default: '₹' },
   gstPercentage: { type: Number, default: 5 },
   storeStatus: { type: String, default: 'Open' },
@@ -120,7 +142,15 @@ const SettingsSchema = new mongoose.Schema({
     login: String,
     dashboard: String,
     admin: String
-  }
+  },
+  smtpHost: { type: String, default: "" },
+  smtpPort: { type: Number, default: 587 },
+  smtpUser: { type: String, default: "" },
+  smtpPass: { type: String, default: "" },
+  smtpFromName: { type: String, default: "Like Your Food Support" },
+  twilioAccountSid: { type: String, default: "" },
+  twilioAuthToken: { type: String, default: "" },
+  twilioFromNumber: { type: String, default: "" }
 });
 
 const ContactSchema = new mongoose.Schema({
@@ -139,6 +169,21 @@ const MongoOrder = mongoose.models.Order || mongoose.model('Order', OrderSchema)
 const MongoCategory = mongoose.models.Category || mongoose.model('Category', CategorySchema);
 const MongoSettings = mongoose.models.Settings || mongoose.model('Settings', SettingsSchema);
 const MongoContact = mongoose.models.Contact || mongoose.model('Contact', ContactSchema);
+const MongoSpot = mongoose.models.Spot || mongoose.model('Spot', SpotSchema);
+
+const PendingUserSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
+  phone: { type: String, required: true },
+  currentLocation: { type: String, required: true },
+  password: { type: String, required: true },
+  otpEmailCode: { type: String, required: true },
+  otpExpires: { type: Date, required: true },
+  createdAt: { type: Date, default: Date.now }
+});
+PendingUserSchema.index({ createdAt: 1 }, { expireAfterSeconds: 300 });
+
+const MongoPendingUser = mongoose.models.PendingUser || mongoose.model('PendingUser', PendingUserSchema);
 
 export const getMongoConnectionStatus = () => {
   return mongoose.connection.readyState === 1; // 1 means connected
@@ -177,6 +222,7 @@ async function syncLocalDataToMongo() {
     await syncCollection(MongoSettings, 'settings.json', 'Settings');
     await syncCollection(MongoOrder, 'orders.json', 'Order');
     await syncCollection(MongoContact, 'contacts.json', 'Contact');
+    await syncCollection(MongoSpot, 'spots.json', 'Spot');
 
     // Dynamically check if AuditLog model is registered
     const MongoAuditLog = mongoose.models.AuditLog;
@@ -194,5 +240,7 @@ export {
   MongoOrder,
   MongoCategory,
   MongoSettings,
-  MongoContact
+  MongoContact,
+  MongoSpot,
+  MongoPendingUser
 };

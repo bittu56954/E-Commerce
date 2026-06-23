@@ -11,6 +11,7 @@ import productRouter from './Routers/productRouter.js';
 import orderRouter from './Routers/orderRouter.js';
 import categoryRouter from './Routers/categoryRouter.js';
 import settingsRouter from './Routers/settingsRouter.js';
+import spotRouter from './Routers/spotRouter.js';
 
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
@@ -76,6 +77,7 @@ app.use('/api/products', productRouter);
 app.use('/api/orders', orderRouter);
 app.use('/api/categories', categoryRouter);
 app.use('/api/settings', settingsRouter);
+app.use('/api/spots', spotRouter);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

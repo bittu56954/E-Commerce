@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Top Header Row: Zomato text and Country/Language selectors */}
         <div className="lys-footer-top-row">
           <div className="lys-footer-logo-block">
-            <span className="lys-footer-logo-text">zomato</span>
+            <span className="lys-footer-logo-text" style={{ textTransform: 'lowercase' }}>Like Your Food</span>
           </div>
           
           <div className="lys-footer-selectors">
@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="lys-footer-grid">
           
           <div className="lys-footer-col">
-            <h4>ABOUT ZOMATO</h4>
+            <h4>ABOUT LIKE YOUR FOOD</h4>
             <ul>
               <li><Link to="/about">Who We Are</Link></li>
               <li><a href="#blog">Blog</a></li>
@@ -41,9 +41,9 @@ const Footer = () => {
           </div>
 
           <div className="lys-footer-col">
-            <h4>ZOMAVERSE</h4>
+            <h4>FOODVERSE</h4>
             <ul>
-              <li><Link to="/">zomato</Link></li>
+              <li><Link to="/">Like Your Food</Link></li>
               <li><a href="#blinkit">Blinkit</a></li>
               <li><a href="#feeding-india">Feeding India</a></li>
               <li><a href="#hyperpure">Hyperpure</a></li>
@@ -91,7 +91,7 @@ const Footer = () => {
         {/* Bottom copyright notice */}
         <div className="lys-footer-bottom">
           <p>
-            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2026-2027 © Zomato™ Ltd. All rights reserved. | Created with ❤️ by BITTU KUMAR
+            By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2026-2027 © Like Your Food™ Ltd. All rights reserved. | Created with ❤️ by BITTU KUMAR
           </p>
         </div>
 

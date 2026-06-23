@@ -1,5 +1,5 @@
 {
-  "storeName": "zomato",
+  "storeName": "Like Your Food",
   "currencySymbol": "₹",
   "gstPercentage": 5,
   "storeStatus": "Open",
@@ -15,5 +15,10 @@
     "admin": "https://images.unsplash.com/photo-1490815685287-c24a72d74021?q=80&w=1600"
   },
   "_id": "6a376f35614924f1b8f15e36",
-  "__v": 0
+  "__v": 0,
+  "smtpHost": "smtp.ethereal.email",
+  "smtpPort": 587,
+  "smtpUser": "r6hddrrwnzw3awte@ethereal.email",
+  "smtpPass": "BJ2S8z23BMAXj5qWdg",
+  "smtpFromName": "Like Your Food Support"
 }

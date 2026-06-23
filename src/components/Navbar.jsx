@@ -9,7 +9,7 @@ const Navbar = () => {
   const [user, setUser] = useState(null);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const [cartCount, setCartCount] = useState(0);
-  const [storeName, setStoreName] = useState("zomato");
+  const [storeName, setStoreName] = useState("Like Your Food");
   const [isScrolled, setIsScrolled] = useState(false);
   
   // Custom states for Zomato location bar
@@ -134,7 +134,7 @@ const Navbar = () => {
         
         {/* Brand Logo styled in new Zomato branding */}
         <div className="lys-logo-block" onClick={() => navigate('/')}>
-          <span className="lys-logo-text">zomato</span>
+          <span className="lys-logo-text" style={{ textTransform: 'lowercase' }}>{storeName}</span>
         </div>
 
         {/* Dynamic Search Bar (dual location/search widget) */}

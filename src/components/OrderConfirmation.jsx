@@ -9,7 +9,7 @@ const OrderConfirmation = () => {
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [settings, setSettings] = useState({
-    storeName: 'zomato',
+    storeName: 'Like Your Food',
     currencySymbol: '₹',
     gstPercentage: 5
   });
@@ -79,7 +79,7 @@ const OrderConfirmation = () => {
     );
   }
 
-  const { items, totalAmount, customerDetails, paymentMethod, paymentStatus, paymentDetails, createdAt, id } = order;
+  const { items, totalAmount, customerDetails = {}, paymentMethod, paymentStatus, paymentDetails, createdAt, id } = order;
 
   // Calculations for billing details
   const currency = settings.currencySymbol || '₹';
@@ -147,11 +147,11 @@ const OrderConfirmation = () => {
             <h2 className="invoice-brand-title">{settings.storeName}</h2>
             <p>Premium Culinary Delicacies & Daily Bites</p>
             <p>Bhilai, Chhattisgarh, Kurud Road, 490001</p>
-            <p>Support: support@zomato.com</p>
+            <p>Support: support@likeyourfood.com</p>
           </div>
           <div className="invoice-meta-details">
             <h1>TAX INVOICE</h1>
-            <p><strong>Invoice No:</strong> ZOMATO-{id.slice(0, 8).toUpperCase()}</p>
+            <p><strong>Invoice No:</strong> LYF-{id.slice(0, 8).toUpperCase()}</p>
             <p><strong>Order ID:</strong> {id}</p>
             <p><strong>Date:</strong> {new Date(createdAt).toLocaleString()}</p>
             <p><strong>Status:</strong> {paymentStatus ? (paymentStatus === 'Completed' ? 'PAID' : paymentStatus.toUpperCase()) : 'PENDING'}</p>
@@ -163,10 +163,10 @@ const OrderConfirmation = () => {
         <div className="invoice-billing-row">
           <div className="billing-to">
             <h3>Billed To:</h3>
-            <p><strong>{customerDetails.name}</strong></p>
-            <p><strong>Phone:</strong> {customerDetails.phone}</p>
+            <p><strong>{customerDetails.name || 'Guest'}</strong></p>
+            <p><strong>Phone:</strong> {customerDetails.phone || 'N/A'}</p>
             <p><strong>Delivery Address:</strong></p>
-            <p className="address-text">{customerDetails.address}</p>
+            <p className="address-text">{customerDetails.address || 'N/A'}</p>
             {customerDetails.notes && (
               <p className="driver-notes"><strong>Instructions:</strong> {customerDetails.notes}</p>
             )}
@@ -224,7 +224,7 @@ const OrderConfirmation = () => {
             <p>1. This is a computer-generated tax invoice and requires no physical signature.</p>
             <p>2. The food products are packed freshly under high hygiene standards.</p>
             <p>3. Cancellations are only permitted until the order status transitions to Preparing.</p>
-            <p>Thank you for placing your culinary trust in <strong>zomato</strong>! ❤️</p>
+            <p>Thank you for placing your culinary trust in <strong>Like Your Food</strong>! ❤️</p>
           </div>
 
           <div className="invoice-totals-block">

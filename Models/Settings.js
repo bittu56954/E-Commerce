@@ -8,7 +8,7 @@ if (!fs.existsSync(DATA_DIR)) {
 }
 
 const DEFAULT_SETTINGS = {
-  storeName: "zomato",
+  storeName: "Like Your Food",
   currencySymbol: "₹",
   gstPercentage: 5,
   storeStatus: "Open",
@@ -22,7 +22,15 @@ const DEFAULT_SETTINGS = {
     login: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1600",
     dashboard: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600",
     admin: "https://images.unsplash.com/photo-1490815685287-c24a72d74021?q=80&w=1600"
-  }
+  },
+  smtpHost: "",
+  smtpPort: 587,
+  smtpUser: "",
+  smtpPass: "",
+  smtpFromName: "Like Your Food Support",
+  twilioAccountSid: "",
+  twilioAuthToken: "",
+  twilioFromNumber: ""
 };
 
 class SettingsModel {
@@ -56,8 +64,15 @@ class SettingsModel {
   async get() {
     if (getMongoConnectionStatus()) {
       try {
-        const found = await MongoSettings.findOne({});
-        if (found) return found.toObject();
+        let found = await MongoSettings.findOne({});
+        if (found) {
+          if (found.storeName === 'zomato' || found.storeName === 'Zomato') {
+            found.storeName = 'Like Your Food';
+            found.smtpFromName = 'Like Your Food Support';
+            await found.save();
+          }
+          return found.toObject();
+        }
         // If not found in DB but connected, seed it!
         const created = await MongoSettings.create(DEFAULT_SETTINGS);
         return created.toObject();

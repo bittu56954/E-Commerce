@@ -8,8 +8,11 @@ import Contacts from "./components/Contacts";
 import Navbar from "./components/Navbar";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import ForgotPassword from "./components/ForgotPassword";
 import Footer from "./components/Footer";
 import AdminPanel from "./components/AdminPanel";
+import AdminLogin from "./components/AdminLogin";
+import AdminRegister from "./components/AdminRegister";
 import OrderConfirmation from "./components/OrderConfirmation";
 import Toast from "./components/Toast";
 import DeveloperBadge from "./components/DeveloperBadge";
@@ -44,6 +47,14 @@ const router = createBrowserRouter([
     element: <PageLayout showFooter={false}><AdminPanel /></PageLayout>
   },
   {
+    path: "/admin/login",
+    element: <PageLayout showFooter={false}><AdminLogin /></PageLayout>
+  },
+  {
+    path: "/admin/register",
+    element: <PageLayout showFooter={false}><AdminRegister /></PageLayout>
+  },
+  {
     path: "/contact",
     element: <PageLayout showFooter={true}><Contacts /></PageLayout>
   },
@@ -54,6 +65,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <PageLayout showFooter={false}><Login /></PageLayout>
+  },
+  {
+    path: "/forgot-password",
+    element: <PageLayout showFooter={false}><ForgotPassword /></PageLayout>
   },
   {
     path: "/order-confirmation/:orderId",

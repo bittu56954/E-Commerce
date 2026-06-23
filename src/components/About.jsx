@@ -11,7 +11,7 @@ const About = () => {
       <section className="ult-about-hero">
         <div className="ult-container ult-hero-content">
           <span className="ult-badge-tag">Crafting Culinary Magic</span>
-          <h1>Welcome to "zomato" — Where Flavor Meets Speed</h1>
+          <h1>Welcome to "Like Your Food" — Where Flavor Meets Speed</h1>
           <p className="hero-subtitle">
             We operate at the intersection of artisanal baking and high-speed delivery. 
             Our mission is to construct the ultimate pizza and food items storefront in India, 
@@ -210,7 +210,7 @@ const About = () => {
               <p className="leader-bio">
                 Bittu Kumar is a Software Engineer and technical founder pioneering next-generation online e-commerce 
                 frameworks, database persistence configurations, and responsive UI structures. Deeply passionate about 
-                the intersection of technology and gourmet culinary execution, he established <strong>zomato</strong> 
+                the intersection of technology and gourmet culinary execution, he established <strong>Like Your Food</strong> 
                 to merge the precision of clean coding with stone-oven sourdough baking.
               </p>
               <p className="leader-bio">
@@ -317,7 +317,7 @@ const About = () => {
               <div className="u-timeline-panel">
                 <h4>Storefront Digital Release</h4>
                 <p>
-                  Released "zomato" digital platform featuring custom setting APIs, dynamic category updates, telemetry dashboard monitoring, and 30-minute delivery routing systems.
+                  Released "Like Your Food" digital platform featuring custom setting APIs, dynamic category updates, telemetry dashboard monitoring, and 30-minute delivery routing systems.
                 </p>
               </div>
             </div>

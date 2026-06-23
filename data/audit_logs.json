@@ -270,5 +270,677 @@
     "email": "browsertest123@zomato.com",
     "ip": "::1",
     "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782039285027-9zkxn",
+    "timestamp": "2026-06-21T10:54:45.027Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "vk6375389@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782040600406-k823j",
+    "timestamp": "2026-06-21T11:16:40.406Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110krh@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782041876143-sea79",
+    "timestamp": "2026-06-21T11:37:56.143Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu8031112@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782041913723-fopj2",
+    "timestamp": "2026-06-21T11:38:33.723Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "krbittu8031112@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1782042348809-1js2y",
+    "timestamp": "2026-06-21T11:45:48.809Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782043065206-j5fl2",
+    "timestamp": "2026-06-21T11:57:45.206Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782044010049-cqyqd",
+    "timestamp": "2026-06-21T12:13:30.049Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "testuser_1782044005465@zomato.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782044010859-98xcc",
+    "timestamp": "2026-06-21T12:13:30.859Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "testuser_1782044005465@zomato.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1782057518388-nhbbl",
+    "timestamp": "2026-06-21T15:58:38.388Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782057530173-c2r5e",
+    "timestamp": "2026-06-21T15:58:50.173Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 2/5."
+  },
+  {
+    "id": "log-1782057541388-ktqwt",
+    "timestamp": "2026-06-21T15:59:01.388Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 3/5."
+  },
+  {
+    "id": "log-1782101866544-7rlp3",
+    "timestamp": "2026-06-22T04:17:46.544Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "vk375389@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782101956554-tytjw",
+    "timestamp": "2026-06-22T04:19:16.554Z",
+    "action": "OTP_RESENT",
+    "email": "vk375389@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new OTP pair."
+  },
+  {
+    "id": "log-1782102932391-tzv51",
+    "timestamp": "2026-06-22T04:35:32.391Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "tester_1782102928388@example.com",
+    "ip": "::1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782102932422-38c9c",
+    "timestamp": "2026-06-22T04:35:32.422Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "tester_1782102928388@example.com",
+    "ip": "::1",
+    "details": "Account email/phone verified and activated."
+  },
+  {
+    "id": "log-1782102935923-v0uqu",
+    "timestamp": "2026-06-22T04:35:35.923Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "tester_1782102928388@example.com",
+    "ip": "::1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782102935940-r06js",
+    "timestamp": "2026-06-22T04:35:35.940Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "tester_1782102928388@example.com",
+    "ip": "::1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1782103921319-j4rlw",
+    "timestamp": "2026-06-22T04:52:01.320Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782104117746-17ptw",
+    "timestamp": "2026-06-22T04:55:17.746Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1782105777164-nggzy",
+    "timestamp": "2026-06-22T05:22:57.164Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782105951211-hd3ck",
+    "timestamp": "2026-06-22T05:25:51.211Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@zomato.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User verified OTP and logged in successfully."
+  },
+  {
+    "id": "log-1782107351129-h8ulu",
+    "timestamp": "2026-06-22T05:49:11.129Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 4/5."
+  },
+  {
+    "id": "log-1782107476719-871nz",
+    "timestamp": "2026-06-22T05:51:16.719Z",
+    "action": "USER_LOGIN_PENDING",
+    "email": "vk375389@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. OTP codes issued."
+  },
+  {
+    "id": "log-1782107856938-naa5u",
+    "timestamp": "2026-06-22T05:57:36.938Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782107972557-rsliu",
+    "timestamp": "2026-06-22T05:59:32.557Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782121009190-5d7eo",
+    "timestamp": "2026-06-22T09:36:49.190Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782121698559-erpgt",
+    "timestamp": "2026-06-22T09:48:18.559Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting dual-OTP verification."
+  },
+  {
+    "id": "log-1782122674544-t6t3j",
+    "timestamp": "2026-06-22T10:04:34.544Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782123599157-92q29",
+    "timestamp": "2026-06-22T10:19:59.157Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782123719084-ts619",
+    "timestamp": "2026-06-22T10:21:59.084Z",
+    "action": "OTP_RESENT",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782125167819-eky3m",
+    "timestamp": "2026-06-22T10:46:07.819Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "customertest2026@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782125967349-l93jw",
+    "timestamp": "2026-06-22T10:59:27.349Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782126313619-564ke",
+    "timestamp": "2026-06-22T11:05:13.619Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782126589320-wqfp6",
+    "timestamp": "2026-06-22T11:09:49.320Z",
+    "action": "PASSWORD_RESET_REQUESTED",
+    "email": "krbittu803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Password reset OTP code requested."
+  },
+  {
+    "id": "log-1782126622457-ud9l1",
+    "timestamp": "2026-06-22T11:10:22.457Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 2/5."
+  },
+  {
+    "id": "log-1782126845454-8caqe",
+    "timestamp": "2026-06-22T11:14:05.454Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782127066177-emwf6",
+    "timestamp": "2026-06-22T11:17:46.177Z",
+    "action": "OTP_RESENT",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782127667091-6ls1t",
+    "timestamp": "2026-06-22T11:27:47.091Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782127768776-f4y0c",
+    "timestamp": "2026-06-22T11:29:28.776Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krajeet803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782127866121-ryobe",
+    "timestamp": "2026-06-22T11:31:06.121Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782127867410-bj0bs",
+    "timestamp": "2026-06-22T11:31:07.410Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782127869719-s9rfh",
+    "timestamp": "2026-06-22T11:31:09.719Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782127870142-lrhxr",
+    "timestamp": "2026-06-22T11:31:10.142Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782130533478-x604v",
+    "timestamp": "2026-06-22T12:15:33.478Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782130611793-cod6e",
+    "timestamp": "2026-06-22T12:16:51.793Z",
+    "action": "OTP_RESENT",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782130679802-hkovp",
+    "timestamp": "2026-06-22T12:17:59.802Z",
+    "action": "OTP_RESENT",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782130767794-qmtvu",
+    "timestamp": "2026-06-22T12:19:27.794Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782143594532-yj5my",
+    "timestamp": "2026-06-22T15:53:14.532Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782145188542-dfi6d",
+    "timestamp": "2026-06-22T16:19:48.542Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782146020248-158k8",
+    "timestamp": "2026-06-22T16:33:40.248Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782146927091-ru64a",
+    "timestamp": "2026-06-22T16:48:47.091Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782147001849-yzy2l",
+    "timestamp": "2026-06-22T16:50:01.849Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782147010512-xxzps",
+    "timestamp": "2026-06-22T16:50:10.512Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782147740442-stq8v",
+    "timestamp": "2026-06-22T17:02:20.442Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782147845516-30eno",
+    "timestamp": "2026-06-22T17:04:05.516Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782147863301-xpu1q",
+    "timestamp": "2026-06-22T17:04:23.301Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782148506425-lforc",
+    "timestamp": "2026-06-22T17:15:06.426Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krajeet803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782148598566-xkl3m",
+    "timestamp": "2026-06-22T17:16:38.566Z",
+    "action": "OTP_RESENT",
+    "email": "krajeet803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "User requested new Email OTP."
+  },
+  {
+    "id": "log-1782149489570-c0xnq",
+    "timestamp": "2026-06-22T17:31:29.570Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782149637778-sb1nx",
+    "timestamp": "2026-06-22T17:33:57.778Z",
+    "action": "USER_REGISTER_PENDING",
+    "email": "krbittu803110kr@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Registration details submitted. Awaiting email OTP verification."
+  },
+  {
+    "id": "log-1782149848194-a9l8k",
+    "timestamp": "2026-06-22T17:37:28.194Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782151049846-aoiva",
+    "timestamp": "2026-06-22T17:57:29.846Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782151069000-l1oau",
+    "timestamp": "2026-06-22T17:57:49.000Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782151335422-pgtgj",
+    "timestamp": "2026-06-22T18:02:15.422Z",
+    "action": "VERIFY_OTP_SENT",
+    "email": "student@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Direct OTP sent for email registration verification."
+  },
+  {
+    "id": "log-1782151529913-gymaa",
+    "timestamp": "2026-06-22T18:05:29.913Z",
+    "action": "VERIFY_OTP_SENT",
+    "email": "student@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Direct OTP sent for email registration verification."
+  },
+  {
+    "id": "log-1782151712702-yos4f",
+    "timestamp": "2026-06-22T18:08:32.702Z",
+    "action": "VERIFY_OTP_SENT",
+    "email": "krajeet803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Direct OTP sent for email registration verification."
+  },
+  {
+    "id": "log-1782152235822-u1pyy",
+    "timestamp": "2026-06-22T18:17:15.822Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782152303737-ei8rr",
+    "timestamp": "2026-06-22T18:18:23.737Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782152332726-j4z9c",
+    "timestamp": "2026-06-22T18:18:52.726Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782152444300-9lkn2",
+    "timestamp": "2026-06-22T18:20:44.300Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782152506436-8dpw0",
+    "timestamp": "2026-06-22T18:21:46.436Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782152539177-jxzsw",
+    "timestamp": "2026-06-22T18:22:19.177Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 2/5."
+  },
+  {
+    "id": "log-1782152581678-78984",
+    "timestamp": "2026-06-22T18:23:01.678Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782186752848-e4dby",
+    "timestamp": "2026-06-23T03:52:32.848Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782187477042-kqz88",
+    "timestamp": "2026-06-23T04:04:37.042Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782187614180-5fgfo",
+    "timestamp": "2026-06-23T04:06:54.180Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782188221879-m7y8z",
+    "timestamp": "2026-06-23T04:17:01.879Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "bittu@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Account registered directly with wizard details."
+  },
+  {
+    "id": "log-1782188222063-g1ev9",
+    "timestamp": "2026-06-23T04:17:02.063Z",
+    "action": "USER_REGISTER_SUCCESS",
+    "email": "bittu@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Account registered directly with wizard details."
+  },
+  {
+    "id": "log-1782189057309-f1dq2",
+    "timestamp": "2026-06-23T04:30:57.309Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782189188227-63spx",
+    "timestamp": "2026-06-23T04:33:08.227Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782190222276-0u7ym",
+    "timestamp": "2026-06-23T04:50:22.276Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803111@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782205450656-n8at5",
+    "timestamp": "2026-06-23T09:04:10.656Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "bittu@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1782205822953-y3cni",
+    "timestamp": "2026-06-23T09:10:22.953Z",
+    "action": "USER_LOGIN_FAILED",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Failed password attempt 1/5."
+  },
+  {
+    "id": "log-1782206811229-tl566",
+    "timestamp": "2026-06-23T09:26:51.229Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
   }
 ]

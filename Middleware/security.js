@@ -62,7 +62,17 @@ export const csrfProtection = (req, res, next) => {
   }
 
   // Exempt auth logins/registrations since they establish the session
-  const exemptPaths = ['/api/auth/login', '/api/auth/register', '/api/auth/verify-login-otp', '/api/auth/verify-registration-otp', '/api/auth/resend-otp'];
+  const exemptPaths = [
+    '/api/auth/login', 
+    '/api/auth/register', 
+    '/api/auth/register-direct', 
+    '/api/auth/register-admin', 
+    '/api/auth/verify-login-otp', 
+    '/api/auth/verify-registration-otp', 
+    '/api/auth/resend-otp',
+    '/api/auth/forgot-password',
+    '/api/auth/reset-password'
+  ];
   if (exemptPaths.includes(req.path)) {
     return next();
   }

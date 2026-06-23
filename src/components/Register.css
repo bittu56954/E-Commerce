@@ -468,3 +468,483 @@ html.light-mode .auth-btn-disabled {
     .reg-fluid-row { grid-template-columns: 1fr; gap: 0; }
     .register-clean-card-node { padding: 25px 20px; }
 }
+
+/* ====================================================
+   🧭 WIZARD STEPPER LAYOUT
+   ==================================================== */
+.wizard-stepper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-bottom: 35px;
+    padding: 0 10px;
+    z-index: 10;
+}
+
+.stepper-progress-line {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    right: 40px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.08);
+    z-index: 1;
+}
+
+html.light-mode .stepper-progress-line {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.stepper-progress-bar {
+    height: 100%;
+    background: #e23744;
+    box-shadow: 0 0 10px rgba(226, 55, 68, 0.5);
+    transition: width 0.3s ease;
+}
+
+.stepper-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    width: 70px;
+}
+
+.step-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(25, 20, 35, 0.95);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+html.light-mode .step-circle {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.step-label {
+    margin-top: 8px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+html.light-mode .step-label {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+/* Stepper States */
+.stepper-step.active .step-circle {
+    border-color: #e23744;
+    color: #ffffff;
+    background: #e23744;
+    box-shadow: 0 0 15px rgba(226, 55, 68, 0.4);
+}
+
+.stepper-step.active .step-label {
+    color: #ffffff;
+}
+
+html.light-mode .stepper-step.active .step-label {
+    color: #2d3436;
+}
+
+.stepper-step.completed .step-circle {
+    border-color: #e23744;
+    color: #ffffff;
+    background: rgba(226, 55, 68, 0.2);
+}
+
+.stepper-step.completed .step-label {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+html.light-mode .stepper-step.completed .step-label {
+    color: #57606f;
+}
+
+/* ====================================================
+   🚻 GENDER SELECTION BUTTONS
+   ==================================================== */
+.gender-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.gender-option-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 11px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+html.light-mode .gender-option-pill {
+    background: rgba(255, 255, 255, 0.85);
+    border-color: #e2e8f0;
+    color: #57606f;
+}
+
+.gender-option-pill:hover {
+    border-color: rgba(226, 55, 68, 0.5);
+    background: rgba(226, 55, 68, 0.05);
+}
+
+.gender-option-pill.selected {
+    background: #e23744;
+    border-color: #e23744;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(226, 55, 68, 0.2);
+}
+
+/* ====================================================
+   ✉️ INLINE EMAIL OTP LAYOUT
+   ==================================================== */
+.inline-email-verification-block {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
+.send-otp-inline-btn {
+    background: #e23744;
+    color: #ffffff;
+    border: none;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(226, 55, 68, 0.2);
+    min-width: 110px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-otp-inline-btn:hover:not(.btn-disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(226, 55, 68, 0.3);
+}
+
+.send-otp-inline-btn.btn-disabled {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+html.light-mode .send-otp-inline-btn.btn-disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+}
+
+.verify-otp-input-block {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px dashed rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+html.light-mode .verify-otp-input-block {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.otp-input-row {
+    display: flex;
+    gap: 10px;
+}
+
+.verify-otp-inline-btn {
+    background: #2ed573;
+    color: #ffffff;
+    border: none;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(46, 213, 115, 0.2);
+    min-width: 110px;
+}
+
+.verify-otp-inline-btn:hover:not(.btn-disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(46, 213, 115, 0.3);
+}
+
+.verify-otp-inline-btn.btn-disabled {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+html.light-mode .verify-otp-inline-btn.btn-disabled {
+    background: #e2e8f0;
+    color: #94a3b8;
+}
+
+.otp-countdown-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+html.light-mode .otp-countdown-row {
+    color: #747d8c;
+}
+
+.resend-otp-link {
+    background: transparent;
+    border: none;
+    color: #e23744;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0;
+    font-size: 12px;
+}
+
+.resend-otp-link:disabled {
+    color: rgba(255, 255, 255, 0.3);
+    cursor: not-allowed;
+}
+
+html.light-mode .resend-otp-link:disabled {
+    color: #a4b0be;
+}
+
+.auth-field-success {
+    color: #2ed573;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+/* ====================================================
+   📦 ACADEMIC SELECT / FORM ELEMENTS
+   ==================================================== */
+.styled-select-element {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1.5px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 16px 12px 42px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 13.5px;
+    outline: none;
+    transition: all 0.2s ease;
+    width: 100%;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+html.light-mode .styled-select-element {
+    background: rgba(255, 255, 255, 0.85) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%2357606f' d='M0 2l4 4 4-4z'/%3E%3C/svg%3E") no-repeat calc(100% - 15px) center;
+    border: 1.5px solid #e2e8f0;
+    color: #2d3436;
+}
+
+/* Custom dropdown icon for select under dark mode */
+.styled-select-element {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath fill='%23ffffff' fill-opacity='0.5' d='M0 2l4 4 4-4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(100% - 15px) center;
+}
+
+.styled-select-element:focus {
+    border-color: #e23744;
+    box-shadow: 0 0 0 4px rgba(226, 55, 68, 0.15);
+}
+
+.styled-select-element option {
+    background: #191423;
+    color: #ffffff;
+}
+
+html.light-mode .styled-select-element option {
+    background: #ffffff;
+    color: #2d3436;
+}
+
+/* ====================================================
+   📜 STEP 4: WIZARD REVIEW & SUMMARIES
+   ==================================================== */
+.wizard-review-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.review-section {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+html.light-mode .review-section {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+.review-section h4 {
+    margin: 0 0 10px 0;
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #e23744;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.review-cell {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.r-label {
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+html.light-mode .r-label {
+    color: #747d8c;
+}
+
+.r-val {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+html.light-mode .r-val {
+    color: #2d3436;
+}
+
+/* ====================================================
+   👣 WIZARD NAVIGATION BAR
+   ==================================================== */
+.wizard-nav-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.wizard-nav-btn {
+    flex: 1;
+    padding: 13px;
+    font-size: 14.5px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Okra', 'Inter', sans-serif;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wizard-nav-btn.btn-primary {
+    background: #e23744;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(226, 55, 68, 0.25);
+}
+
+.wizard-nav-btn.btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(226, 55, 68, 0.35);
+}
+
+.wizard-nav-btn.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+html.light-mode .wizard-nav-btn.btn-secondary {
+    background: #f1f5f9;
+    color: #57606f;
+    border-color: #e2e8f0;
+}
+
+.wizard-nav-btn.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+
+html.light-mode .wizard-nav-btn.btn-secondary:hover {
+    background: #e2e8f0;
+    color: #2d3436;
+}
+
+.wizard-step-pane.fade-in-step {
+    animation: stepPaneFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes stepPaneFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 576px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+    .wizard-stepper {
+        padding: 0;
+    }
+    .step-label {
+        font-size: 9px;
+    }
+}

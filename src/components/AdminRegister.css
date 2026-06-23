@@ -1,0 +1,390 @@
+/* ====================================================
+   🎨 ADMIN PANEL AUTH - REGISTER SCREEN STYLING
+   ==================================================== */
+
+.admin-register-canvas {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  background-color: #0b0f19;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Background Atmospheric Blur Meshes */
+.admin-blur-mesh {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mesh-alpha-admin-register {
+  width: 500px;
+  height: 500px;
+  background: rgba(99, 102, 241, 0.25);
+  top: -15%;
+  left: -5%;
+}
+
+.mesh-beta-admin-register {
+  width: 450px;
+  height: 450px;
+  background: rgba(6, 182, 212, 0.2);
+  bottom: -15%;
+  right: -5%;
+}
+
+.admin-register-wrapper {
+  width: 100%;
+  max-width: 460px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* Brand Logo Symbol */
+.admin-register-brand-logo {
+  margin-bottom: 12px;
+}
+
+.admin-register-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 6px 0;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.admin-register-subtitle {
+  font-size: 15px;
+  color: #94a3b8;
+  margin: 0 0 28px 0;
+  text-align: center;
+}
+
+/* ====================================================
+   📏 TIMELINE TRACKER INDICATORS
+   ==================================================== */
+.admin-timeline-tracker {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline-node .node-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #1e293b;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid #334155;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-node .node-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Timeline Active Node Styles */
+.timeline-node.node-active .node-circle {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.timeline-node.node-active .node-label {
+  color: #60a5fa;
+  font-weight: 700;
+}
+
+/* Connectors */
+.timeline-connector {
+  flex-grow: 1;
+  height: 2px;
+  background: #334155;
+  margin: 0 12px;
+  margin-bottom: 22px; /* aligns line horizontally with center of node circles */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-connector.connector-active {
+  background: #3b82f6;
+}
+
+/* Glassmorphic Form Card */
+.admin-register-card {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px 30px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+}
+
+.wizard-step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.admin-field-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-field-block label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.admin-field-block input[type="text"],
+.admin-field-block input[type="email"],
+.admin-field-block input[type="password"] {
+  width: 100%;
+  background: #090d16;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 13px 16px;
+  color: #ffffff;
+  font-size: 14.5px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.admin-field-block input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+  outline: none;
+  background: #0d1321;
+}
+
+.admin-field-block input::placeholder {
+  color: #475569;
+}
+
+/* Sandbox OTP Text Hint */
+.sandbox-otp-hint {
+  font-size: 12.5px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px dashed rgba(16, 185, 129, 0.3);
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+/* Step Wizard Button Actions Layout */
+.register-actions-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.register-actions-row.single-btn {
+  grid-template-columns: 1fr;
+}
+
+.admin-send-otp-btn {
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-send-otp-btn:hover {
+  background: #6366f1;
+}
+
+.admin-send-otp-btn.otp-resend-variant {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+}
+
+.admin-send-otp-btn.otp-resend-variant:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.admin-continue-btn {
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.admin-continue-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.3);
+  filter: brightness(1.05);
+}
+
+.admin-continue-btn:disabled {
+  background: #1e293b;
+  color: #64748b;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Submit Action Button */
+.admin-register-submit-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+  margin-top: 6px;
+}
+
+.admin-register-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+  filter: brightness(1.05);
+}
+
+.admin-register-submit-btn:active {
+  transform: translateY(1px);
+}
+
+/* Step Backward Action */
+.wizard-back-navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.wizard-back-btn {
+  background: none;
+  border: none;
+  font-size: 13.5px;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.wizard-back-btn:hover {
+  color: #cbd5e1;
+}
+
+/* Footer Redirect */
+.admin-register-footer {
+  text-align: center;
+  font-size: 13.5px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+/* Animations */
+.animate-fade-in {
+  animation: step-fade-in 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes step-fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-down {
+  animation: slide-down-view 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slide-down-view {
+  from { opacity: 0; max-height: 0; transform: scaleY(0.9); }
+  to { opacity: 1; max-height: 100px; transform: scaleY(1); }
+}
+
+/* ====================================================
+   📱 RESPONSIVE ADJUSTMENTS
+   ==================================================== */
+@media (max-width: 480px) {
+  .admin-register-canvas {
+    padding: 40px 16px;
+  }
+  
+  .admin-timeline-tracker {
+    margin-bottom: 20px;
+  }
+  
+  .timeline-node .node-circle {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  
+  .timeline-connector {
+    margin-bottom: 19px;
+  }
+  
+  .admin-register-card {
+    padding: 28px 20px;
+    border-radius: 16px;
+  }
+  
+  .admin-register-title {
+    font-size: 28px;
+  }
+  
+  .admin-register-subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}

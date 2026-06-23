@@ -14,7 +14,7 @@ const Dashboard = () => {
   const [expandedOrders, setExpandedOrders] = useState({});
   const [selectedInvoice, setSelectedInvoice] = useState(null);
   const [settings, setSettings] = useState({
-    storeName: 'zomato',
+    storeName: 'Like Your Food',
     currencySymbol: '₹',
     gstPercentage: 5
   });
@@ -32,6 +32,16 @@ const Dashboard = () => {
       }
     };
     fetchSettings();
+  }, []);
+
+  const [timeTicker, setTimeTicker] = useState(0);
+
+  // Trigger re-render of countdown minutes every 30s
+  useEffect(() => {
+    const ticker = setInterval(() => {
+      setTimeTicker(prev => prev + 1);
+    }, 30000);
+    return () => clearInterval(ticker);
   }, []);
 
   useEffect(() => {
@@ -85,7 +95,53 @@ const Dashboard = () => {
     };
 
     fetchMyOrders();
+
+    // Auto-poll orders status continuously every 5 seconds
+    const pollInterval = setInterval(fetchMyOrders, 5000);
+
+    return () => clearInterval(pollInterval);
   }, [navigate]);
+
+  const getDeliveryEstimate = (order) => {
+    if (!order.createdAt) return null;
+    const createdTime = new Date(order.createdAt).getTime();
+    let estimateDurationMinutes = 40; // Default: 40 mins for Pending
+
+    if (order.status === 'Accepted' || order.status === 'Preparing') {
+      estimateDurationMinutes = 25;
+    } else if (order.status === 'Shipped' || order.status === 'Out for Delivery') {
+      estimateDurationMinutes = 10;
+    } else if (order.status === 'Delivered') {
+      return {
+        message: `Delivered successfully!`,
+        timeStr: new Date(order.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        isDelivered: true,
+        minutesRemaining: 0
+      };
+    } else if (order.status === 'Rejected' || order.status === 'Cancelled') {
+      return {
+        message: `Order was ${order.status.toLowerCase()}`,
+        timeStr: null,
+        isCancelled: true,
+        minutesRemaining: 0
+      };
+    }
+
+    const estimatedDeliveryTime = new Date(createdTime + estimateDurationMinutes * 60 * 1000);
+    const timeStr = estimatedDeliveryTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    
+    // Calculate remaining minutes
+    const now = new Date().getTime();
+    const remainingMs = estimatedDeliveryTime.getTime() - now;
+    const minutesRemaining = Math.max(0, Math.round(remainingMs / 1000 / 60));
+
+    return {
+      message: `Expected by ${timeStr}`,
+      timeStr,
+      minutesRemaining,
+      isDelivered: false
+    };
+  };
 
   const toggleOrderExpand = (orderId) => {
     setExpandedOrders(prev => ({
@@ -139,13 +195,15 @@ const Dashboard = () => {
     .filter(o => o.status === 'Delivered')
     .reduce((sum, o) => sum + Number(o.totalAmount || 0), 0);
   
-  const activeOrders = orders.filter(o => o.status !== 'Delivered' && o.status !== 'Cancelled');
-  const pastOrders = orders.filter(o => o.status === 'Delivered' || o.status === 'Cancelled');
+  const activeOrders = orders.filter(o => o.status !== 'Delivered' && o.status !== 'Cancelled' && o.status !== 'Rejected');
+  const pastOrders = orders.filter(o => o.status === 'Delivered' || o.status === 'Cancelled' || o.status === 'Rejected');
 
   const getStatusPercentage = (status) => {
     switch (status) {
       case 'Pending': return 15;
+      case 'Accepted':
       case 'Preparing': return 50;
+      case 'Shipped':
       case 'Out for Delivery': return 80;
       case 'Delivered': return 100;
       default: return 0;
@@ -155,9 +213,12 @@ const Dashboard = () => {
   const getStatusMessage = (status) => {
     switch (status) {
       case 'Pending': return 'Awaiting validation in our kitchen loop...';
-      case 'Preparing': return 'Our culinary masters are baking your meals!';
-      case 'Out for Delivery': return 'Hot fresh food is zooming to your doorstep!';
+      case 'Accepted':
+      case 'Preparing': return 'Your order has been accepted by the kitchen!';
+      case 'Shipped':
+      case 'Out for Delivery': return 'Hot fresh food has been shipped and is on the way!';
       case 'Delivered': return 'Delivered! Enjoy your delicious meal!';
+      case 'Rejected': return 'Order was rejected by the kitchen.';
       case 'Cancelled': return 'Order was cancelled.';
       default: return '';
     }
@@ -168,7 +229,7 @@ const Dashboard = () => {
       <AnimatedBackground page="dashboard" />
 
       <div className="mobile-header-bar">
-        <div className="m-logo">🌐 {currentUser ? currentUser.name.toUpperCase() : 'CUSTOMER'} <span className="m-sub">Portal</span></div>
+        <div className="m-logo">🌐 {currentUser?.name ? currentUser.name.toUpperCase() : 'CUSTOMER'} <span className="m-sub">Portal</span></div>
         <button className="hamburger-btn" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? '✕ Close' : '☰ Menu'}
         </button>
@@ -177,7 +238,7 @@ const Dashboard = () => {
       <aside className={`dash-sidebar-node ${mobileMenuOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-brand-zone">
           <span className="brand-icon">🔴</span>
-          <h2>zomato <span className="brand-sub">Hub</span></h2>
+          <h2>{settings.storeName || 'Like Your Food'} <span className="brand-sub">Hub</span></h2>
         </div>
         
         <nav className="sidebar-navigation-links">
@@ -191,16 +252,16 @@ const Dashboard = () => {
 
         <div className="sidebar-auth-profile">
           <div className="avatar-circle-node" style={{ backgroundColor: '#e23744', color: '#fff', fontWeight: 'bold' }}>
-            {currentUser ? currentUser.name.substring(0, 2).toUpperCase() : 'CU'}
+            {currentUser?.name ? currentUser.name.substring(0, 2).toUpperCase() : 'CU'}
           </div>
           <div className="avatar-meta-data">
-            <h4>{currentUser ? currentUser.name.toUpperCase() : 'CUSTOMER'}</h4>
+            <h4>{currentUser?.name ? currentUser.name.toUpperCase() : 'CUSTOMER'}</h4>
             <p>{currentUser ? currentUser.email : 'Awaiting sync'}</p>
           </div>
         </div>
       </aside>
 
-      <main className="dash-viewport-main">
+      <main className="dashboard-viewport-main">
         <header className="viewport-top-header">
           <div className="header-meta-left">
             <h1>Customer Dispatch Console</h1>
@@ -253,6 +314,15 @@ const Dashboard = () => {
                         <div>
                           <h4 style={{ fontSize: '18px', color: '#e23744', margin: '0 0 5px 0' }}>Order ID: {order.id}</h4>
                           <span style={{ fontSize: '12px', color: 'var(--text-muted-override)' }}>Placed on: {new Date(order.createdAt).toLocaleString()}</span>
+                          {getDeliveryEstimate(order) && (
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', background: 'rgba(226, 55, 68, 0.08)', border: '1px solid rgba(226, 55, 68, 0.15)', borderRadius: '6px', padding: '6px 10px', width: 'fit-content', marginTop: '8px' }}>
+                              <span style={{ fontSize: '13px' }}>⏳</span>
+                              <span style={{ fontSize: '12px', fontWeight: '700', color: '#e23744' }}>
+                                {getDeliveryEstimate(order).message} 
+                                {getDeliveryEstimate(order).minutesRemaining > 0 && ` (~${getDeliveryEstimate(order).minutesRemaining} mins remaining)`}
+                              </span>
+                            </div>
+                          )}
                         </div>
                         <div style={{ textAlign: 'right' }}>
                           <span className="badge-tag stage-prod" style={{ fontSize: '13px', fontWeight: 'bold' }}>{order.status}</span>
@@ -284,12 +354,12 @@ const Dashboard = () => {
                             <span className="node-lbl">Pending</span>
                           </div>
                           <div className={`tracker-node ${getStatusPercentage(order.status) >= 50 ? 'active' : ''}`}>
-                            <span className="node-icon">🍳</span>
-                            <span className="node-lbl">Preparing</span>
+                            <span className="node-icon">✅</span>
+                            <span className="node-lbl">Accepted</span>
                           </div>
                           <div className={`tracker-node ${getStatusPercentage(order.status) >= 80 ? 'active' : ''}`}>
                             <span className="node-icon">🛵</span>
-                            <span className="node-lbl">On The Way</span>
+                            <span className="node-lbl">Shipped</span>
                           </div>
                           <div className={`tracker-node ${getStatusPercentage(order.status) >= 100 ? 'active' : ''}`}>
                             <span className="node-icon">😋</span>
@@ -356,9 +426,9 @@ const Dashboard = () => {
                               ))}
                             </div>
                             <div className="checkout-coordinates-footer">
-                              <strong>Delivery Address:</strong> {order.customerDetails.address} <br />
-                              <strong>Contact Phone:</strong> {order.customerDetails.phone}
-                              {order.customerDetails.notes && (
+                              <strong>Delivery Address:</strong> {order.customerDetails?.address || 'N/A'} <br />
+                              <strong>Contact Phone:</strong> {order.customerDetails?.phone || 'N/A'}
+                              {order.customerDetails?.notes && (
                                 <>
                                   <br /><strong>Notes:</strong> <em>{order.customerDetails.notes}</em>
                                 </>
@@ -438,7 +508,7 @@ const Dashboard = () => {
                               )}
                             </div>
                           </td>
-                          <td style={{ maxWidth: '180px', wordBreak: 'break-word', fontSize: '12px' }}>{order.customerDetails.address}</td>
+                          <td style={{ maxWidth: '180px', wordBreak: 'break-word', fontSize: '12px' }}>{order.customerDetails?.address || 'N/A'}</td>
                           <td>
                             <span 
                               className="badge-tag stage-prod" 
@@ -496,14 +566,14 @@ const Dashboard = () => {
             <div className="lys-invoice-container" style={{ margin: 0, boxShadow: 'none', width: '100%', borderRadius: 0 }}>
               <div className="invoice-header">
                 <div className="invoice-company-details">
-                  <h2 className="invoice-brand-title">{settings.storeName || 'zomato'}</h2>
+                  <h2 className="invoice-brand-title">{settings.storeName || 'Like Your Food'}</h2>
                   <p>Premium Culinary Delicacies & Daily Bites</p>
                   <p>Bhilai, Chhattisgarh, Kurud Road, 490001</p>
-                  <p>Support: support@zomato.com</p>
+                  <p>Support: support@likeyourfood.com</p>
                 </div>
                 <div className="invoice-meta-details">
                   <h1>TAX INVOICE</h1>
-                  <p><strong>Invoice No:</strong> ZOMATO-{selectedInvoice.id.slice(0, 8).toUpperCase()}</p>
+                  <p><strong>Invoice No:</strong> LYF-{selectedInvoice.id.slice(0, 8).toUpperCase()}</p>
                   <p><strong>Order ID:</strong> {selectedInvoice.id}</p>
                   <p><strong>Date:</strong> {new Date(selectedInvoice.createdAt).toLocaleString()}</p>
                   <p><strong>Status:</strong> {selectedInvoice.paymentStatus ? (selectedInvoice.paymentStatus === 'Completed' ? 'PAID' : selectedInvoice.paymentStatus.toUpperCase()) : 'PENDING'}</p>
@@ -515,11 +585,11 @@ const Dashboard = () => {
               <div className="invoice-billing-row" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', marginBottom: '30px' }}>
                 <div className="billing-to">
                   <h3 style={{ fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.5px', color: '#95a5a6', margin: '0 0 10px 0' }}>Billed To:</h3>
-                  <p style={{ margin: '3px 0', fontSize: '13.5px', color: '#34495e' }}><strong>{selectedInvoice.customerDetails.name}</strong></p>
-                  <p style={{ margin: '3px 0', fontSize: '13.5px', color: '#34495e' }}><strong>Phone:</strong> {selectedInvoice.customerDetails.phone}</p>
+                  <p style={{ margin: '3px 0', fontSize: '13.5px', color: '#34495e' }}><strong>{selectedInvoice.customerDetails?.name || 'Guest'}</strong></p>
+                  <p style={{ margin: '3px 0', fontSize: '13.5px', color: '#34495e' }}><strong>Phone:</strong> {selectedInvoice.customerDetails?.phone || 'N/A'}</p>
                   <p style={{ margin: '3px 0', fontSize: '13.5px', color: '#34495e' }}><strong>Delivery Address:</strong></p>
-                  <p className="address-text" style={{ color: '#7f8c8d', fontSize: '13px', marginTop: '5px', lineHeight: '1.4' }}>{selectedInvoice.customerDetails.address}</p>
-                  {selectedInvoice.customerDetails.notes && (
+                  <p className="address-text" style={{ color: '#7f8c8d', fontSize: '13px', marginTop: '5px', lineHeight: '1.4' }}>{selectedInvoice.customerDetails?.address || 'N/A'}</p>
+                  {selectedInvoice.customerDetails?.notes && (
                     <p className="driver-notes" style={{ background: '#fdf5eb', borderLeft: '3px solid #e23744', padding: '6px 10px', borderRadius: '4px', marginTop: '10px', fontSize: '12.5px', color: '#8a6d3b' }}><strong>Instructions:</strong> {selectedInvoice.customerDetails.notes}</p>
                   )}
                 </div>
@@ -587,7 +657,7 @@ const Dashboard = () => {
                   <p style={{ fontSize: '11px', color: '#95a5a6', margin: '3px 0', lineHeight: '1.4' }}>1. This is a computer-generated tax invoice and requires no physical signature.</p>
                   <p style={{ fontSize: '11px', color: '#95a5a6', margin: '3px 0', lineHeight: '1.4' }}>2. The food products are packed freshly under high hygiene standards.</p>
                   <p style={{ fontSize: '11px', color: '#95a5a6', margin: '3px 0', lineHeight: '1.4' }}>3. Cancellations are only permitted until the order status transitions to Preparing.</p>
-                  <p style={{ fontSize: '11px', color: '#95a5a6', margin: '3px 0', lineHeight: '1.4' }}>Thank you for placing your culinary trust in <strong>zomato</strong>! ❤️</p>
+                  <p style={{ fontSize: '11px', color: '#95a5a6', margin: '3px 0', lineHeight: '1.4' }}>Thank you for placing your culinary trust in <strong>Like Your Food</strong>! ❤️</p>
                 </div>
 
                 <div className="invoice-totals-block" style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>

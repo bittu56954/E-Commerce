@@ -25,6 +25,7 @@ const Login = () => {
   const [otpPhone, setOtpPhone] = useState('');
   const [verifying, setVerifying] = useState(false);
   const [resendTimer, setResendTimer] = useState(60);
+  const [previewUrl, setPreviewUrl] = useState('');
 
   useEffect(() => {
     let timer;
@@ -115,7 +116,25 @@ const Login = () => {
         setTempToken(data.tempToken);
         setRequiresVerification(true);
         setResendTimer(60);
+        setPreviewUrl(data.previewUrl || '');
         triggerToast(data.message || 'OTP sent to email and mobile.', 'info');
+      } else {
+        // Direct login success
+        localStorage.setItem('token', data.accessToken);
+        localStorage.setItem('csrfToken', data.csrfToken);
+        localStorage.setItem('user', JSON.stringify(data.user));
+
+        // Sync navbar
+        window.dispatchEvent(new Event('authChange'));
+        triggerToast('Login successful! Welcome back. 🔓', 'success');
+
+        setTimeout(() => {
+          if (data.user.isAdmin) {
+            navigate('/admin');
+          } else {
+            navigate('/');
+          }
+        }, 1000);
       }
       setLoading(false);
     } catch (error) {
@@ -193,6 +212,7 @@ const Login = () => {
       const data = await response.json();
       if (response.ok) {
         setResendTimer(60);
+        setPreviewUrl(data.previewUrl || '');
         triggerToast('New OTP codes have been dispatched.', 'success');
       } else {
         triggerToast(data.error || 'Failed to resend OTPs.', 'error');
@@ -217,7 +237,7 @@ const Login = () => {
         <div className="login-telemetry-side">
           <div className="top-branding-block">
             <div className="login-badge-light">🔒 SECURE ENCRYPTED GATEWAY</div>
-            <h1 className="login-title-light">Welcome Back to <br /><span>zomato</span></h1>
+            <h1 className="login-title-light">Welcome Back to <br /><span style={{ textTransform: 'lowercase' }}>Like Your Food</span></h1>
             <p className="login-desc-light">
               Access your storefront profile. Admin status changes, orders, and tickets are audited to maintain system security.
             </p>
@@ -305,12 +325,9 @@ const Login = () => {
                   />
                   <span>Keep me logged in</span>
                 </label>
-                <span
-                  className="forgot-password-link"
-                  onClick={() => triggerToast("Contact support at admin@zomato.com to reset password keys.", "info")}
-                >
+                <Link to="/forgot-password" className="forgot-password-link">
                   Forgot Password?
-                </span>
+                </Link>
               </div>
 
               <button

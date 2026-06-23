@@ -1,0 +1,4012 @@
+[
+  {
+    "id": "dining-1",
+    "type": "dining",
+    "name": "The Bier Library",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1,500 for two"
+  },
+  {
+    "id": "dining-2",
+    "type": "dining",
+    "name": "Toit",
+    "cuisine": "Italian, Pizza, Craft Beer",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2,000 for two"
+  },
+  {
+    "id": "dining-3",
+    "type": "dining",
+    "name": "Punjab Grill",
+    "cuisine": "North Indian, Mughlai",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1,800 for two"
+  },
+  {
+    "id": "dining-4",
+    "type": "dining",
+    "name": "Windmills Craftworks",
+    "cuisine": "American, North Indian, Salad",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2,500 for two"
+  },
+  {
+    "id": "dining-5",
+    "type": "dining",
+    "name": "Fenny's Lounge & Kitchen",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1,600 for two"
+  },
+  {
+    "id": "dining-6",
+    "type": "dining",
+    "name": "Corner House Ice Cream",
+    "cuisine": "Desserts, Ice Cream",
+    "location": "Bhilai, Chhattisgarh, Kurud Road, 490001",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹400 for two"
+  },
+  {
+    "id": "dining-gen-1",
+    "type": "dining",
+    "name": "Capital Restaurant #1",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1950 for two"
+  },
+  {
+    "id": "dining-gen-2",
+    "type": "dining",
+    "name": "Golden Plaza #2",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "dining-gen-3",
+    "type": "dining",
+    "name": "Royal Diner #3",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1050 for two"
+  },
+  {
+    "id": "dining-gen-4",
+    "type": "dining",
+    "name": "Signature Dhaba #4",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹600 for two"
+  },
+  {
+    "id": "dining-gen-5",
+    "type": "dining",
+    "name": "Urban Palace #5",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2150 for two"
+  },
+  {
+    "id": "dining-gen-6",
+    "type": "dining",
+    "name": "Gourmet House #6",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "dining-gen-7",
+    "type": "dining",
+    "name": "Heritage Bistro #7",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1250 for two"
+  },
+  {
+    "id": "dining-gen-8",
+    "type": "dining",
+    "name": "Vintage Tavern #8",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "dining-gen-9",
+    "type": "dining",
+    "name": "Spice Grill #9",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2350 for two"
+  },
+  {
+    "id": "dining-gen-10",
+    "type": "dining",
+    "name": "The Great Kitchen #10",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "dining-gen-11",
+    "type": "dining",
+    "name": "Capital Restaurant #11",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1450 for two"
+  },
+  {
+    "id": "dining-gen-12",
+    "type": "dining",
+    "name": "Golden Plaza #12",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "dining-gen-13",
+    "type": "dining",
+    "name": "Royal Diner #13",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹550 for two"
+  },
+  {
+    "id": "dining-gen-14",
+    "type": "dining",
+    "name": "Signature Dhaba #14",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "dining-gen-15",
+    "type": "dining",
+    "name": "Urban Palace #15",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1650 for two"
+  },
+  {
+    "id": "dining-gen-16",
+    "type": "dining",
+    "name": "Gourmet House #16",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "dining-gen-17",
+    "type": "dining",
+    "name": "Heritage Bistro #17",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹750 for two"
+  },
+  {
+    "id": "dining-gen-18",
+    "type": "dining",
+    "name": "Vintage Tavern #18",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "dining-gen-19",
+    "type": "dining",
+    "name": "Spice Grill #19",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1850 for two"
+  },
+  {
+    "id": "dining-gen-20",
+    "type": "dining",
+    "name": "The Great Kitchen #20",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "dining-gen-21",
+    "type": "dining",
+    "name": "Capital Restaurant #21",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹950 for two"
+  },
+  {
+    "id": "dining-gen-22",
+    "type": "dining",
+    "name": "Golden Plaza #22",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹500 for two"
+  },
+  {
+    "id": "dining-gen-23",
+    "type": "dining",
+    "name": "Royal Diner #23",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹2050 for two"
+  },
+  {
+    "id": "dining-gen-24",
+    "type": "dining",
+    "name": "Signature Dhaba #24",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-gen-25",
+    "type": "dining",
+    "name": "Urban Palace #25",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1150 for two"
+  },
+  {
+    "id": "dining-gen-26",
+    "type": "dining",
+    "name": "Gourmet House #26",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹700 for two"
+  },
+  {
+    "id": "dining-gen-27",
+    "type": "dining",
+    "name": "Heritage Bistro #27",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹2250 for two"
+  },
+  {
+    "id": "dining-gen-28",
+    "type": "dining",
+    "name": "Vintage Tavern #28",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "dining-gen-29",
+    "type": "dining",
+    "name": "Spice Grill #29",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1350 for two"
+  },
+  {
+    "id": "dining-gen-30",
+    "type": "dining",
+    "name": "The Great Kitchen #30",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "dining-gen-31",
+    "type": "dining",
+    "name": "Capital Restaurant #31",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹450 for two"
+  },
+  {
+    "id": "dining-gen-32",
+    "type": "dining",
+    "name": "Golden Plaza #32",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "dining-gen-33",
+    "type": "dining",
+    "name": "Royal Diner #33",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1550 for two"
+  },
+  {
+    "id": "dining-gen-34",
+    "type": "dining",
+    "name": "Signature Dhaba #34",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "dining-gen-35",
+    "type": "dining",
+    "name": "Urban Palace #35",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹650 for two"
+  },
+  {
+    "id": "dining-gen-36",
+    "type": "dining",
+    "name": "Gourmet House #36",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "dining-gen-37",
+    "type": "dining",
+    "name": "Heritage Bistro #37",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1750 for two"
+  },
+  {
+    "id": "dining-gen-38",
+    "type": "dining",
+    "name": "Vintage Tavern #38",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "dining-gen-39",
+    "type": "dining",
+    "name": "Spice Grill #39",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹850 for two"
+  },
+  {
+    "id": "dining-gen-40",
+    "type": "dining",
+    "name": "The Great Kitchen #40",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹400 for two"
+  },
+  {
+    "id": "dining-gen-41",
+    "type": "dining",
+    "name": "Capital Restaurant #41",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1950 for two"
+  },
+  {
+    "id": "dining-gen-42",
+    "type": "dining",
+    "name": "Golden Plaza #42",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "dining-gen-43",
+    "type": "dining",
+    "name": "Royal Diner #43",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1050 for two"
+  },
+  {
+    "id": "dining-gen-44",
+    "type": "dining",
+    "name": "Signature Dhaba #44",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹600 for two"
+  },
+  {
+    "id": "dining-gen-45",
+    "type": "dining",
+    "name": "Urban Palace #45",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2150 for two"
+  },
+  {
+    "id": "dining-gen-46",
+    "type": "dining",
+    "name": "Gourmet House #46",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "dining-gen-47",
+    "type": "dining",
+    "name": "Heritage Bistro #47",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1250 for two"
+  },
+  {
+    "id": "dining-gen-48",
+    "type": "dining",
+    "name": "Vintage Tavern #48",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "dining-gen-49",
+    "type": "dining",
+    "name": "Spice Grill #49",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2350 for two"
+  },
+  {
+    "id": "dining-gen-50",
+    "type": "dining",
+    "name": "The Great Kitchen #50",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "dining-gen-51",
+    "type": "dining",
+    "name": "Capital Restaurant #51",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1450 for two"
+  },
+  {
+    "id": "dining-gen-52",
+    "type": "dining",
+    "name": "Golden Plaza #52",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "dining-gen-53",
+    "type": "dining",
+    "name": "Royal Diner #53",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹550 for two"
+  },
+  {
+    "id": "dining-gen-54",
+    "type": "dining",
+    "name": "Signature Dhaba #54",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "dining-gen-55",
+    "type": "dining",
+    "name": "Urban Palace #55",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1650 for two"
+  },
+  {
+    "id": "dining-gen-56",
+    "type": "dining",
+    "name": "Gourmet House #56",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "dining-gen-57",
+    "type": "dining",
+    "name": "Heritage Bistro #57",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹750 for two"
+  },
+  {
+    "id": "dining-gen-58",
+    "type": "dining",
+    "name": "Vintage Tavern #58",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "dining-gen-59",
+    "type": "dining",
+    "name": "Spice Grill #59",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1850 for two"
+  },
+  {
+    "id": "dining-gen-60",
+    "type": "dining",
+    "name": "The Great Kitchen #60",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "dining-gen-61",
+    "type": "dining",
+    "name": "Capital Restaurant #61",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹950 for two"
+  },
+  {
+    "id": "dining-gen-62",
+    "type": "dining",
+    "name": "Golden Plaza #62",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹500 for two"
+  },
+  {
+    "id": "dining-gen-63",
+    "type": "dining",
+    "name": "Royal Diner #63",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹2050 for two"
+  },
+  {
+    "id": "dining-gen-64",
+    "type": "dining",
+    "name": "Signature Dhaba #64",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-gen-65",
+    "type": "dining",
+    "name": "Urban Palace #65",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1150 for two"
+  },
+  {
+    "id": "dining-gen-66",
+    "type": "dining",
+    "name": "Gourmet House #66",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹700 for two"
+  },
+  {
+    "id": "dining-gen-67",
+    "type": "dining",
+    "name": "Heritage Bistro #67",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹2250 for two"
+  },
+  {
+    "id": "dining-gen-68",
+    "type": "dining",
+    "name": "Vintage Tavern #68",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "dining-gen-69",
+    "type": "dining",
+    "name": "Spice Grill #69",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1350 for two"
+  },
+  {
+    "id": "dining-gen-70",
+    "type": "dining",
+    "name": "The Great Kitchen #70",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "dining-gen-71",
+    "type": "dining",
+    "name": "Capital Restaurant #71",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹450 for two"
+  },
+  {
+    "id": "dining-gen-72",
+    "type": "dining",
+    "name": "Golden Plaza #72",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "dining-gen-73",
+    "type": "dining",
+    "name": "Royal Diner #73",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1550 for two"
+  },
+  {
+    "id": "dining-gen-74",
+    "type": "dining",
+    "name": "Signature Dhaba #74",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "dining-gen-75",
+    "type": "dining",
+    "name": "Urban Palace #75",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹650 for two"
+  },
+  {
+    "id": "dining-gen-76",
+    "type": "dining",
+    "name": "Gourmet House #76",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "dining-gen-77",
+    "type": "dining",
+    "name": "Heritage Bistro #77",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1750 for two"
+  },
+  {
+    "id": "dining-gen-78",
+    "type": "dining",
+    "name": "Vintage Tavern #78",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "dining-gen-79",
+    "type": "dining",
+    "name": "Spice Grill #79",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹850 for two"
+  },
+  {
+    "id": "dining-gen-80",
+    "type": "dining",
+    "name": "The Great Kitchen #80",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹400 for two"
+  },
+  {
+    "id": "dining-gen-81",
+    "type": "dining",
+    "name": "Capital Restaurant #81",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1950 for two"
+  },
+  {
+    "id": "dining-gen-82",
+    "type": "dining",
+    "name": "Golden Plaza #82",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "dining-gen-83",
+    "type": "dining",
+    "name": "Royal Diner #83",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1050 for two"
+  },
+  {
+    "id": "dining-gen-84",
+    "type": "dining",
+    "name": "Signature Dhaba #84",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹600 for two"
+  },
+  {
+    "id": "dining-gen-85",
+    "type": "dining",
+    "name": "Urban Palace #85",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2150 for two"
+  },
+  {
+    "id": "dining-gen-86",
+    "type": "dining",
+    "name": "Gourmet House #86",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "dining-gen-87",
+    "type": "dining",
+    "name": "Heritage Bistro #87",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1250 for two"
+  },
+  {
+    "id": "dining-gen-88",
+    "type": "dining",
+    "name": "Vintage Tavern #88",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "dining-gen-89",
+    "type": "dining",
+    "name": "Spice Grill #89",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2350 for two"
+  },
+  {
+    "id": "dining-gen-90",
+    "type": "dining",
+    "name": "The Great Kitchen #90",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "dining-gen-91",
+    "type": "dining",
+    "name": "Capital Restaurant #91",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1450 for two"
+  },
+  {
+    "id": "dining-gen-92",
+    "type": "dining",
+    "name": "Golden Plaza #92",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "dining-gen-93",
+    "type": "dining",
+    "name": "Royal Diner #93",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹550 for two"
+  },
+  {
+    "id": "dining-gen-94",
+    "type": "dining",
+    "name": "Signature Dhaba #94",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "dining-gen-95",
+    "type": "dining",
+    "name": "Urban Palace #95",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1650 for two"
+  },
+  {
+    "id": "dining-gen-96",
+    "type": "dining",
+    "name": "Gourmet House #96",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "dining-gen-97",
+    "type": "dining",
+    "name": "Heritage Bistro #97",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹750 for two"
+  },
+  {
+    "id": "dining-gen-98",
+    "type": "dining",
+    "name": "Vintage Tavern #98",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "dining-gen-99",
+    "type": "dining",
+    "name": "Spice Grill #99",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1850 for two"
+  },
+  {
+    "id": "dining-gen-100",
+    "type": "dining",
+    "name": "The Great Kitchen #100",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "dining-gen-101",
+    "type": "dining",
+    "name": "Capital Restaurant #101",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹950 for two"
+  },
+  {
+    "id": "dining-gen-102",
+    "type": "dining",
+    "name": "Golden Plaza #102",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹500 for two"
+  },
+  {
+    "id": "dining-gen-103",
+    "type": "dining",
+    "name": "Royal Diner #103",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹2050 for two"
+  },
+  {
+    "id": "dining-gen-104",
+    "type": "dining",
+    "name": "Signature Dhaba #104",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-gen-105",
+    "type": "dining",
+    "name": "Urban Palace #105",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1150 for two"
+  },
+  {
+    "id": "dining-gen-106",
+    "type": "dining",
+    "name": "Gourmet House #106",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹700 for two"
+  },
+  {
+    "id": "dining-gen-107",
+    "type": "dining",
+    "name": "Heritage Bistro #107",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹2250 for two"
+  },
+  {
+    "id": "dining-gen-108",
+    "type": "dining",
+    "name": "Vintage Tavern #108",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "dining-gen-109",
+    "type": "dining",
+    "name": "Spice Grill #109",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1350 for two"
+  },
+  {
+    "id": "dining-gen-110",
+    "type": "dining",
+    "name": "The Great Kitchen #110",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "dining-gen-111",
+    "type": "dining",
+    "name": "Capital Restaurant #111",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹450 for two"
+  },
+  {
+    "id": "dining-gen-112",
+    "type": "dining",
+    "name": "Golden Plaza #112",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "dining-gen-113",
+    "type": "dining",
+    "name": "Royal Diner #113",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1550 for two"
+  },
+  {
+    "id": "dining-gen-114",
+    "type": "dining",
+    "name": "Signature Dhaba #114",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "dining-gen-115",
+    "type": "dining",
+    "name": "Urban Palace #115",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹650 for two"
+  },
+  {
+    "id": "dining-gen-116",
+    "type": "dining",
+    "name": "Gourmet House #116",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "dining-gen-117",
+    "type": "dining",
+    "name": "Heritage Bistro #117",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1750 for two"
+  },
+  {
+    "id": "dining-gen-118",
+    "type": "dining",
+    "name": "Vintage Tavern #118",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "dining-gen-119",
+    "type": "dining",
+    "name": "Spice Grill #119",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹850 for two"
+  },
+  {
+    "id": "dining-gen-120",
+    "type": "dining",
+    "name": "The Great Kitchen #120",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹400 for two"
+  },
+  {
+    "id": "dining-gen-121",
+    "type": "dining",
+    "name": "Capital Restaurant #121",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1950 for two"
+  },
+  {
+    "id": "dining-gen-122",
+    "type": "dining",
+    "name": "Golden Plaza #122",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "dining-gen-123",
+    "type": "dining",
+    "name": "Royal Diner #123",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1050 for two"
+  },
+  {
+    "id": "dining-gen-124",
+    "type": "dining",
+    "name": "Signature Dhaba #124",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹600 for two"
+  },
+  {
+    "id": "dining-gen-125",
+    "type": "dining",
+    "name": "Urban Palace #125",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2150 for two"
+  },
+  {
+    "id": "dining-gen-126",
+    "type": "dining",
+    "name": "Gourmet House #126",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "dining-gen-127",
+    "type": "dining",
+    "name": "Heritage Bistro #127",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1250 for two"
+  },
+  {
+    "id": "dining-gen-128",
+    "type": "dining",
+    "name": "Vintage Tavern #128",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "dining-gen-129",
+    "type": "dining",
+    "name": "Spice Grill #129",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2350 for two"
+  },
+  {
+    "id": "dining-gen-130",
+    "type": "dining",
+    "name": "The Great Kitchen #130",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "dining-gen-131",
+    "type": "dining",
+    "name": "Capital Restaurant #131",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1450 for two"
+  },
+  {
+    "id": "dining-gen-132",
+    "type": "dining",
+    "name": "Golden Plaza #132",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "dining-gen-133",
+    "type": "dining",
+    "name": "Royal Diner #133",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹550 for two"
+  },
+  {
+    "id": "dining-gen-134",
+    "type": "dining",
+    "name": "Signature Dhaba #134",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "dining-gen-135",
+    "type": "dining",
+    "name": "Urban Palace #135",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1650 for two"
+  },
+  {
+    "id": "dining-gen-136",
+    "type": "dining",
+    "name": "Gourmet House #136",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "dining-gen-137",
+    "type": "dining",
+    "name": "Heritage Bistro #137",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹750 for two"
+  },
+  {
+    "id": "dining-gen-138",
+    "type": "dining",
+    "name": "Vintage Tavern #138",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "dining-gen-139",
+    "type": "dining",
+    "name": "Spice Grill #139",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1850 for two"
+  },
+  {
+    "id": "dining-gen-140",
+    "type": "dining",
+    "name": "The Great Kitchen #140",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "dining-gen-141",
+    "type": "dining",
+    "name": "Capital Restaurant #141",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹950 for two"
+  },
+  {
+    "id": "dining-gen-142",
+    "type": "dining",
+    "name": "Golden Plaza #142",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹500 for two"
+  },
+  {
+    "id": "dining-gen-143",
+    "type": "dining",
+    "name": "Royal Diner #143",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹2050 for two"
+  },
+  {
+    "id": "dining-gen-144",
+    "type": "dining",
+    "name": "Signature Dhaba #144",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-gen-145",
+    "type": "dining",
+    "name": "Urban Palace #145",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1150 for two"
+  },
+  {
+    "id": "dining-gen-146",
+    "type": "dining",
+    "name": "Gourmet House #146",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹700 for two"
+  },
+  {
+    "id": "dining-gen-147",
+    "type": "dining",
+    "name": "Heritage Bistro #147",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹2250 for two"
+  },
+  {
+    "id": "dining-gen-148",
+    "type": "dining",
+    "name": "Vintage Tavern #148",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "dining-gen-149",
+    "type": "dining",
+    "name": "Spice Grill #149",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1350 for two"
+  },
+  {
+    "id": "dining-gen-150",
+    "type": "dining",
+    "name": "The Great Kitchen #150",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "dining-gen-151",
+    "type": "dining",
+    "name": "Capital Restaurant #151",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹450 for two"
+  },
+  {
+    "id": "dining-gen-152",
+    "type": "dining",
+    "name": "Golden Plaza #152",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "dining-gen-153",
+    "type": "dining",
+    "name": "Royal Diner #153",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1550 for two"
+  },
+  {
+    "id": "dining-gen-154",
+    "type": "dining",
+    "name": "Signature Dhaba #154",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "dining-gen-155",
+    "type": "dining",
+    "name": "Urban Palace #155",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹650 for two"
+  },
+  {
+    "id": "dining-gen-156",
+    "type": "dining",
+    "name": "Gourmet House #156",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "dining-gen-157",
+    "type": "dining",
+    "name": "Heritage Bistro #157",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1750 for two"
+  },
+  {
+    "id": "dining-gen-158",
+    "type": "dining",
+    "name": "Vintage Tavern #158",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "dining-gen-159",
+    "type": "dining",
+    "name": "Spice Grill #159",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹850 for two"
+  },
+  {
+    "id": "dining-gen-160",
+    "type": "dining",
+    "name": "The Great Kitchen #160",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹400 for two"
+  },
+  {
+    "id": "dining-gen-161",
+    "type": "dining",
+    "name": "Capital Restaurant #161",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1950 for two"
+  },
+  {
+    "id": "dining-gen-162",
+    "type": "dining",
+    "name": "Golden Plaza #162",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "dining-gen-163",
+    "type": "dining",
+    "name": "Royal Diner #163",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1050 for two"
+  },
+  {
+    "id": "dining-gen-164",
+    "type": "dining",
+    "name": "Signature Dhaba #164",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹600 for two"
+  },
+  {
+    "id": "dining-gen-165",
+    "type": "dining",
+    "name": "Urban Palace #165",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹2150 for two"
+  },
+  {
+    "id": "dining-gen-166",
+    "type": "dining",
+    "name": "Gourmet House #166",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "dining-gen-167",
+    "type": "dining",
+    "name": "Heritage Bistro #167",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1250 for two"
+  },
+  {
+    "id": "dining-gen-168",
+    "type": "dining",
+    "name": "Vintage Tavern #168",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "dining-gen-169",
+    "type": "dining",
+    "name": "Spice Grill #169",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2350 for two"
+  },
+  {
+    "id": "dining-gen-170",
+    "type": "dining",
+    "name": "The Great Kitchen #170",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "dining-gen-171",
+    "type": "dining",
+    "name": "Capital Restaurant #171",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1450 for two"
+  },
+  {
+    "id": "dining-gen-172",
+    "type": "dining",
+    "name": "Golden Plaza #172",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "dining-gen-173",
+    "type": "dining",
+    "name": "Royal Diner #173",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹550 for two"
+  },
+  {
+    "id": "dining-gen-174",
+    "type": "dining",
+    "name": "Signature Dhaba #174",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "dining-gen-175",
+    "type": "dining",
+    "name": "Urban Palace #175",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹1650 for two"
+  },
+  {
+    "id": "dining-gen-176",
+    "type": "dining",
+    "name": "Gourmet House #176",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "dining-gen-177",
+    "type": "dining",
+    "name": "Heritage Bistro #177",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹750 for two"
+  },
+  {
+    "id": "dining-gen-178",
+    "type": "dining",
+    "name": "Vintage Tavern #178",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "dining-gen-179",
+    "type": "dining",
+    "name": "Spice Grill #179",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹1850 for two"
+  },
+  {
+    "id": "dining-gen-180",
+    "type": "dining",
+    "name": "The Great Kitchen #180",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "dining-gen-181",
+    "type": "dining",
+    "name": "Capital Restaurant #181",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹950 for two"
+  },
+  {
+    "id": "dining-gen-182",
+    "type": "dining",
+    "name": "Golden Plaza #182",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹500 for two"
+  },
+  {
+    "id": "dining-gen-183",
+    "type": "dining",
+    "name": "Royal Diner #183",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹2050 for two"
+  },
+  {
+    "id": "dining-gen-184",
+    "type": "dining",
+    "name": "Signature Dhaba #184",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-gen-185",
+    "type": "dining",
+    "name": "Urban Palace #185",
+    "cuisine": "Desserts, Desserts",
+    "location": "MG Road, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1150 for two"
+  },
+  {
+    "id": "dining-gen-186",
+    "type": "dining",
+    "name": "Gourmet House #186",
+    "cuisine": "Seafood, Mughlai",
+    "location": "Malleshwaram, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹700 for two"
+  },
+  {
+    "id": "dining-gen-187",
+    "type": "dining",
+    "name": "Heritage Bistro #187",
+    "cuisine": "South Indian, Continental",
+    "location": "Sadashivnagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "price": "₹2250 for two"
+  },
+  {
+    "id": "dining-gen-188",
+    "type": "dining",
+    "name": "Vintage Tavern #188",
+    "cuisine": "Mughlai, Chinese",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "dining-gen-189",
+    "type": "dining",
+    "name": "Spice Grill #189",
+    "cuisine": "Fast Food, South Indian",
+    "location": "Marathahalli, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "price": "₹1350 for two"
+  },
+  {
+    "id": "dining-gen-190",
+    "type": "dining",
+    "name": "The Great Kitchen #190",
+    "cuisine": "North Indian, North Indian",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "dining-gen-191",
+    "type": "dining",
+    "name": "Capital Restaurant #191",
+    "cuisine": "Continental, Street Food",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "price": "₹450 for two"
+  },
+  {
+    "id": "dining-gen-192",
+    "type": "dining",
+    "name": "Golden Plaza #192",
+    "cuisine": "Italian, Seafood",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "dining-gen-193",
+    "type": "dining",
+    "name": "Royal Diner #193",
+    "cuisine": "Street Food, Fast Food",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1550 for two"
+  },
+  {
+    "id": "dining-gen-194",
+    "type": "dining",
+    "name": "Signature Dhaba #194",
+    "cuisine": "Chinese, Italian",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-1",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewing Company",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2,200 for two"
+  },
+  {
+    "id": "nightlife-2",
+    "type": "nightlife",
+    "name": "Social",
+    "cuisine": "American, North Indian, Cocktails",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1,400 for two"
+  },
+  {
+    "id": "nightlife-3",
+    "type": "nightlife",
+    "name": "XOOX Brewmill",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1,800 for two"
+  },
+  {
+    "id": "nightlife-4",
+    "type": "nightlife",
+    "name": "Hard Rock Cafe",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2,000 for two"
+  },
+  {
+    "id": "nightlife-gen-1",
+    "type": "nightlife",
+    "name": "Social Room #1",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-2",
+    "type": "nightlife",
+    "name": "Club Hub #2",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-3",
+    "type": "nightlife",
+    "name": "Brew Club #3",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-4",
+    "type": "nightlife",
+    "name": "High Bar #4",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-5",
+    "type": "nightlife",
+    "name": "The Lounge Arena #5",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-6",
+    "type": "nightlife",
+    "name": "Pulse Lounge #6",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-7",
+    "type": "nightlife",
+    "name": "Vibe Deck #7",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-8",
+    "type": "nightlife",
+    "name": "Elevate Pub #8",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-9",
+    "type": "nightlife",
+    "name": "Neon Social #9",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-10",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #10",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-11",
+    "type": "nightlife",
+    "name": "Social Room #11",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-12",
+    "type": "nightlife",
+    "name": "Club Hub #12",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-13",
+    "type": "nightlife",
+    "name": "Brew Club #13",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-14",
+    "type": "nightlife",
+    "name": "High Bar #14",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-15",
+    "type": "nightlife",
+    "name": "The Lounge Arena #15",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-16",
+    "type": "nightlife",
+    "name": "Pulse Lounge #16",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-17",
+    "type": "nightlife",
+    "name": "Vibe Deck #17",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-18",
+    "type": "nightlife",
+    "name": "Elevate Pub #18",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-19",
+    "type": "nightlife",
+    "name": "Neon Social #19",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-20",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #20",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-21",
+    "type": "nightlife",
+    "name": "Social Room #21",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-22",
+    "type": "nightlife",
+    "name": "Club Hub #22",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-23",
+    "type": "nightlife",
+    "name": "Brew Club #23",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-24",
+    "type": "nightlife",
+    "name": "High Bar #24",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-25",
+    "type": "nightlife",
+    "name": "The Lounge Arena #25",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-26",
+    "type": "nightlife",
+    "name": "Pulse Lounge #26",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-27",
+    "type": "nightlife",
+    "name": "Vibe Deck #27",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-28",
+    "type": "nightlife",
+    "name": "Elevate Pub #28",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-29",
+    "type": "nightlife",
+    "name": "Neon Social #29",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-30",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #30",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-31",
+    "type": "nightlife",
+    "name": "Social Room #31",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-32",
+    "type": "nightlife",
+    "name": "Club Hub #32",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-33",
+    "type": "nightlife",
+    "name": "Brew Club #33",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-34",
+    "type": "nightlife",
+    "name": "High Bar #34",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-35",
+    "type": "nightlife",
+    "name": "The Lounge Arena #35",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-36",
+    "type": "nightlife",
+    "name": "Pulse Lounge #36",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-37",
+    "type": "nightlife",
+    "name": "Vibe Deck #37",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-38",
+    "type": "nightlife",
+    "name": "Elevate Pub #38",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-39",
+    "type": "nightlife",
+    "name": "Neon Social #39",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-40",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #40",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-41",
+    "type": "nightlife",
+    "name": "Social Room #41",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-42",
+    "type": "nightlife",
+    "name": "Club Hub #42",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-43",
+    "type": "nightlife",
+    "name": "Brew Club #43",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-44",
+    "type": "nightlife",
+    "name": "High Bar #44",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-45",
+    "type": "nightlife",
+    "name": "The Lounge Arena #45",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-46",
+    "type": "nightlife",
+    "name": "Pulse Lounge #46",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-47",
+    "type": "nightlife",
+    "name": "Vibe Deck #47",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-48",
+    "type": "nightlife",
+    "name": "Elevate Pub #48",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-49",
+    "type": "nightlife",
+    "name": "Neon Social #49",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-50",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #50",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-51",
+    "type": "nightlife",
+    "name": "Social Room #51",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-52",
+    "type": "nightlife",
+    "name": "Club Hub #52",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-53",
+    "type": "nightlife",
+    "name": "Brew Club #53",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-54",
+    "type": "nightlife",
+    "name": "High Bar #54",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-55",
+    "type": "nightlife",
+    "name": "The Lounge Arena #55",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-56",
+    "type": "nightlife",
+    "name": "Pulse Lounge #56",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-57",
+    "type": "nightlife",
+    "name": "Vibe Deck #57",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-58",
+    "type": "nightlife",
+    "name": "Elevate Pub #58",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-59",
+    "type": "nightlife",
+    "name": "Neon Social #59",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-60",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #60",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-61",
+    "type": "nightlife",
+    "name": "Social Room #61",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-62",
+    "type": "nightlife",
+    "name": "Club Hub #62",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-63",
+    "type": "nightlife",
+    "name": "Brew Club #63",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-64",
+    "type": "nightlife",
+    "name": "High Bar #64",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-65",
+    "type": "nightlife",
+    "name": "The Lounge Arena #65",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-66",
+    "type": "nightlife",
+    "name": "Pulse Lounge #66",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-67",
+    "type": "nightlife",
+    "name": "Vibe Deck #67",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-68",
+    "type": "nightlife",
+    "name": "Elevate Pub #68",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-69",
+    "type": "nightlife",
+    "name": "Neon Social #69",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-70",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #70",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-71",
+    "type": "nightlife",
+    "name": "Social Room #71",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-72",
+    "type": "nightlife",
+    "name": "Club Hub #72",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-73",
+    "type": "nightlife",
+    "name": "Brew Club #73",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-74",
+    "type": "nightlife",
+    "name": "High Bar #74",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-75",
+    "type": "nightlife",
+    "name": "The Lounge Arena #75",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-76",
+    "type": "nightlife",
+    "name": "Pulse Lounge #76",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-77",
+    "type": "nightlife",
+    "name": "Vibe Deck #77",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-78",
+    "type": "nightlife",
+    "name": "Elevate Pub #78",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-79",
+    "type": "nightlife",
+    "name": "Neon Social #79",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-80",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #80",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-81",
+    "type": "nightlife",
+    "name": "Social Room #81",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-82",
+    "type": "nightlife",
+    "name": "Club Hub #82",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-83",
+    "type": "nightlife",
+    "name": "Brew Club #83",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-84",
+    "type": "nightlife",
+    "name": "High Bar #84",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-85",
+    "type": "nightlife",
+    "name": "The Lounge Arena #85",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-86",
+    "type": "nightlife",
+    "name": "Pulse Lounge #86",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-87",
+    "type": "nightlife",
+    "name": "Vibe Deck #87",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-88",
+    "type": "nightlife",
+    "name": "Elevate Pub #88",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-89",
+    "type": "nightlife",
+    "name": "Neon Social #89",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-90",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #90",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-91",
+    "type": "nightlife",
+    "name": "Social Room #91",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-92",
+    "type": "nightlife",
+    "name": "Club Hub #92",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-93",
+    "type": "nightlife",
+    "name": "Brew Club #93",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-94",
+    "type": "nightlife",
+    "name": "High Bar #94",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-95",
+    "type": "nightlife",
+    "name": "The Lounge Arena #95",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-96",
+    "type": "nightlife",
+    "name": "Pulse Lounge #96",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-97",
+    "type": "nightlife",
+    "name": "Vibe Deck #97",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-98",
+    "type": "nightlife",
+    "name": "Elevate Pub #98",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-99",
+    "type": "nightlife",
+    "name": "Neon Social #99",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-100",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #100",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-101",
+    "type": "nightlife",
+    "name": "Social Room #101",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-102",
+    "type": "nightlife",
+    "name": "Club Hub #102",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-103",
+    "type": "nightlife",
+    "name": "Brew Club #103",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-104",
+    "type": "nightlife",
+    "name": "High Bar #104",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-105",
+    "type": "nightlife",
+    "name": "The Lounge Arena #105",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-106",
+    "type": "nightlife",
+    "name": "Pulse Lounge #106",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-107",
+    "type": "nightlife",
+    "name": "Vibe Deck #107",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-108",
+    "type": "nightlife",
+    "name": "Elevate Pub #108",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-109",
+    "type": "nightlife",
+    "name": "Neon Social #109",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-110",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #110",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-111",
+    "type": "nightlife",
+    "name": "Social Room #111",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-112",
+    "type": "nightlife",
+    "name": "Club Hub #112",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-113",
+    "type": "nightlife",
+    "name": "Brew Club #113",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-114",
+    "type": "nightlife",
+    "name": "High Bar #114",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-115",
+    "type": "nightlife",
+    "name": "The Lounge Arena #115",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-116",
+    "type": "nightlife",
+    "name": "Pulse Lounge #116",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-117",
+    "type": "nightlife",
+    "name": "Vibe Deck #117",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-118",
+    "type": "nightlife",
+    "name": "Elevate Pub #118",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-119",
+    "type": "nightlife",
+    "name": "Neon Social #119",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-120",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #120",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-121",
+    "type": "nightlife",
+    "name": "Social Room #121",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-122",
+    "type": "nightlife",
+    "name": "Club Hub #122",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-123",
+    "type": "nightlife",
+    "name": "Brew Club #123",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-124",
+    "type": "nightlife",
+    "name": "High Bar #124",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-125",
+    "type": "nightlife",
+    "name": "The Lounge Arena #125",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-126",
+    "type": "nightlife",
+    "name": "Pulse Lounge #126",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-127",
+    "type": "nightlife",
+    "name": "Vibe Deck #127",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-128",
+    "type": "nightlife",
+    "name": "Elevate Pub #128",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-129",
+    "type": "nightlife",
+    "name": "Neon Social #129",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-130",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #130",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-131",
+    "type": "nightlife",
+    "name": "Social Room #131",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-132",
+    "type": "nightlife",
+    "name": "Club Hub #132",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-133",
+    "type": "nightlife",
+    "name": "Brew Club #133",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-134",
+    "type": "nightlife",
+    "name": "High Bar #134",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-135",
+    "type": "nightlife",
+    "name": "The Lounge Arena #135",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-136",
+    "type": "nightlife",
+    "name": "Pulse Lounge #136",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-137",
+    "type": "nightlife",
+    "name": "Vibe Deck #137",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-138",
+    "type": "nightlife",
+    "name": "Elevate Pub #138",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-139",
+    "type": "nightlife",
+    "name": "Neon Social #139",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-140",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #140",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-141",
+    "type": "nightlife",
+    "name": "Social Room #141",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-142",
+    "type": "nightlife",
+    "name": "Club Hub #142",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-143",
+    "type": "nightlife",
+    "name": "Brew Club #143",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-144",
+    "type": "nightlife",
+    "name": "High Bar #144",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-145",
+    "type": "nightlife",
+    "name": "The Lounge Arena #145",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-146",
+    "type": "nightlife",
+    "name": "Pulse Lounge #146",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-147",
+    "type": "nightlife",
+    "name": "Vibe Deck #147",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-148",
+    "type": "nightlife",
+    "name": "Elevate Pub #148",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-149",
+    "type": "nightlife",
+    "name": "Neon Social #149",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-150",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #150",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-151",
+    "type": "nightlife",
+    "name": "Social Room #151",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-152",
+    "type": "nightlife",
+    "name": "Club Hub #152",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-153",
+    "type": "nightlife",
+    "name": "Brew Club #153",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-154",
+    "type": "nightlife",
+    "name": "High Bar #154",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-155",
+    "type": "nightlife",
+    "name": "The Lounge Arena #155",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-156",
+    "type": "nightlife",
+    "name": "Pulse Lounge #156",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-157",
+    "type": "nightlife",
+    "name": "Vibe Deck #157",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-158",
+    "type": "nightlife",
+    "name": "Elevate Pub #158",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-159",
+    "type": "nightlife",
+    "name": "Neon Social #159",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-160",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #160",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-161",
+    "type": "nightlife",
+    "name": "Social Room #161",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-162",
+    "type": "nightlife",
+    "name": "Club Hub #162",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-163",
+    "type": "nightlife",
+    "name": "Brew Club #163",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-164",
+    "type": "nightlife",
+    "name": "High Bar #164",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-165",
+    "type": "nightlife",
+    "name": "The Lounge Arena #165",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-166",
+    "type": "nightlife",
+    "name": "Pulse Lounge #166",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "nightlife-gen-167",
+    "type": "nightlife",
+    "name": "Vibe Deck #167",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹900 for two"
+  },
+  {
+    "id": "nightlife-gen-168",
+    "type": "nightlife",
+    "name": "Elevate Pub #168",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3200 for two"
+  },
+  {
+    "id": "nightlife-gen-169",
+    "type": "nightlife",
+    "name": "Neon Social #169",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2500 for two"
+  },
+  {
+    "id": "nightlife-gen-170",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #170",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1800 for two"
+  },
+  {
+    "id": "nightlife-gen-171",
+    "type": "nightlife",
+    "name": "Social Room #171",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1100 for two"
+  },
+  {
+    "id": "nightlife-gen-172",
+    "type": "nightlife",
+    "name": "Club Hub #172",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3400 for two"
+  },
+  {
+    "id": "nightlife-gen-173",
+    "type": "nightlife",
+    "name": "Brew Club #173",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹2700 for two"
+  },
+  {
+    "id": "nightlife-gen-174",
+    "type": "nightlife",
+    "name": "High Bar #174",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2000 for two"
+  },
+  {
+    "id": "nightlife-gen-175",
+    "type": "nightlife",
+    "name": "The Lounge Arena #175",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1300 for two"
+  },
+  {
+    "id": "nightlife-gen-176",
+    "type": "nightlife",
+    "name": "Pulse Lounge #176",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹3600 for two"
+  },
+  {
+    "id": "nightlife-gen-177",
+    "type": "nightlife",
+    "name": "Vibe Deck #177",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2900 for two"
+  },
+  {
+    "id": "nightlife-gen-178",
+    "type": "nightlife",
+    "name": "Elevate Pub #178",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹2200 for two"
+  },
+  {
+    "id": "nightlife-gen-179",
+    "type": "nightlife",
+    "name": "Neon Social #179",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹1500 for two"
+  },
+  {
+    "id": "nightlife-gen-180",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #180",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹800 for two"
+  },
+  {
+    "id": "nightlife-gen-181",
+    "type": "nightlife",
+    "name": "Social Room #181",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹3100 for two"
+  },
+  {
+    "id": "nightlife-gen-182",
+    "type": "nightlife",
+    "name": "Club Hub #182",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹2400 for two"
+  },
+  {
+    "id": "nightlife-gen-183",
+    "type": "nightlife",
+    "name": "Brew Club #183",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹1700 for two"
+  },
+  {
+    "id": "nightlife-gen-184",
+    "type": "nightlife",
+    "name": "High Bar #184",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "5.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹1000 for two"
+  },
+  {
+    "id": "nightlife-gen-185",
+    "type": "nightlife",
+    "name": "The Lounge Arena #185",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "4.3",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹3300 for two"
+  },
+  {
+    "id": "nightlife-gen-186",
+    "type": "nightlife",
+    "name": "Pulse Lounge #186",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹2600 for two"
+  },
+  {
+    "id": "nightlife-gen-187",
+    "type": "nightlife",
+    "name": "Vibe Deck #187",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Church Street, Bengaluru",
+    "rating": "4.2",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹1900 for two"
+  },
+  {
+    "id": "nightlife-gen-188",
+    "type": "nightlife",
+    "name": "Elevate Pub #188",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "Indiranagar, Bengaluru",
+    "rating": "4.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹1200 for two"
+  },
+  {
+    "id": "nightlife-gen-189",
+    "type": "nightlife",
+    "name": "Neon Social #189",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "HSR Layout, Bengaluru",
+    "rating": "4.1",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹3500 for two"
+  },
+  {
+    "id": "nightlife-gen-190",
+    "type": "nightlife",
+    "name": "Byg Brewski Brewery #190",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Hennur, Bengaluru",
+    "rating": "4.7",
+    "image": "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "price": "₹2800 for two"
+  },
+  {
+    "id": "nightlife-gen-191",
+    "type": "nightlife",
+    "name": "Social Room #191",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "St. Marks Road, Bengaluru",
+    "rating": "4.0",
+    "image": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "price": "₹2100 for two"
+  },
+  {
+    "id": "nightlife-gen-192",
+    "type": "nightlife",
+    "name": "Club Hub #192",
+    "cuisine": "Mediterranean, Seafood, Goan",
+    "location": "Jayanagar, Bengaluru",
+    "rating": "4.6",
+    "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "price": "₹1400 for two"
+  },
+  {
+    "id": "nightlife-gen-193",
+    "type": "nightlife",
+    "name": "Brew Club #193",
+    "cuisine": "American, Burgers, Cocktails",
+    "location": "BTM Layout, Bengaluru",
+    "rating": "3.9",
+    "image": "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "price": "₹3700 for two"
+  },
+  {
+    "id": "nightlife-gen-194",
+    "type": "nightlife",
+    "name": "High Bar #194",
+    "cuisine": "Continental, Finger Food, Brewery",
+    "location": "Koramangala, Bengaluru",
+    "rating": "4.5",
+    "image": "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "price": "₹3000 for two"
+  },
+  {
+    "id": "nightlife-gen-195",
+    "type": "nightlife",
+    "name": "The Lounge Arena #195",
+    "cuisine": "Finger Food, Craft Beer",
+    "location": "Whitefield, Bengaluru",
+    "rating": "3.8",
+    "image": "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600",
+    "price": "₹2300 for two"
+  },
+  {
+    "id": "nightlife-gen-196",
+    "type": "nightlife",
+    "name": "Pulse Lounge #196",
+    "cuisine": "Modern Indian, Craft Beer",
+    "location": "MG Road, Bengaluru",
+    "rating": "4.4",
+    "image": "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "price": "₹1600 for two"
+  },
+  {
+    "id": "dining-1782104858506",
+    "rating": "4.5",
+    "type": "dining",
+    "name": "Admin Test Spot",
+    "cuisine": "Pizza, Pasta, Fast Food",
+    "location": "Koramangala, Bengaluru",
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "price": "500 for two"
+  }
+]

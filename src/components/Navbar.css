@@ -1,352 +1,309 @@
 /* ====================================================
-   🌅 LIKE YOUR SHOP DESIGN SYSTEM (NAVBAR ARCH)
+   🔴 ZOMATO PREMIUM STYLING (NAVBAR DESIGN)
    ==================================================== */
 
 .lys-navbar-node {
-    width: 100%;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 100%;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: var(--font-title);
+  background-color: var(--bg-card-override);
+  border-bottom: 1.5px solid var(--border-color-override);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-spring);
 }
 
-/* Background Variations */
 .lys-navbar-node.transparent-navbar {
-    background: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.lys-navbar-node.white-navbar {
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(28, 28, 28, 0.08);
-    border-bottom: 1px solid #f8f8f8;
+  background: transparent;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
 }
 
 .lys-navbar-node.scrolled {
-    background: #ffffff !important;
-    box-shadow: 0 4px 12px rgba(28, 28, 28, 0.1) !important;
-    border-bottom: 1px solid #e8e8e8 !important;
+  background-color: var(--bg-card-override) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-bottom-color: var(--border-color-override) !important;
 }
 
-/* Container */
 .lys-navbar-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-/* Logo */
+/* Logo styling */
 .lys-logo-block {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
 }
 
 .lys-logo-text {
-    font-size: 32px;
-    font-weight: 850;
-    color: #e23744;
-    letter-spacing: -1.5px;
-    line-height: 1;
-    font-style: italic;
-    font-family: 'Okra', 'Inter', sans-serif;
-    transition: color 0.3s ease;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -1.2px;
+  line-height: 1;
+  font-style: italic;
+  font-family: var(--font-title);
 }
 
 .transparent-navbar .lys-logo-text {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-.white-navbar .lys-logo-text,
 .scrolled .lys-logo-text {
-    color: #e23744 !important;
+  color: var(--primary-color) !important;
 }
 
-/* Dual Search Widget */
+/* Navbar Dual Search Widget */
 .lys-search-widget {
-    flex: 1;
-    max-width: 520px;
-    height: 48px;
-    background: #ffffff;
-    border: 1px solid #e8e8e8;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    margin: 0 30px;
-    box-shadow: 0 2px 8px rgba(28, 28, 28, 0.06);
-    transition: box-shadow 0.2s ease;
+  flex: 1;
+  max-width: 500px;
+  height: 44px;
+  background-color: var(--bg-color-override);
+  border: 1.5px solid var(--border-color-override);
+  border-radius: var(--border-radius-sm);
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  margin: 0 24px;
+  transition: var(--transition-spring);
 }
 
 .lys-search-widget:focus-within {
-    box-shadow: 0 4px 15px rgba(28, 28, 28, 0.12);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
 }
 
 .search-location-picker {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0.8;
+  overflow: hidden;
 }
 
 .location-pin-icon {
-    font-size: 16px;
-    color: #e23744;
+  font-size: 16px;
+  color: var(--primary-color);
 }
 
 .search-location-picker input {
-    border: none;
-    outline: none;
-    font-size: 13.5px;
-    color: #1c1c1c;
-    width: 100%;
-    font-weight: 500;
+  border: none !important;
+  outline: none !important;
+  font-size: 13.5px !important;
+  color: var(--text-color-override) !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
 .location-chevron {
-    font-size: 8px;
-    color: #4f4f4f;
-    cursor: pointer;
-    margin-right: 4px;
+  font-size: 10px;
+  color: var(--text-muted-override);
 }
 
 .search-widget-divider {
-    width: 1px;
-    height: 20px;
-    background: #cfcfcf;
-    margin: 0 12px;
+  width: 1.5px;
+  height: 18px;
+  background-color: var(--border-color-override);
+  margin: 0 10px;
 }
 
 .search-input-field {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1.2;
 }
 
 .search-lens-icon {
-    font-size: 14px;
-    color: #828282;
+  font-size: 15px;
+  color: var(--text-muted-override);
 }
 
 .search-input-field input {
-    border: none;
-    outline: none;
-    font-size: 13.5px;
-    color: #1c1c1c;
-    width: 100%;
+  border: none !important;
+  outline: none !important;
+  font-size: 13.5px !important;
+  color: var(--text-color-override) !important;
+  width: 100% !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Nav Actions Link Row */
+/* Nav Actions List Row */
 .lys-nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-action-link {
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    color: #363636;
-    transition: color 0.15s ease;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-muted-override);
+  transition: color 0.2s ease;
 }
 
 .nav-action-link:hover,
 .nav-action-link.active {
-    color: #e23744;
+  color: var(--primary-color);
 }
 
 .admin-pill {
-    background: rgba(226, 55, 68, 0.1);
-    color: #e23744 !important;
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-weight: 600;
+  background-color: var(--primary-light);
+  color: var(--primary-color) !important;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-/* Cart Button */
+/* Cart Trigger Button */
 .lys-cart-btn {
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background 0.15s ease;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--border-radius-sm);
+  transition: background-color 0.2s ease;
 }
 
 .lys-cart-btn:hover {
-    background: rgba(226, 55, 68, 0.08);
+  background-color: var(--table-tr-hover);
 }
 
 .cart-icon-wrap {
-    position: relative;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-override);
 }
 
 .lys-cart-count {
-    position: absolute;
-    top: -5px;
-    right: -7px;
-    background: #e23744;
-    color: #ffffff;
-    font-size: 9.5px;
-    font-weight: 800;
-    min-width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid #ffffff;
-    box-shadow: 0 1px 4px rgba(226, 55, 68, 0.3);
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-size: 9px;
+  font-weight: 800;
+  min-width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--bg-card-override);
+  box-shadow: 0 1px 4px rgba(255, 63, 86, 0.4);
 }
 
 .cart-text-lbl {
-    font-size: 15px;
-    font-weight: 500;
-    color: #363636;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-color-override);
 }
 
-/* Auth Buttons */
+/* Navigation Auth Buttons */
 .nav-auth-link {
-    text-decoration: none;
-    font-size: 15px;
-    font-weight: 500;
-    color: #363636;
+  text-decoration: none;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--text-color-override);
+  transition: var(--transition-spring);
 }
 
 .nav-auth-link.signup-btn {
-    background: #e23744;
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background: var(--primary-gradient);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: var(--border-radius-sm);
+  box-shadow: 0 4px 12px rgba(255, 63, 86, 0.2);
 }
 
 .nav-auth-link.signup-btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 10px rgba(226, 55, 68, 0.25);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 63, 86, 0.35);
 }
 
 .nav-logout-btn-lys {
-    background: transparent;
-    border: 1px solid #e23744;
-    color: #e23744;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 14.5px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.15s ease;
+  background: transparent;
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 6px 14px;
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-spring);
 }
 
 .nav-logout-btn-lys:hover {
-    background: rgba(226, 55, 68, 0.08);
+  background-color: var(--primary-light);
 }
 
-/* Theme switch */
+/* Theme Switcher Toggle */
 .lys-theme-toggle {
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 18px;
-    cursor: pointer;
-    padding: 6px;
-    border-radius: 50%;
-    transition: background 0.15s ease;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted-override);
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .lys-theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.05);
+  background-color: var(--table-tr-hover);
+  color: var(--primary-color);
 }
 
-/* ====================================================
-   🌙 DARK MODE COMPATIBILITY MODES
-   ==================================================== */
-
-html.dark-mode .lys-navbar-node.white-navbar,
-html.dark-mode .lys-navbar-node.scrolled {
-    background: #1c1c1c !important;
-    border-bottom-color: #2e2e2e !important;
-}
-
-html.dark-mode .nav-action-link,
-html.dark-mode .cart-text-lbl,
-html.dark-mode .nav-auth-link {
-    color: #e5e5e5;
-}
-
-html.dark-mode .nav-action-link:hover,
-html.dark-mode .nav-action-link.active {
-    color: #e23744;
-}
-
-html.dark-mode .lys-search-widget {
-    background: #2b2b2b;
-    border-color: #3e3e3e;
-}
-
-html.dark-mode .search-location-picker input,
-html.dark-mode .search-input-field input {
-    background: transparent;
-    color: #ffffff;
-}
-
-html.dark-mode .search-widget-divider {
-    background: #4a4a4a;
-}
-
-html.dark-mode .location-chevron,
-html.dark-mode .search-lens-icon {
-    color: #a0a0a0;
-}
-
-html.dark-mode .lys-theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-/* ====================================================
-   📱 RESPONSIVE BREAKPOINTS
-   ==================================================== */
-
+/* Mobile Responsiveness */
 @media (max-width: 992px) {
-    .lys-search-widget {
-        display: none; /* Hide inside navbar for medium screen heights */
-    }
+  .lys-search-widget {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-    .lys-navbar-node {
-        height: auto;
-        padding: 15px 0;
-    }
-    
-    .lys-navbar-container {
-        flex-direction: column;
-        gap: 12px;
-    }
+  .lys-navbar-node {
+    height: auto;
+    padding: 12px 0;
+  }
+  
+  .lys-navbar-container {
+    flex-direction: column;
+    gap: 12px;
+  }
 
-    .lys-nav-actions {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
+  .lys-nav-actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
 }

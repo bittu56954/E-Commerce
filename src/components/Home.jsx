@@ -3,6 +3,90 @@ import { useNavigate } from 'react-router-dom';
 import { triggerToast } from './Toast';
 import './Home.css';
 
+const defaultDiningOutSpots = (() => {
+  const list = [];
+  const cuisines = ["North Indian", "South Indian", "Chinese", "Continental", "Mughlai", "Desserts", "Italian", "Fast Food", "Seafood", "Street Food"];
+  const locations = ["Koramangala", "Indiranagar", "Whitefield", "Jayanagar", "HSR Layout", "MG Road", "Malleshwaram", "Sadashivnagar", "BTM Layout", "Marathahalli"];
+  const images = [
+    "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600",
+    "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600",
+    "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600",
+    "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600",
+    "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600",
+    "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600",
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600"
+  ];
+  const prefix = ["The Great", "Royal", "Gourmet", "Spice", "Golden", "Urban", "Vintage", "Capital", "Signature", "Heritage"];
+  const suffix = ["Kitchen", "Bistro", "Dhaba", "Restaurant", "Tavern", "Palace", "Plaza", "Grill", "House", "Diner"];
+  
+  const originals = [
+    { name: "The Bier Library", cuisine: "Continental, Finger Food, Brewery", location: "Koramangala, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600", price: "₹1,500 for two" },
+    { name: "Toit", cuisine: "Italian, Pizza, Craft Beer", location: "Indiranagar, Bengaluru", rating: "4.8", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600", price: "₹2,000 for two" },
+    { name: "Punjab Grill", cuisine: "North Indian, Mughlai", location: "Whitefield, Bengaluru", rating: "4.5", image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600", price: "₹1,800 for two" },
+    { name: "Windmills Craftworks", cuisine: "American, North Indian, Salad", location: "Whitefield, Bengaluru", rating: "4.7", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600", price: "₹2,500 for two" },
+    { name: "Fenny's Lounge & Kitchen", cuisine: "Mediterranean, Seafood, Goan", location: "Koramangala, Bengaluru", rating: "4.4", image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600", price: "₹1,600 for two" },
+    { name: "Corner House Ice Cream", cuisine: "Desserts, Ice Cream", location: "Bhilai, Chhattisgarh, Kurud Road, 490001", rating: "4.9", image: "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600", price: "₹400 for two" }
+  ];
+  
+  originals.forEach((d, idx) => {
+    list.push({ id: `dining-${idx + 1}`, type: 'dining', ...d });
+  });
+
+  for (let i = 1; i <= 194; i++) {
+    const p = prefix[(i * 7) % prefix.length];
+    const s = suffix[(i * 13) % suffix.length];
+    const name = `${p} ${s} #${i}`;
+    const cuisine = cuisines[(i * 3) % cuisines.length] + ", " + cuisines[(i * 9) % cuisines.length];
+    const location = locations[(i * 11) % locations.length] + ", Bengaluru";
+    const rating = (3.8 + ((i * 17) % 13) / 10).toFixed(1);
+    const image = images[(i * 23) % images.length];
+    const price = `₹${Math.floor(400 + ((i * 31) % 40) * 50)} for two`;
+    list.push({ id: `dining-gen-${i}`, type: 'dining', name, cuisine, location, rating, image, price });
+  }
+  return list;
+})();
+
+const defaultNightlifeSpots = (() => {
+  const list = [];
+  const cuisines = ["Finger Food, Craft Beer", "American, Burgers, Cocktails", "Modern Indian, Craft Beer", "Continental, Finger Food, Brewery", "Mediterranean, Seafood, Goan"];
+  const locations = ["Hennur", "Church Street", "Koramangala", "St. Marks Road", "Indiranagar", "Whitefield", "Jayanagar", "HSR Layout", "MG Road", "BTM Layout"];
+  const images = [
+    "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600",
+    "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600",
+    "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600",
+    "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600",
+    "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?q=80&w=600",
+    "https://images.unsplash.com/photo-1543007630-9710e4a00a20?q=80&w=600",
+    "https://images.unsplash.com/photo-1574096079513-d8259312b785?q=80&w=600"
+  ];
+  const prefix = ["Byg Brewski", "Social", "Club", "Brew", "High", "The Lounge", "Pulse", "Vibe", "Elevate", "Neon"];
+  const suffix = ["Brewery", "Club", "Lounge", "Social", "Hub", "Arena", "Pub", "Room", "Bar", "Deck"];
+
+  const originals = [
+    { name: "Byg Brewski Brewing Company", cuisine: "Finger Food, Craft Beer", location: "Hennur, Bengaluru", rating: "4.7", image: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600", price: "₹2,200 for two" },
+    { name: "Social", cuisine: "American, North Indian, Cocktails", location: "Church Street, Bengaluru", rating: "4.5", image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600", price: "₹1,400 for two" },
+    { name: "XOOX Brewmill", cuisine: "Modern Indian, Craft Beer", location: "Koramangala, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600", price: "₹1,800 for two" },
+    { name: "Hard Rock Cafe", cuisine: "American, Burgers, Cocktails", location: "St. Marks Road, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600", price: "₹2,000 for two" }
+  ];
+  originals.forEach((n, idx) => {
+    list.push({ id: `nightlife-${idx + 1}`, type: 'nightlife', ...n });
+  });
+
+  for (let i = 1; i <= 196; i++) {
+    const p = prefix[(i * 11) % prefix.length];
+    const s = suffix[(i * 17) % suffix.length];
+    const name = `${p} ${s} #${i}`;
+    const cuisine = cuisines[(i * 7) % cuisines.length];
+    const location = locations[(i * 13) % locations.length] + ", Bengaluru";
+    const rating = (3.8 + ((i * 19) % 13) / 10).toFixed(1);
+    const image = images[(i * 29) % images.length];
+    const price = `₹${Math.floor(800 + ((i * 23) % 30) * 100)} for two`;
+    list.push({ id: `nightlife-gen-${i}`, type: 'nightlife', name, cuisine, location, rating, image, price });
+  }
+  return list;
+})();
+
 const Home = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -10,6 +94,11 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [cartOpen, setCartOpen] = useState(false);
+  const [user, setUser] = useState(null);
+  
+  // Spots list state
+  const [diningOutSpots, setDiningOutSpots] = useState(defaultDiningOutSpots);
+  const [nightlifeSpots, setNightlifeSpots] = useState(defaultNightlifeSpots);
   
   // Like Your Shop specific view state: 'landing', 'delivery', 'dining', 'nightlife'
   const [viewMode, setViewMode] = useState('landing');
@@ -51,14 +140,14 @@ const Home = () => {
   });
 
   const [settings, setSettings] = useState({
-    storeName: "zomato",
+    storeName: "Like Your Food",
     currencySymbol: "₹",
     gstPercentage: 5,
     storeStatus: "Open"
   });
   const [categoriesList, setCategoriesList] = useState([]);
 
-  // Fetch settings & categories
+  // Fetch settings, categories & spots
   useEffect(() => {
     const fetchSettingsAndCategories = async () => {
       try {
@@ -73,8 +162,19 @@ const Home = () => {
           const categoriesData = await categoriesRes.json();
           setCategoriesList(categoriesData.categories);
         }
+
+        const spotsRes = await fetch('/api/spots');
+        if (spotsRes.ok) {
+          const spotsData = await spotsRes.json();
+          if (Array.isArray(spotsData.spots) && spotsData.spots.length > 0) {
+            const dining = spotsData.spots.filter(s => s.type === 'dining');
+            const nightlife = spotsData.spots.filter(s => s.type === 'nightlife');
+            if (dining.length > 0) setDiningOutSpots(dining);
+            if (nightlife.length > 0) setNightlifeSpots(nightlife);
+          }
+        }
       } catch (error) {
-        console.error('Error fetching settings/categories:', error);
+        console.error('Error fetching settings/categories/spots:', error);
       }
     };
     fetchSettingsAndCategories();
@@ -107,6 +207,7 @@ const Home = () => {
     if (savedUser) {
       try {
         const parsed = JSON.parse(savedUser);
+        setUser(parsed);
         setCheckoutData(prev => ({
           ...prev,
           name: prev.name || parsed.name || '',
@@ -116,6 +217,8 @@ const Home = () => {
       } catch (e) {
         console.error(e);
       }
+    } else {
+      setUser(null);
     }
   };
 
@@ -158,6 +261,16 @@ const Home = () => {
     fetchProducts();
   }, [selectedCategory]);
 
+  const parsePrice = (priceVal) => {
+    if (typeof priceVal === 'number') return priceVal;
+    if (typeof priceVal === 'string') {
+      const cleaned = priceVal.replace(/[^\d]/g, '');
+      const num = parseInt(cleaned, 10);
+      return isNaN(num) ? 0 : num;
+    }
+    return 0;
+  };
+
   const handleAddToCart = (product) => {
     const existingIndex = cart.findIndex(item => item.id === product.id);
     const newCart = [...cart];
@@ -165,7 +278,8 @@ const Home = () => {
     if (existingIndex > -1) {
       newCart[existingIndex].quantity += 1;
     } else {
-      newCart.push({ ...product, quantity: 1 });
+      const parsedPrice = parsePrice(product.price);
+      newCart.push({ ...product, price: parsedPrice, quantity: 1 });
     }
     
     saveCart(newCart);
@@ -410,24 +524,6 @@ const Home = () => {
 
   const grandTotal = cartSubtotal - discountAmount + deliveryCharges;
 
-  // Like Your Shop static Dining Out list
-  const diningOutSpots = [
-    { name: "The Bier Library", cuisine: "Continental, Finger Food, Brewery", location: "Koramangala, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=600", price: "₹1,500 for two" },
-    { name: "Toit", cuisine: "Italian, Pizza, Craft Beer", location: "Indiranagar, Bengaluru", rating: "4.8", image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=600", price: "₹2,000 for two" },
-    { name: "Punjab Grill", cuisine: "North Indian, Mughlai", location: "Whitefield, Bengaluru", rating: "4.5", image: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=600", price: "₹1,800 for two" },
-    { name: "Windmills Craftworks", cuisine: "American, North Indian, Salad", location: "Whitefield, Bengaluru", rating: "4.7", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=600", price: "₹2,500 for two" },
-    { name: "Fenny's Lounge & Kitchen", cuisine: "Mediterranean, Seafood, Goan", location: "Koramangala, Bengaluru", rating: "4.4", image: "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?q=80&w=600", price: "₹1,600 for two" },
-    { name: "Corner House Ice Cream", cuisine: "Desserts, Ice Cream", location: "Bhilai, Chhattisgarh, Kurud Road, 490001", rating: "4.9", image: "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600", price: "₹400 for two" }
-  ];
-
-  // Like Your Shop static Nightlife list
-  const nightlifeSpots = [
-    { name: "Byg Brewski Brewing Company", cuisine: "Finger Food, Craft Beer", location: "Hennur, Bengaluru", rating: "4.7", image: "https://images.unsplash.com/photo-1572116469696-31de0f17cc34?q=80&w=600", price: "₹2,200 for two" },
-    { name: "Social", cuisine: "American, North Indian, Cocktails", location: "Church Street, Bengaluru", rating: "4.5", image: "https://images.unsplash.com/photo-1470337458703-46ad1756a187?q=80&w=600", price: "₹1,400 for two" },
-    { name: "XOOX Brewmill", cuisine: "Modern Indian, Craft Beer", location: "Koramangala, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=600", price: "₹1,800 for two" },
-    { name: "Hard Rock Cafe", cuisine: "American, Burgers, Cocktails", location: "St. Marks Road, Bengaluru", rating: "4.6", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600", price: "₹2,000 for two" }
-  ];
-
   const handleCardClick = (mode) => {
     setViewMode(mode);
     // Scroll smoothly to navigation anchor
@@ -441,11 +537,11 @@ const Home = () => {
       
       {/* 1. HERO LANDING SECTION (Only displayed in 'landing' viewMode) */}
       {viewMode === 'landing' && (
-        <div className="lys-hero-banner">
+        <div className="lys-hero-banner" style={{ backgroundImage: `url(${settings.backgrounds?.home || 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600'})` }}>
           <div className="hero-dark-overlay"></div>
           
           <div className="hero-banner-content">
-            <h1 className="hero-zomato-title">zomato</h1>
+            <h1 className="hero-zomato-title" style={{ textTransform: 'lowercase' }}>{settings.storeName || 'like your food'}</h1>
             <p className="hero-zomato-tagline">
               Discover the best food & drinks in Bhilai
             </p>
@@ -605,9 +701,7 @@ const Home = () => {
                       <div className="lys-dish-card" key={prod.id}>
                         <div className="dish-card-img-box" style={{ backgroundImage: `url(${prod.image})` }}>
                           <span className="dish-time-badge">30 min</span>
-                          <span className={`dish-veg-badge ${!prod.name.toLowerCase().includes('chicken') && !prod.name.toLowerCase().includes('pepperoni') && !prod.name.toLowerCase().includes('meatball') && !prod.name.toLowerCase().includes('bacon') && !prod.name.toLowerCase().includes('fish') && !prod.name.toLowerCase().includes('beef') && !prod.name.toLowerCase().includes('lamb') && !prod.name.toLowerCase().includes('pork') ? 'veg' : 'nonveg'}`}>
-                            ●
-                          </span>
+                          <span className={`dish-veg-badge ${!prod.name.toLowerCase().includes('chicken') && !prod.name.toLowerCase().includes('pepperoni') && !prod.name.toLowerCase().includes('meatball') && !prod.name.toLowerCase().includes('bacon') && !prod.name.toLowerCase().includes('fish') && !prod.name.toLowerCase().includes('beef') && !prod.name.toLowerCase().includes('lamb') && !prod.name.toLowerCase().includes('pork') ? 'veg' : 'nonveg'}`}></span>
                         </div>
                         <div className="dish-card-details">
                           <div className="dish-title-row">
@@ -643,6 +737,49 @@ const Home = () => {
           <div className="lys-dining-view-layout">
             <h2>Trending Dining Restaurants in Bengaluru</h2>
             <p className="dining-view-subtext">Book table reservations and view popular menus nearby</p>
+            {user?.isAdmin && (
+              <div className="admin-shortcut-bar" style={{
+                background: 'rgba(226, 55, 68, 0.08)',
+                border: '1.5px dashed #e23744',
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '25px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: '15px',
+                flexWrap: 'wrap'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '24px' }}>🛡️</span>
+                  <div style={{ textAlign: 'left' }}>
+                    <h4 style={{ margin: 0, fontSize: '15px', color: '#fff', fontWeight: '700' }}>Admin Console Mode</h4>
+                    <p style={{ margin: '2px 0 0 0', fontSize: '12.5px', color: 'rgba(255,255,255,0.6)' }}>You have full permission to add, modify, or remove outlets from the Dining Out database.</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => navigate('/admin', { state: { section: 'spots' } })}
+                  className="add-product-btn"
+                  style={{
+                    background: '#e23744',
+                    color: '#fff',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    fontSize: '13.5px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 4px 10px rgba(226,55,68,0.3)'
+                  }}
+                >
+                  ➕ Add / Manage Dining Outlets
+                </button>
+              </div>
+            )}
             <div className="lys-restaurant-grid">
               {diningOutSpots.map((spot, idx) => (
                 <div 
@@ -659,9 +796,20 @@ const Home = () => {
                       <span className="dish-rating-badge green">{spot.rating} ★</span>
                     </div>
                     <p className="dining-cuisines-text">{spot.cuisine}</p>
-                    <div className="dining-location-row">
-                      <span>📍 {spot.location}</span>
-                      <strong className="dining-price-text">{spot.price}</strong>
+                    <div className="dining-location-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>📍 {spot.location}</span>
+                        <strong className="dining-price-text" style={{ margin: 0 }}>{spot.price}</strong>
+                      </div>
+                      <button 
+                        className="lys-add-to-cart-action-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleAddToCart(spot);
+                        }}
+                      >
+                        Add +
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -675,6 +823,49 @@ const Home = () => {
           <div className="lys-dining-view-layout">
             <h2>Nightlife & Club Outlets in Bengaluru</h2>
             <p className="dining-view-subtext">Discover top pubs, bars, breweries, and night lounges</p>
+            {user?.isAdmin && (
+              <div className="admin-shortcut-bar" style={{
+                background: 'rgba(226, 55, 68, 0.08)',
+                border: '1.5px dashed #e23744',
+                borderRadius: '12px',
+                padding: '16px 20px',
+                marginBottom: '25px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: '15px',
+                flexWrap: 'wrap'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <span style={{ fontSize: '24px' }}>🛡️</span>
+                  <div style={{ textAlign: 'left' }}>
+                    <h4 style={{ margin: 0, fontSize: '15px', color: '#fff', fontWeight: '700' }}>Admin Console Mode</h4>
+                    <p style={{ margin: '2px 0 0 0', fontSize: '12.5px', color: 'rgba(255,255,255,0.6)' }}>You have full permission to add, modify, or remove outlets from the Nightlife & Clubs database.</p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => navigate('/admin', { state: { section: 'spots' } })}
+                  className="add-product-btn"
+                  style={{
+                    background: '#e23744',
+                    color: '#fff',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    fontSize: '13.5px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 4px 10px rgba(226,55,68,0.3)'
+                  }}
+                >
+                  ➕ Add / Manage Nightlife Outlets
+                </button>
+              </div>
+            )}
             <div className="lys-restaurant-grid">
               {nightlifeSpots.map((spot, idx) => (
                 <div 
@@ -691,9 +882,20 @@ const Home = () => {
                       <span className="dish-rating-badge yellow">{spot.rating} ★</span>
                     </div>
                     <p className="dining-cuisines-text">{spot.cuisine}</p>
-                    <div className="dining-location-row">
-                      <span>📍 {spot.location}</span>
-                      <strong className="dining-price-text">{spot.price}</strong>
+                    <div className="dining-location-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '10px' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', alignItems: 'flex-start' }}>
+                        <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>📍 {spot.location}</span>
+                        <strong className="dining-price-text" style={{ margin: 0 }}>{spot.price}</strong>
+                      </div>
+                      <button 
+                        className="lys-add-to-cart-action-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handleAddToCart(spot);
+                        }}
+                      >
+                        Add +
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -708,7 +910,7 @@ const Home = () => {
       <div className={`cart-drawer-backdrop ${cartOpen ? 'open' : ''}`} onClick={() => setCartOpen(false)}>
         <div className="cart-drawer-sheet" onClick={(e) => e.stopPropagation()}>
           <div className="cart-drawer-header">
-            <h2>🛒 My Basket ({cart.length} items)</h2>
+            <h2>🛒 Cart ({cart.length} items)</h2>
             <button className="cart-drawer-close" onClick={() => setCartOpen(false)}>✕</button>
           </div>
 
@@ -731,7 +933,7 @@ const Home = () => {
           ) : cart.length === 0 ? (
             <div className="cart-empty-screen">
               <span className="empty-cart-icon">🛒</span>
-              <h3>No items in basket.</h3>
+              <h3>Your cart is empty.</h3>
               <p>Select delicious dishes from our delivery menu catalog to checkout!</p>
               <button onClick={() => setCartOpen(false)} className="lys-checkout-btn" style={{ marginTop: '20px', width: '100%' }}>Continue Ordering</button>
             </div>
@@ -858,149 +1060,185 @@ const Home = () => {
                   <div className="checkout-payment-methods-box" style={{ marginTop: '20px', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '15px' }}>
                     <h3 style={{ margin: '0 0 12px 0', fontSize: '15px', fontWeight: '800', color: 'white' }}>💳 Payment Method</h3>
                     
-                    <div style={{ display: 'flex', gap: '20px', marginBottom: '15px' }}>
-                      <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '13.5px', color: 'rgba(255,255,255,0.8)' }}>
-                        <input 
-                          type="radio" 
-                          name="paymentMethod" 
-                          value="COD" 
-                          checked={paymentMethod === 'COD'}
-                          onChange={() => setPaymentMethod('COD')}
-                        />
-                        <span>Cash on Delivery (COD)</span>
-                      </label>
-                      <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '13.5px', color: 'rgba(255,255,255,0.8)' }}>
-                        <input 
-                          type="radio" 
-                          name="paymentMethod" 
-                          value="Online" 
-                          checked={paymentMethod === 'Online'}
-                          onChange={() => setPaymentMethod('Online')}
-                        />
-                        <span>Online Payment</span>
-                      </label>
+                    <div className="payment-method-selector-grid">
+                      <div 
+                        className={`payment-method-card ${paymentMethod === 'COD' ? 'active' : ''}`}
+                        onClick={() => setPaymentMethod('COD')}
+                      >
+                        <div className="payment-card-icon">💵</div>
+                        <div className="payment-card-info">
+                          <h4>Cash on Delivery</h4>
+                          <p>Pay with Cash/UPI on arrival</p>
+                        </div>
+                        <div className="payment-card-check"></div>
+                      </div>
+                      
+                      <div 
+                        className={`payment-method-card ${paymentMethod === 'Online' ? 'active' : ''}`}
+                        onClick={() => setPaymentMethod('Online')}
+                      >
+                        <div className="payment-card-icon">💳</div>
+                        <div className="payment-card-info">
+                          <h4>Online Payment</h4>
+                          <p>Pay securely via UPI, Card, NetBanking</p>
+                        </div>
+                        <div className="payment-card-check"></div>
+                      </div>
                     </div>
 
                     {paymentMethod === 'Online' && (
-                      <div className="online-payment-details-form" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '10px', padding: '15px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '8px', marginBottom: '5px' }}>
+                      <div className="online-payment-details-form">
+                        <div className="online-providers-tabs">
                           {['UPI', 'Card', 'NetBanking', 'Wallet'].map(provider => (
                             <button
                               key={provider}
                               type="button"
                               onClick={() => setOnlineProvider(provider)}
-                              style={{
-                                background: onlineProvider === provider ? 'rgba(226, 55, 68, 0.15)' : 'rgba(255,255,255,0.02)',
-                                border: `1px solid ${onlineProvider === provider ? '#e23744' : 'rgba(255,255,255,0.08)'}`,
-                                color: onlineProvider === provider ? '#e23744' : 'rgba(255,255,255,0.6)',
-                                padding: '8px 4px',
-                                borderRadius: '6px',
-                                cursor: 'pointer',
-                                fontSize: '11px',
-                                fontWeight: 700,
-                                outline: 'none'
-                              }}
+                              className={`provider-tab ${onlineProvider === provider ? 'active' : ''}`}
                             >
-                              {provider === 'Card' ? '💳 Card' : provider === 'UPI' ? '📱 UPI' : provider === 'NetBanking' ? '🏦 Bank' : '👛 Wallet'}
+                              <span>{provider === 'Card' ? '💳' : provider === 'UPI' ? '📱' : provider === 'NetBanking' ? '🏦' : '👛'}</span>
+                              <span>{provider === 'Card' ? 'Card' : provider === 'UPI' ? 'UPI' : provider === 'NetBanking' ? 'Bank' : 'Wallet'}</span>
                             </button>
                           ))}
                         </div>
 
                         {onlineProvider === 'UPI' && (
-                          <div className="checkout-field" style={{ marginBottom: 0 }}>
-                            <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Enter UPI ID</label>
-                            <input 
-                              type="text" 
-                              placeholder="e.g. name@upi"
-                              value={paymentDetails.upiId}
-                              onChange={(e) => setPaymentDetails(prev => ({ ...prev, upiId: e.target.value }))}
-                              style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
-                              required={paymentMethod === 'Online' && onlineProvider === 'UPI'}
-                            />
+                          <div className="premium-input-group">
+                            <label>Enter UPI ID</label>
+                            <div className="premium-input-wrapper">
+                              <span className="premium-input-icon">📱</span>
+                              <input 
+                                type="text" 
+                                placeholder="e.g. name@upi"
+                                value={paymentDetails.upiId}
+                                onChange={(e) => setPaymentDetails(prev => ({ ...prev, upiId: e.target.value }))}
+                                className="premium-input-field"
+                                required={paymentMethod === 'Online' && onlineProvider === 'UPI'}
+                              />
+                            </div>
                           </div>
                         )}
 
                         {onlineProvider === 'Card' && (
-                          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                            <div className="checkout-field" style={{ marginBottom: 0 }}>
-                              <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Card Number</label>
-                              <input 
-                                type="text" 
-                                placeholder="4111 2222 3333 4444"
-                                maxLength="19"
-                                value={paymentDetails.cardNumber}
-                                onChange={(e) => {
-                                  // Format card spacing
-                                  const val = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim();
-                                  setPaymentDetails(prev => ({ ...prev, cardNumber: val }));
-                                }}
-                                style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
-                                required={paymentMethod === 'Online' && onlineProvider === 'Card'}
-                              />
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                            {/* Live Virtual Credit Card Preview */}
+                            <div className="glass-virtual-card-preview">
+                              <div className="virtual-card-glow"></div>
+                              <div className="virtual-card-header">
+                                <span className="card-chip"></span>
+                                <span className="card-logo">VISA / MASTERCARD</span>
+                              </div>
+                              <div className="virtual-card-number-display">
+                                {paymentDetails.cardNumber || '•••• •••• •••• ••••'}
+                              </div>
+                              <div className="virtual-card-footer">
+                                <div className="virtual-card-holder-box">
+                                  <span className="card-label">CARDHOLDER</span>
+                                  <span className="card-val">{(checkoutData.name || 'YOUR NAME').toUpperCase()}</span>
+                                </div>
+                                <div className="virtual-card-expiry-box">
+                                  <span className="card-label">EXPIRES</span>
+                                  <span className="card-val">{paymentDetails.cardExpiry || 'MM/YY'}</span>
+                                </div>
+                              </div>
                             </div>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
-                              <div className="checkout-field" style={{ marginBottom: 0 }}>
-                                <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Expiry (MM/YY)</label>
+
+                            <div className="premium-input-group">
+                              <label>Card Number</label>
+                              <div className="premium-input-wrapper">
+                                <span className="premium-input-icon">💳</span>
                                 <input 
                                   type="text" 
-                                  placeholder="12/28"
-                                  maxLength="5"
-                                  value={paymentDetails.cardExpiry}
+                                  placeholder="4111 2222 3333 4444"
+                                  maxLength="19"
+                                  value={paymentDetails.cardNumber}
                                   onChange={(e) => {
-                                    let val = e.target.value.replace(/\D/g, '');
-                                    if (val.length > 2) val = val.slice(0, 2) + '/' + val.slice(2, 4);
-                                    setPaymentDetails(prev => ({ ...prev, cardExpiry: val }));
+                                    const val = e.target.value.replace(/\D/g, '').replace(/(.{4})/g, '$1 ').trim();
+                                    setPaymentDetails(prev => ({ ...prev, cardNumber: val }));
                                   }}
-                                  style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
+                                  className="premium-input-field"
                                   required={paymentMethod === 'Online' && onlineProvider === 'Card'}
                                 />
                               </div>
-                              <div className="checkout-field" style={{ marginBottom: 0 }}>
-                                <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>CVV</label>
-                                <input 
-                                  type="password" 
-                                  placeholder="•••"
-                                  maxLength="3"
-                                  value={paymentDetails.cardCvv}
-                                  onChange={(e) => setPaymentDetails(prev => ({ ...prev, cardCvv: e.target.value.replace(/\D/g, '') }))}
-                                  style={{ width: '100%', padding: '10px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
-                                  required={paymentMethod === 'Online' && onlineProvider === 'Card'}
-                                />
+                            </div>
+
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
+                              <div className="premium-input-group">
+                                <label>Expiry (MM/YY)</label>
+                                <div className="premium-input-wrapper">
+                                  <span className="premium-input-icon">📅</span>
+                                  <input 
+                                    type="text" 
+                                    placeholder="12/28"
+                                    maxLength="5"
+                                    value={paymentDetails.cardExpiry}
+                                    onChange={(e) => {
+                                      let val = e.target.value.replace(/\D/g, '');
+                                      if (val.length > 2) val = val.slice(0, 2) + '/' + val.slice(2, 4);
+                                      setPaymentDetails(prev => ({ ...prev, cardExpiry: val }));
+                                    }}
+                                    className="premium-input-field"
+                                    required={paymentMethod === 'Online' && onlineProvider === 'Card'}
+                                  />
+                                </div>
+                              </div>
+                              <div className="premium-input-group">
+                                <label>CVV</label>
+                                <div className="premium-input-wrapper">
+                                  <span className="premium-input-icon">🔒</span>
+                                  <input 
+                                    type="password" 
+                                    placeholder="•••"
+                                    maxLength="3"
+                                    value={paymentDetails.cardCvv}
+                                    onChange={(e) => setPaymentDetails(prev => ({ ...prev, cardCvv: e.target.value.replace(/\D/g, '') }))}
+                                    className="premium-input-field"
+                                    required={paymentMethod === 'Online' && onlineProvider === 'Card'}
+                                  />
+                                </div>
                               </div>
                             </div>
                           </div>
                         )}
 
                         {onlineProvider === 'NetBanking' && (
-                          <div className="checkout-field" style={{ marginBottom: 0 }}>
-                            <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Select Bank</label>
-                            <select 
-                              value={paymentDetails.bankName}
-                              onChange={(e) => setPaymentDetails(prev => ({ ...prev, bankName: e.target.value }))}
-                              style={{ width: '100%', padding: '10px', background: 'rgba(25, 20, 35, 0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
-                            >
-                              <option value="State Bank of India">State Bank of India (SBI)</option>
-                              <option value="HDFC Bank">HDFC Bank</option>
-                              <option value="ICICI Bank">ICICI Bank</option>
-                              <option value="Axis Bank">Axis Bank</option>
-                              <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
-                            </select>
+                          <div className="premium-input-group">
+                            <label>Select Bank</label>
+                            <div className="premium-input-wrapper">
+                              <span className="premium-input-icon">🏦</span>
+                              <select 
+                                value={paymentDetails.bankName}
+                                onChange={(e) => setPaymentDetails(prev => ({ ...prev, bankName: e.target.value }))}
+                                className="premium-input-field"
+                                style={{ paddingLeft: '38px', background: 'rgba(25, 20, 35, 0.95)' }}
+                              >
+                                <option value="State Bank of India">State Bank of India (SBI)</option>
+                                <option value="HDFC Bank">HDFC Bank</option>
+                                <option value="ICICI Bank">ICICI Bank</option>
+                                <option value="Axis Bank">Axis Bank</option>
+                                <option value="Kotak Mahindra Bank">Kotak Mahindra Bank</option>
+                              </select>
+                            </div>
                           </div>
                         )}
 
                         {onlineProvider === 'Wallet' && (
-                          <div className="checkout-field" style={{ marginBottom: 0 }}>
-                            <label style={{ fontSize: '11px', color: 'rgba(255,255,255,0.5)' }}>Select Wallet</label>
-                            <select 
-                              value={paymentDetails.walletName}
-                              onChange={(e) => setPaymentDetails(prev => ({ ...prev, walletName: e.target.value }))}
-                              style={{ width: '100%', padding: '10px', background: 'rgba(25, 20, 35, 0.95)', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '6px', color: 'white', marginTop: '4px' }}
-                            >
-                              <option value="Paytm">Paytm</option>
-                              <option value="PhonePe">PhonePe</option>
-                              <option value="Amazon Pay">Amazon Pay</option>
-                              <option value="MobiKwik">MobiKwik</option>
-                            </select>
+                          <div className="premium-input-group">
+                            <label>Select Wallet</label>
+                            <div className="premium-input-wrapper">
+                              <span className="premium-input-icon">👛</span>
+                              <select 
+                                value={paymentDetails.walletName}
+                                onChange={(e) => setPaymentDetails(prev => ({ ...prev, walletName: e.target.value }))}
+                                className="premium-input-field"
+                                style={{ paddingLeft: '38px', background: 'rgba(25, 20, 35, 0.95)' }}
+                              >
+                                <option value="Paytm">Paytm</option>
+                                <option value="PhonePe">PhonePe</option>
+                                <option value="Amazon Pay">Amazon Pay</option>
+                                <option value="MobiKwik">MobiKwik</option>
+                              </select>
+                            </div>
                           </div>
                         )}
                       </div>

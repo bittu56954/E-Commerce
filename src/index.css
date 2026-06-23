@@ -1,53 +1,105 @@
-/* Zomato - Global CSS Variables and Themes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ====================================================
+   🔴 ZOMATO PREMIUM DESIGN SYSTEM (GLOBAL ARCHITECTURE)
+   ==================================================== */
+
 :root {
-  --transition-speed: 0.3s;
+  --primary-color: #ff3f56;
+  --primary-hover: #e02d43;
+  --primary-light: rgba(255, 63, 86, 0.1);
+  --primary-gradient: linear-gradient(135deg, #ff3f56 0%, #e02d43 100%);
+  
+  --font-title: 'Poppins', 'Inter', -apple-system, sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  
+  --transition-speed: 0.25s;
+  --transition-spring: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 16px;
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.1);
 }
 
-html.dark-mode {
-  --bg-color-override: #121212;
-  --bg-card-override: rgba(28, 28, 28, 0.9);
-  --text-color-override: #ffffff;
-  --text-muted-override: #a0a0a0;
-  --border-color-override: rgba(255, 255, 255, 0.08);
-  --accent-color: #e23744;
-  --accent-secondary: #cb202d;
-  --table-tr-hover: rgba(226, 55, 68, 0.05);
-}
-
+/* Light Theme Variables */
 html.light-mode {
-  --bg-color-override: #ffffff;
+  --bg-color-override: #f8f9fc;
   --bg-card-override: #ffffff;
-  --text-color-override: #1c1c1c;
-  --text-muted-override: #696969;
-  --border-color-override: #e8e8e8;
-  --accent-color: #e23744;
-  --accent-secondary: #cb202d;
-  --table-tr-hover: rgba(226, 55, 68, 0.03);
+  --bg-sidebar-override: #ffffff;
+  --text-color-override: #1e293b;
+  --text-muted-override: #64748b;
+  --border-color-override: #e2e8f0;
+  --table-tr-hover: rgba(255, 63, 86, 0.015);
+  --input-bg: #ffffff;
+  --card-shadow: var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-md);
+  --scroll-thumb: #cbd5e1;
+  --scroll-track: #f1f5f9;
 }
 
-/* Global Transitions */
+/* Dark Theme Variables */
+html.dark-mode {
+  --bg-color-override: #0a0a0c;
+  --bg-card-override: #151518;
+  --bg-sidebar-override: #151518;
+  --text-color-override: #f1f5f9;
+  --text-muted-override: #94a3b8;
+  --border-color-override: #222227;
+  --table-tr-hover: rgba(255, 63, 86, 0.035);
+  --input-bg: #1c1c21;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --scroll-thumb: #3f3f46;
+  --scroll-track: #18181b;
+}
+
+/* Global resets & animations */
 * {
+  box-sizing: border-box;
   transition: background-color var(--transition-speed) ease, 
-              border-color var(--transition-speed) ease;
+              border-color var(--transition-speed) ease,
+              color var(--transition-speed) ease;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Okra', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--bg-color-override);
+  color: var(--text-color-override);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-html.dark-mode body {
-  background-color: var(--bg-color-override);
+/* Smooth Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scroll-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* General Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  font-weight: 600;
+  margin-top: 0;
   color: var(--text-color-override);
 }
 
-html.light-mode body {
-  background-color: var(--bg-color-override);
-  color: var(--text-color-override);
-}
-
-/* Common Global CSS overrides for Zomato E-Commerce */
+/* Common Global CSS overrides for Zomato E-Commerce Canvas Panels */
 html.dark-mode .corporate-home-canvas,
 html.dark-mode .about-ultimate-container,
 html.dark-mode .corporate-contact-canvas,
@@ -56,7 +108,7 @@ html.dark-mode .corporate-login-canvas,
 html.dark-mode .ultimate-dashboard-system,
 html.dark-mode .admin-panel-system {
   background: transparent !important;
-  color: #ffffff !important;
+  color: var(--text-color-override) !important;
 }
 
 html.light-mode .corporate-home-canvas,
@@ -67,138 +119,129 @@ html.light-mode .corporate-login-canvas,
 html.light-mode .ultimate-dashboard-system,
 html.light-mode .admin-panel-system {
   background: transparent !important;
-  color: #1c1c1c !important;
+  color: var(--text-color-override) !important;
 }
 
-/* Form controls & Cards adaptation */
-html.dark-mode .login-clean-card-node,
-html.dark-mode .register-clean-card-node,
-html.dark-mode .glass-form-container-node,
-html.dark-mode .u-dna-card,
-html.dark-mode .leader-profile-card,
-html.dark-mode .comp-box,
-html.dark-mode .u-timeline-panel,
-html.dark-mode .metric-cube-card,
-html.dark-mode .split-panel-left,
-html.dark-mode .split-panel-right,
-html.dark-mode .admin-metric-card,
-html.dark-mode .admin-table-panel,
-html.dark-mode .dash-sidebar-node,
-html.dark-mode .growth-metric-card,
-html.dark-mode .infra-node-card-heavy,
-html.dark-mode .deep-infrastructure-logs-block,
-html.dark-mode .security-card-flat {
-  background: var(--bg-card-override) !important;
-  border-color: var(--border-color-override) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+/* Card components adaptation to unified design variables */
+.login-clean-card-node,
+.register-clean-card-node,
+.glass-form-container-node,
+.u-dna-card,
+.leader-profile-card,
+.comp-box,
+.u-timeline-panel,
+.metric-cube-card,
+.split-panel-left,
+.split-panel-right,
+.admin-metric-card,
+.admin-table-panel,
+.dash-sidebar-node,
+.growth-metric-card,
+.infra-node-card-heavy,
+.deep-infrastructure-logs-block,
+.security-card-flat {
+  background-color: var(--bg-card-override) !important;
+  border: 1px solid var(--border-color-override) !important;
+  box-shadow: var(--card-shadow) !important;
+  border-radius: var(--border-radius-md) !important;
+  transition: var(--transition-spring) !important;
 }
 
-html.light-mode .login-clean-card-node,
-html.light-mode .register-clean-card-node,
-html.light-mode .glass-form-container-node,
-html.light-mode .u-dna-card,
-html.light-mode .leader-profile-card,
-html.light-mode .comp-box,
-html.light-mode .u-timeline-panel,
-html.light-mode .metric-cube-card,
-html.light-mode .split-panel-left,
-html.light-mode .split-panel-right,
-html.light-mode .admin-metric-card,
-html.light-mode .admin-table-panel,
-html.light-mode .dash-sidebar-node,
-html.light-mode .growth-metric-card,
-html.light-mode .infra-node-card-heavy,
-html.light-mode .deep-infrastructure-logs-block,
-html.light-mode .security-card-flat {
-  background: var(--bg-card-override) !important;
-  border-color: var(--border-color-override) !important;
-  box-shadow: 0 10px 30px rgba(226, 55, 68, 0.05) !important;
-}
-
-/* Text adaptations */
-html.dark-mode h1, html.dark-mode h2, html.dark-mode h3, html.dark-mode h4,
-html.dark-mode .register-title-light, html.dark-mode .login-title-light {
-  color: #ffffff !important;
-}
-
-html.light-mode h1, html.light-mode h2, html.light-mode h3, html.light-mode h4,
-html.light-mode .register-title-light, html.light-mode .login-title-light {
-  color: #1c1c1c !important;
+.login-clean-card-node:hover,
+.register-clean-card-node:hover,
+.glass-form-container-node:hover,
+.u-dna-card:hover,
+.comp-box:hover,
+.metric-cube-card:hover,
+.admin-metric-card:hover,
+.admin-table-panel:hover,
+.growth-metric-card:hover {
+  box-shadow: var(--card-shadow-hover) !important;
 }
 
 /* Form input styling overrides */
-html.dark-mode input, html.dark-mode select, html.dark-mode textarea {
-  background-color: rgba(20, 20, 20, 0.8) !important;
-  color: #ffffff !important;
-  border-color: var(--border-color-override) !important;
+input, select, textarea {
+  font-family: var(--font-body);
+  background-color: var(--input-bg) !important;
+  color: var(--text-color-override) !important;
+  border: 1.5px solid var(--border-color-override) !important;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 10px 14px !important;
+  font-size: 14px !important;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-html.light-mode input, html.light-mode select, html.light-mode textarea {
-  background-color: #ffffff !important;
-  color: #1c1c1c !important;
-  border-color: var(--border-color-override) !important;
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px var(--primary-light) !important;
 }
 
 /* Tables and grids styling */
-html.dark-mode table, html.dark-mode th, html.dark-mode td,
-html.light-mode table, html.light-mode th, html.light-mode td {
-  border-color: var(--border-color-override) !important;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-html.dark-mode th {
-  background-color: rgba(226, 55, 68, 0.15) !important;
-  color: #e23744 !important;
+th, td {
+  padding: 14px 16px !important;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color-override) !important;
+  font-size: 14px !important;
 }
 
-html.light-mode th {
-  background-color: rgba(226, 55, 68, 0.08) !important;
-  color: #e23744 !important;
+th {
+  font-family: var(--font-title);
+  background-color: var(--table-tr-hover) !important;
+  color: var(--primary-color) !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 12px !important;
 }
 
-html.dark-mode td, html.dark-mode tr {
-  color: #ffffff !important;
+tr {
+  transition: background-color 0.2s ease;
 }
 
-html.light-mode td, html.light-mode tr {
-  color: #1c1c1c !important;
-}
-
-html.dark-mode tr:hover {
+tr:hover {
   background-color: var(--table-tr-hover) !important;
 }
 
-html.light-mode tr:hover {
-  background-color: var(--table-tr-hover) !important;
-}
-
-/* Buttons global customization to warm food accent colors */
+/* Custom premium primary CTA buttons styling overrides */
 button, .primary-cta-btn, .corporate-register-submit-btn-light, .corporate-login-submit-btn, .corporate-submit-action-btn {
-  border-radius: 8px !important;
+  font-family: var(--font-title);
+  font-weight: 600;
+  border-radius: var(--border-radius-sm) !important;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-spring) !important;
 }
 
-html.dark-mode .primary-cta-btn,
-html.dark-mode .corporate-register-submit-btn-light,
-html.dark-mode .corporate-login-submit-btn,
-html.dark-mode .corporate-submit-action-btn {
-  background: linear-gradient(135deg, #e23744 0%, #cb202d 100%) !important;
+/* Solid accents for CTAs */
+.primary-cta-btn,
+.corporate-register-submit-btn-light,
+.corporate-login-submit-btn,
+.corporate-submit-action-btn {
+  background: var(--primary-gradient) !important;
   color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(255, 63, 86, 0.2) !important;
 }
 
-html.light-mode .primary-cta-btn,
-html.light-mode .corporate-register-submit-btn-light,
-html.light-mode .corporate-login-submit-btn,
-html.light-mode .corporate-submit-action-btn {
-  background: linear-gradient(135deg, #e23744 0%, #cb202d 100%) !important;
-  color: #ffffff !important;
+.primary-cta-btn:hover,
+.corporate-register-submit-btn-light:hover,
+.corporate-login-submit-btn:hover,
+.corporate-submit-action-btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 18px rgba(255, 63, 86, 0.35) !important;
 }
 
-/* Sidebar dynamic styles */
-html.dark-mode .dash-sidebar-node {
-  background: rgba(20, 20, 20, 0.95) !important;
-  border-right-color: var(--border-color-override) !important;
-}
-
-html.light-mode .dash-sidebar-node {
-  background: #ffffff !important;
-  border-right-color: var(--border-color-override) !important;
+.primary-cta-btn:active,
+.corporate-register-submit-btn-light:active,
+.corporate-login-submit-btn:active,
+.corporate-submit-action-btn:active {
+  transform: translateY(0) !important;
 }

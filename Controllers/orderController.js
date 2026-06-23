@@ -75,8 +75,8 @@ export const updateOrderStatus = async (req, res) => {
     }
 
     let updated;
-    if (status === 'Cancelled') {
-      const updateData = { status: 'Cancelled' };
+    if (status === 'Cancelled' || status === 'Rejected') {
+      const updateData = { status };
       if (order.paymentMethod === 'Online' && order.paymentStatus === 'Completed') {
         updateData.paymentStatus = 'Refunded';
         updateData.refundStatus = 'Completed';
@@ -180,7 +180,7 @@ export const getAdminStats = async (req, res) => {
     allOrders.forEach(o => {
       activityLogs.push({
         time: o.createdAt,
-        text: `Order ${o.id} placed by ${o.customerDetails.name} - Total ₹${o.totalAmount} (${o.status})`,
+        text: `Order ${o.id} placed by ${(o.customerDetails && o.customerDetails.name) || 'Guest'} - Total ₹${o.totalAmount} (${o.status})`,
         type: o.status === 'Pending' ? 'warn' : 'info'
       });
     });

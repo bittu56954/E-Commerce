@@ -37,6 +37,9 @@ const Register = () => {
     return re.test(phone.replace(/\s+/g, ''));
   };
 
+
+
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -129,7 +132,7 @@ const Register = () => {
       triggerToast('Please fill out all fields correctly.', 'warning');
       return;
     }
-    
+
     setLoading(true);
     try {
       const response = await fetch('/api/auth/register-direct', {
@@ -343,8 +346,8 @@ const Register = () => {
             </div>
 
             {/* Submission button */}
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className={`corporate-register-submit-btn-light ${loading || !isFormValid() ? 'auth-btn-disabled' : ''}`}
               disabled={loading || !isFormValid()}
               style={{ width: '100%', marginTop: '20px' }}

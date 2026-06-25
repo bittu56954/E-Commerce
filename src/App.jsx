@@ -48,11 +48,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin/login",
-    element: <PageLayout showFooter={false}><AdminLogin /></PageLayout>
+    element: <PageLayout showFooter={false}><AdminLogin/></PageLayout>
   },
   {
     path: "/admin/register",
-    element: <PageLayout showFooter={false}><AdminRegister /></PageLayout>
+    element: <PageLayout showFooter={false}><AdminRegister/></PageLayout>
   },
   {
     path: "/contact",
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <PageLayout showFooter={false}><Register /></PageLayout>
+    element: <PageLayout showFooter={false}><Register/></PageLayout>
   },
   {
     path: "/login",

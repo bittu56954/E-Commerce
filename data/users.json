@@ -6,7 +6,7 @@
     "otpEmailCode": null,
     "otpPhoneCode": null,
     "otpExpires": null,
-    "failedLoginAttempts": 1,
+    "failedLoginAttempts": 0,
     "lockoutUntil": null,
     "refreshTokens": [
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjEyMjY3NCwiZXhwIjoxNzgyNzI3NDc0fQ.yKuOTSxuzTJKr0hucHuN5Lm89tYqgvO8eBJJJiKMdZY",
@@ -24,7 +24,8 @@
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjE1MjU4MSwiZXhwIjoxNzgyNzU3MzgxfQ.Xkw74h3OYB17Vf6UORTSgmszgipP8u7uGOW3YwdHeLE",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjE4Njc1MiwiZXhwIjoxNzgyNzkxNTUyfQ.VJEwG025YCLijeP1QJ3Ic0kI20aqQCfXBBBAKz2z2QE",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjE4NzYxNCwiZXhwIjoxNzgyNzkyNDE0fQ.2006oK2dCTzJTnC7cPaIiLrh4QmTlmmXRYWprcAboFI",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjE4OTE4OCwiZXhwIjoxNzgyNzkzOTg4fQ.fD_O1o8smV72KFvrGgDDZzE4IAq17ccYqdENPRrLpXU"
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjE4OTE4OCwiZXhwIjoxNzgyNzkzOTg4fQ.fD_O1o8smV72KFvrGgDDZzE4IAq17ccYqdENPRrLpXU",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODE4NDUyMjEzOTIiLCJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsImlhdCI6MTc4MjM4NDUxMSwiZXhwIjoxNzgyOTg5MzExfQ.sy48vcquFTGYhh2F_rRziCau0kjt-VxRbPDtubw_Lzw"
     ],
     "name": "Bittu Administrator",
     "email": "admin@gmail.com",
@@ -45,7 +46,8 @@
     "refreshTokens": [
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODIxMDc4NTM4MzEiLCJlbWFpbCI6ImtyYml0dHU4MDMxMTBAZ21haWwuY29tIiwiaWF0IjoxNzgyMTA3OTcyLCJleHAiOjE3ODI3MTI3NzJ9.riSker2KmKVyLB-c1-7LHV4MFln31bX0DEXSPpp-6-k",
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODIxMDc4NTM4MzEiLCJlbWFpbCI6ImtyYml0dHU4MDMxMTBAZ21haWwuY29tIiwiaWF0IjoxNzgyMTIxMDA5LCJleHAiOjE3ODI3MjU4MDl9.kJ6GZ6JiUVf_i-d1FN0GizWl1YMLa9v2qERybyq7RXk",
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODIxMDc4NTM4MzEiLCJlbWFpbCI6ImtyYml0dHU4MDMxMTBAZ21haWwuY29tIiwiaWF0IjoxNzgyMjA2ODExLCJleHAiOjE3ODI4MTE2MTF9.Pdqbrfm4QrRryNDBAYSiyGkY7wffDsEkKVnYWorejWg"
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODIxMDc4NTM4MzEiLCJlbWFpbCI6ImtyYml0dHU4MDMxMTBAZ21haWwuY29tIiwiaWF0IjoxNzgyMjA2ODExLCJleHAiOjE3ODI4MTE2MTF9.Pdqbrfm4QrRryNDBAYSiyGkY7wffDsEkKVnYWorejWg",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3ODIxMDc4NTM4MzEiLCJlbWFpbCI6ImtyYml0dHU4MDMxMTBAZ21haWwuY29tIiwiaWF0IjoxNzgyMzg0OTMxLCJleHAiOjE3ODI5ODk3MzF9.RWXL1R2FgikRhWLfznH5ErrqdMiPxTITTffR3gabLKM"
     ],
     "name": "Bittu kumar",
     "email": "krbittu803110@gmail.com",

@@ -147,6 +147,46 @@ const Home = () => {
   });
   const [categoriesList, setCategoriesList] = useState([]);
 
+  // Table Booking state
+  const [bookingOpen, setBookingOpen] = useState(false);
+  const [bookingStep, setBookingStep] = useState(1); // 1 = form, 2 = confirmed
+  const [bookingData, setBookingData] = useState({
+    name: '',
+    phone: '',
+    date: '',
+    time: '',
+    guests: '2',
+    occasion: 'None'
+  });
+  const [bookingId, setBookingId] = useState('');
+  const [bookingLoading, setBookingLoading] = useState(false);
+
+  const timeSlots = ['11:00 AM','12:00 PM','01:00 PM','02:00 PM','03:00 PM',
+    '04:00 PM','05:00 PM','06:00 PM','07:00 PM','08:00 PM','09:00 PM','10:00 PM'];
+
+  const handleBookingSubmit = (e) => {
+    e.preventDefault();
+    if (!bookingData.name || !bookingData.phone || !bookingData.date || !bookingData.time) {
+      triggerToast('Please fill all required booking fields.', 'warning');
+      return;
+    }
+    setBookingLoading(true);
+    const id = 'BK-' + Date.now().toString().slice(-8).toUpperCase();
+    setTimeout(() => {
+      setBookingId(id);
+      setBookingStep(2);
+      setBookingLoading(false);
+      triggerToast('Table booked successfully! 🎉', 'success');
+    }, 1200);
+  };
+
+  const resetBooking = () => {
+    setBookingStep(1);
+    setBookingData({ name: '', phone: '', date: '', time: '', guests: '2', occasion: 'None' });
+    setBookingId('');
+    setBookingOpen(false);
+  };
+
   // Fetch settings, categories & spots
   useEffect(() => {
     const fetchSettingsAndCategories = async () => {
@@ -276,6 +316,10 @@ const Home = () => {
     const newCart = [...cart];
     
     if (existingIndex > -1) {
+      if (newCart[existingIndex].quantity >= 200) {
+        triggerToast('Maximum quantity of 200 items reached! 🛒', 'warning');
+        return;
+      }
       newCart[existingIndex].quantity += 1;
     } else {
       const parsedPrice = parsePrice(product.price);
@@ -287,11 +331,35 @@ const Home = () => {
     setCartOpen(true);
   };
 
+  const handleSetQuantity = (productId, qty) => {
+    const existingIndex = cart.findIndex(item => item.id === productId);
+    if (existingIndex === -1) return;
+    
+    const newCart = [...cart];
+    let finalQty = qty;
+    
+    if (qty > 200) {
+      finalQty = 200;
+      triggerToast('Maximum quantity of 200 items reached! 🛒', 'warning');
+    } else if (qty < 1) {
+      finalQty = 1;
+    }
+    
+    newCart[existingIndex].quantity = finalQty;
+    saveCart(newCart);
+  };
+
   const handleUpdateQuantity = (productId, change) => {
     const existingIndex = cart.findIndex(item => item.id === productId);
     if (existingIndex === -1) return;
     
     const newCart = [...cart];
+    
+    if (change > 0 && newCart[existingIndex].quantity >= 200) {
+      triggerToast('Maximum quantity of 200 items reached! 🛒', 'warning');
+      return;
+    }
+    
     newCart[existingIndex].quantity += change;
     
     if (newCart[existingIndex].quantity <= 0) {
@@ -480,8 +548,8 @@ const Home = () => {
 
   // Filter products by search and checkboxes
   let filteredProducts = products.filter(prod => 
-    prod.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    prod.description.toLowerCase().includes(searchQuery.toLowerCase())
+    (prod.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (prod.description || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   if (filterRating) {
@@ -657,19 +725,60 @@ const Home = () => {
               <aside className="lys-left-sidebar">
                 <h3>Cuisines / Categories</h3>
                 <div className="sidebar-links-stack">
-                  {['All', ...categoriesList.map(c => typeof c === 'string' ? c : c.name)].map(cat => (
-                    <button
-                      key={cat}
-                      className={`sidebar-cat-btn ${selectedCategory === cat ? 'active' : ''}`}
-                      onClick={() => setSelectedCategory(cat)}
-                    >
-                      {cat === 'All' ? '🍽️ All Cuisines' : 
-                       cat === 'Pizza' ? '🍕 Pizzas' :
-                       cat === 'Burger' ? '🍔 Burgers' :
-                       cat === 'Food' ? '🍛 Main Courses' :
-                       cat === 'Drinks' ? '🥤 Beverages' : '🍰 Desserts'}
-                    </button>
-                  ))}
+                  {['All', ...categoriesList.map(c => typeof c === 'string' ? c : c.name)].map(cat => {
+                    const catIcons = {
+                      'All': '🍽️ All Cuisines',
+                      'Pizza': '🍕 Pizzas',
+                      'Burger': '🍔 Burgers',
+                      'Food': '🍛 Main Courses',
+                      'Drinks': '🥤 Beverages',
+                      'Desserts': '🍰 Desserts'
+                    };
+                    const label = catIcons[cat] || `🍽️ ${cat}`;
+                    return (
+                      <button
+                        key={cat}
+                        className={`sidebar-cat-btn ${selectedCategory === cat ? 'active' : ''}`}
+                        onClick={() => setSelectedCategory(cat)}
+                      >
+                        {label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {/* Book a Table Button in Sidebar */}
+                <div style={{ marginTop: '30px', borderTop: '1px solid rgba(255,255,255,0.07)', paddingTop: '20px' }}>
+                  <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.4)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.5px', marginBottom: '12px' }}>Reservations</p>
+                  <button
+                    id="book-table-btn"
+                    onClick={() => { setBookingOpen(true); setBookingStep(1); }}
+                    style={{
+                      width: '100%',
+                      padding: '13px 16px',
+                      background: 'linear-gradient(135deg, #e23744, #c0392b)',
+                      color: '#fff',
+                      border: 'none',
+                      borderRadius: '12px',
+                      fontSize: '14px',
+                      fontWeight: '800',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '8px',
+                      boxShadow: '0 6px 20px rgba(226,55,68,0.35)',
+                      transition: 'all 0.25s ease',
+                      letterSpacing: '0.3px'
+                    }}
+                    onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-2px)'}
+                    onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+                  >
+                    📅 Book a Table
+                  </button>
+                  <p style={{ fontSize: '11.5px', color: 'rgba(255,255,255,0.35)', marginTop: '8px', textAlign: 'center', lineHeight: '1.4' }}>
+                    Reserve your seat in advance
+                  </p>
                 </div>
               </aside>
 
@@ -678,6 +787,24 @@ const Home = () => {
                 <h2 className="delivery-catalog-title">
                   Order Food Online in Bhilai, Chhattisgarh, Kurud Road, 490001
                 </h2>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px', flexWrap: 'wrap' }}>
+                  <span style={{ 
+                    background: 'linear-gradient(135deg, #e23744, #c0392b)',
+                    color: '#fff',
+                    padding: '5px 14px',
+                    borderRadius: '20px',
+                    fontSize: '13px',
+                    fontWeight: '700',
+                    letterSpacing: '0.3px'
+                  }}>
+                    🍽️ {loading ? '...' : `${filteredProducts.length} dishes available`}
+                  </span>
+                  {!loading && products.length > 0 && (
+                    <span style={{ fontSize: '12.5px', color: 'rgba(255,255,255,0.45)' }}>
+                      Total catalog: {products.length} items · Showing {filteredProducts.length}
+                    </span>
+                  )}
+                </div>
 
                 {loading ? (
                   <div className="lys-loading-spin">
@@ -949,7 +1076,27 @@ const Home = () => {
                       <div className="cart-item-qty-row">
                         <div className="qty-controls">
                           <button onClick={() => handleUpdateQuantity(item.id, -1)} className="qty-btn">−</button>
-                          <span className="qty-val">{item.quantity}</span>
+                          <input 
+                            type="number" 
+                            className="qty-input" 
+                            value={item.quantity} 
+                            min="1"
+                            max="200"
+                            onChange={(e) => {
+                              const val = parseInt(e.target.value, 10);
+                              if (!isNaN(val)) {
+                                handleSetQuantity(item.id, val);
+                              } else {
+                                handleSetQuantity(item.id, 1);
+                              }
+                            }}
+                            onBlur={(e) => {
+                              const val = parseInt(e.target.value, 10);
+                              if (isNaN(val) || val <= 0) {
+                                handleRemoveItem(item.id);
+                              }
+                            }}
+                          />
                           <button onClick={() => handleUpdateQuantity(item.id, 1)} className="qty-btn">＋</button>
                         </div>
                         <button onClick={() => handleRemoveItem(item.id)} className="cart-item-remove-btn">Remove</button>
@@ -1268,7 +1415,252 @@ const Home = () => {
         </div>
       </div>
 
-    </div>
+      {/* 5. TABLE BOOKING MODAL */}
+      {bookingOpen && (
+      <div
+        id="booking-modal-overlay"
+        style={{
+          position: 'fixed', inset: 0, zIndex: 9999,
+          background: 'rgba(0,0,0,0.75)',
+          backdropFilter: 'blur(8px)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center',
+          padding: '20px'
+        }}
+        onClick={(e) => { if (e.target.id === 'booking-modal-overlay') resetBooking(); }}
+      >
+        <div style={{
+          background: 'linear-gradient(145deg, #1a1025, #120d1e)',
+          border: '1px solid rgba(226,55,68,0.25)',
+          borderRadius: '20px',
+          width: '100%',
+          maxWidth: '540px',
+          maxHeight: '90vh',
+          overflowY: 'auto',
+          boxShadow: '0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(226,55,68,0.1)',
+          animation: 'slideUpFade 0.3s ease'
+        }}>
+
+          {/* Modal Header */}
+          <div style={{
+            display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+            padding: '24px 28px 20px',
+            borderBottom: '1px solid rgba(255,255,255,0.07)'
+          }}>
+            <div>
+              <h2 style={{ margin: 0, fontSize: '20px', fontWeight: '800', color: '#fff' }}>
+                {bookingStep === 1 ? '📅 Reserve a Table' : '✅ Booking Confirmed!'}
+              </h2>
+              <p style={{ margin: '4px 0 0', fontSize: '13px', color: 'rgba(255,255,255,0.45)' }}>
+                {bookingStep === 1 ? 'Fill in your details to reserve your seat' : 'Your table is reserved. See you soon!'}
+              </p>
+            </div>
+            <button
+              onClick={resetBooking}
+              style={{
+                background: 'rgba(255,255,255,0.08)', border: 'none',
+                color: '#fff', width: '36px', height: '36px',
+                borderRadius: '50%', cursor: 'pointer', fontSize: '16px',
+                display: 'flex', alignItems: 'center', justifyContent: 'center'
+              }}
+            >✕</button>
+          </div>
+
+          {/* STEP 1 — Booking Form */}
+          {bookingStep === 1 && (
+            <form onSubmit={handleBookingSubmit} style={{ padding: '24px 28px 28px' }}>
+
+              {/* Name + Phone Row */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '14px' }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '7px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Full Name *</label>
+                  <input
+                    id="booking-name"
+                    type="text"
+                    placeholder="Your full name"
+                    value={bookingData.name}
+                    onChange={e => setBookingData(p => ({ ...p, name: e.target.value }))}
+                    required
+                    style={{
+                      width: '100%', padding: '12px 14px', background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px',
+                      color: '#fff', fontSize: '14px', outline: 'none', boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '7px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Phone *</label>
+                  <input
+                    id="booking-phone"
+                    type="tel"
+                    placeholder="+91 mobile number"
+                    value={bookingData.phone}
+                    onChange={e => setBookingData(p => ({ ...p, phone: e.target.value }))}
+                    required
+                    style={{
+                      width: '100%', padding: '12px 14px', background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px',
+                      color: '#fff', fontSize: '14px', outline: 'none', boxSizing: 'border-box'
+                    }}
+                  />
+                </div>
+              </div>
+
+              {/* Date + Guests Row */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px', marginBottom: '14px' }}>
+                <div>
+                  <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '7px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Date *</label>
+                  <input
+                    id="booking-date"
+                    type="date"
+                    min={new Date().toISOString().split('T')[0]}
+                    value={bookingData.date}
+                    onChange={e => setBookingData(p => ({ ...p, date: e.target.value }))}
+                    required
+                    style={{
+                      width: '100%', padding: '12px 14px', background: 'rgba(255,255,255,0.06)',
+                      border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px',
+                      color: '#fff', fontSize: '14px', outline: 'none', boxSizing: 'border-box',
+                      colorScheme: 'dark'
+                    }}
+                  />
+                </div>
+                <div>
+                  <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '7px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Guests *</label>
+                  <select
+                    id="booking-guests"
+                    value={bookingData.guests}
+                    onChange={e => setBookingData(p => ({ ...p, guests: e.target.value }))}
+                    style={{
+                      width: '100%', padding: '12px 14px', background: 'rgba(25,16,38,0.98)',
+                      border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px',
+                      color: '#fff', fontSize: '14px', outline: 'none', boxSizing: 'border-box'
+                    }}
+                  >
+                    {['1','2','3','4','5','6','7','8','9','10+'].map(n => <option key={n} value={n}>{n} {n === '1' ? 'Guest' : 'Guests'}</option>)}
+                  </select>
+                </div>
+              </div>
+
+              {/* Time Slot Picker */}
+              <div style={{ marginBottom: '14px' }}>
+                <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '10px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Select Time Slot *</label>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                  {timeSlots.map(slot => (
+                    <button
+                      key={slot}
+                      type="button"
+                      onClick={() => setBookingData(p => ({ ...p, time: slot }))}
+                      style={{
+                        padding: '8px 14px',
+                        borderRadius: '8px',
+                        border: bookingData.time === slot ? '2px solid #e23744' : '1px solid rgba(255,255,255,0.12)',
+                        background: bookingData.time === slot ? 'rgba(226,55,68,0.18)' : 'rgba(255,255,255,0.04)',
+                        color: bookingData.time === slot ? '#e23744' : 'rgba(255,255,255,0.65)',
+                        fontSize: '13px', fontWeight: '700', cursor: 'pointer',
+                        transition: 'all 0.15s ease'
+                      }}
+                    >{slot}</button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Occasion */}
+              <div style={{ marginBottom: '22px' }}>
+                <label style={{ display: 'block', fontSize: '12px', fontWeight: '700', color: 'rgba(255,255,255,0.55)', marginBottom: '7px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Occasion (Optional)</label>
+                <select
+                  id="booking-occasion"
+                  value={bookingData.occasion}
+                  onChange={e => setBookingData(p => ({ ...p, occasion: e.target.value }))}
+                  style={{
+                    width: '100%', padding: '12px 14px', background: 'rgba(25,16,38,0.98)',
+                    border: '1px solid rgba(255,255,255,0.1)', borderRadius: '10px',
+                    color: '#fff', fontSize: '14px', outline: 'none'
+                  }}
+                >
+                  {['None','Birthday 🎂','Anniversary 💑','Date Night 🌹','Business Meal 💼','Family Gathering 👨‍👩‍👧','Graduation 🎓','Celebration 🎉'].map(o => <option key={o} value={o}>{o}</option>)}
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                id="booking-submit-btn"
+                disabled={bookingLoading}
+                style={{
+                  width: '100%', padding: '15px',
+                  background: bookingLoading ? 'rgba(226,55,68,0.5)' : 'linear-gradient(135deg, #e23744, #c0392b)',
+                  color: '#fff', border: 'none', borderRadius: '12px',
+                  fontSize: '16px', fontWeight: '800', cursor: bookingLoading ? 'wait' : 'pointer',
+                  boxShadow: '0 8px 25px rgba(226,55,68,0.4)',
+                  transition: 'all 0.25s ease',
+                  letterSpacing: '0.3px'
+                }}
+              >
+                {bookingLoading ? '⏳ Processing Reservation...' : '📅 Confirm Table Booking'}
+              </button>
+            </form>
+          )}
+
+          {/* STEP 2 — Confirmation Screen */}
+          {bookingStep === 2 && (
+            <div style={{ padding: '30px 28px', textAlign: 'center' }}>
+              <div style={{ fontSize: '64px', marginBottom: '16px', animation: 'pulse 1.5s ease infinite' }}>🎉</div>
+              <h3 style={{ margin: '0 0 8px', fontSize: '22px', fontWeight: '800', color: '#fff' }}>Booking Confirmed!</h3>
+              <p style={{ margin: '0 0 24px', color: 'rgba(255,255,255,0.5)', fontSize: '14px' }}>Your table has been reserved successfully.</p>
+
+              <div style={{
+                background: 'rgba(226,55,68,0.1)', border: '1px solid rgba(226,55,68,0.25)',
+                borderRadius: '14px', padding: '20px', marginBottom: '24px', textAlign: 'left'
+              }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '14px' }}>
+                  {[
+                    { label: 'Booking ID', val: bookingId },
+                    { label: 'Name', val: bookingData.name },
+                    { label: 'Phone', val: bookingData.phone },
+                    { label: 'Date', val: new Date(bookingData.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }) },
+                    { label: 'Time', val: bookingData.time },
+                    { label: 'Guests', val: bookingData.guests },
+                  ].map(({ label, val }) => (
+                    <div key={label}>
+                      <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'block', marginBottom: '3px' }}>{label}</span>
+                      <strong style={{ fontSize: '14px', color: '#fff', fontWeight: '700' }}>{val}</strong>
+                    </div>
+                  ))}
+                  {bookingData.occasion !== 'None' && (
+                    <div style={{ gridColumn: '1 / -1' }}>
+                      <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.4)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'block', marginBottom: '3px' }}>Occasion</span>
+                      <strong style={{ fontSize: '14px', color: '#e23744', fontWeight: '700' }}>{bookingData.occasion}</strong>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <button
+                  onClick={resetBooking}
+                  style={{
+                    flex: 1, padding: '13px',
+                    background: 'rgba(255,255,255,0.06)',
+                    color: '#fff', border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: 'pointer'
+                  }}
+                >Close</button>
+                <button
+                  onClick={() => { resetBooking(); setBookingOpen(true); setBookingStep(1); setBookingData({ name: '', phone: '', date: '', time: '', guests: '2', occasion: 'None' }); }}
+                  style={{
+                    flex: 1, padding: '13px',
+                    background: 'linear-gradient(135deg, #e23744, #c0392b)',
+                    color: '#fff', border: 'none',
+                    borderRadius: '10px', fontSize: '14px', fontWeight: '700', cursor: 'pointer'
+                  }}
+                >📅 New Booking</button>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+
+  </div>
   );
 };
 

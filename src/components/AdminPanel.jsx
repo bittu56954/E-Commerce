@@ -649,7 +649,8 @@ const AdminPanel = () => {
   const shippingCount = orders.filter(o => o.status === 'Shipped' || o.status === 'Out for Delivery').length;
   const deliveredCount = orders.filter(o => o.status === 'Delivered').length;
   const rejectedCount = orders.filter(o => o.status === 'Rejected' || o.status === 'Cancelled').length;
- 
+  const cancelledCount = rejectedCount; // alias — orders that are Cancelled or Rejected
+
   const cookingOrPendingCount = pendingCount + acceptedCount + shippingCount;
   const totalRevenueVal = adminData.stats.totalRevenue || 0;
   const avgOrderValue = deliveredCount > 0 ? Math.round(totalRevenueVal / deliveredCount) : 0;

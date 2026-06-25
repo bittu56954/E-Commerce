@@ -32,13 +32,17 @@ export const xssSanitizer = (req, res, next) => {
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#x27;')
-      .replace(/\//g, '&#x2F;');
+      .replace(/'/g, '&#x27;');
+    // NOTE: We intentionally do NOT escape '/' to avoid corrupting passwords and paths
   };
+
+  // Sensitive fields that must NOT be sanitized (password values must reach bcrypt unmodified)
+  const SKIP_KEYS = new Set(['password', 'confirmPassword', 'newPassword', 'currentPassword']);
 
   const sanitizeInput = (obj) => {
     if (obj instanceof Object) {
       for (const key in obj) {
+        if (SKIP_KEYS.has(key)) continue; // skip password fields
         if (typeof obj[key] === 'string') {
           obj[key] = escapeHtml(obj[key]);
         } else {
@@ -71,7 +75,10 @@ export const csrfProtection = (req, res, next) => {
     '/api/auth/verify-registration-otp', 
     '/api/auth/resend-otp',
     '/api/auth/forgot-password',
-    '/api/auth/reset-password'
+    '/api/auth/reset-password',
+    '/api/auth/send-verify-otp',
+    '/api/auth/check-verify-otp',
+    '/api/auth/refresh'
   ];
   if (exemptPaths.includes(req.path)) {
     return next();

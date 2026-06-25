@@ -186,16 +186,17 @@ export const login = async (req, res) => {
 
     await AuditLogModel.log('USER_LOGIN_SUCCESS', email, ip, 'Credentials verified. Direct login session established.');
 
-    const userResponse = { ...user._doc };
-    delete userResponse.password;
-    delete userResponse.refreshTokens;
+    // Support both Mongoose documents (_doc) and plain JSON fallback objects
+    const userRaw = user._doc ? { ...user._doc } : { ...user };
+    delete userRaw.password;
+    delete userRaw.refreshTokens;
 
     res.status(200).json({
       message: 'Login successful!',
       requiresVerification: false,
       accessToken,
       csrfToken,
-      user: userResponse
+      user: userRaw
     });
 
   } catch (error) {
@@ -290,15 +291,16 @@ export const verifyRegistrationOtp = async (req, res) => {
 
     await AuditLogModel.log('USER_REGISTER_SUCCESS', email, ip, 'Account email verified and activated.');
 
-    const userResponse = { ...newUser };
-    delete userResponse.password;
-    delete userResponse.refreshTokens;
+    // Support both Mongoose documents (_doc) and plain JSON fallback objects
+    const userRaw = newUser._doc ? { ...newUser._doc } : { ...newUser };
+    delete userRaw.password;
+    delete userRaw.refreshTokens;
 
     res.status(200).json({
       message: 'Account verified and created successfully! Session established.',
       accessToken,
       csrfToken,
-      user: userResponse
+      user: userRaw
     });
 
   } catch (error) {
@@ -844,15 +846,16 @@ export const registerDirect = async (req, res) => {
 
     await AuditLogModel.log('USER_REGISTER_SUCCESS', email, ip, 'Account registered directly with wizard details.');
 
-    const userResponse = { ...newUser };
-    delete userResponse.password;
-    delete userResponse.refreshTokens;
+    // Support both Mongoose documents (_doc) and plain JSON fallback objects
+    const userRaw = newUser._doc ? { ...newUser._doc } : { ...newUser };
+    delete userRaw.password;
+    delete userRaw.refreshTokens;
 
     res.status(201).json({
       message: 'Registration successful! Session authorized.',
       accessToken,
       csrfToken,
-      user: userResponse
+      user: userRaw
     });
 
   } catch (error) {
@@ -947,15 +950,16 @@ export const registerAdmin = async (req, res) => {
 
     await AuditLogModel.log('ADMIN_REGISTER_SUCCESS', email, ip, 'Admin account registered successfully with bank details.');
 
-    const userResponse = { ...newUser };
-    delete userResponse.password;
-    delete userResponse.refreshTokens;
+    // Support both Mongoose documents (_doc) and plain JSON fallback objects
+    const userRaw = newUser._doc ? { ...newUser._doc } : { ...newUser };
+    delete userRaw.password;
+    delete userRaw.refreshTokens;
 
     res.status(201).json({
       message: 'Admin registration successful! Session authorized.',
       accessToken,
       csrfToken,
-      user: userResponse
+      user: userRaw
     });
 
   } catch (error) {

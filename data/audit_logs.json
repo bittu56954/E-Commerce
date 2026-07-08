@@ -974,5 +974,13 @@
     "email": "admin@gmail.com",
     "ip": "::ffff:127.0.0.1",
     "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1783491675069-uv8vo",
+    "timestamp": "2026-07-08T06:21:15.069Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
   }
 ]

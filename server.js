@@ -3,7 +3,7 @@ dotenv.config();
 
 import express from 'express';
 import cors from 'cors';
-import './Models/db.js';
+import { ensureDbConnection } from './Models/db.js';
 import authRouter from './Routers/authRouter.js';
 import contactRouter from './Routers/contactRouter.js';
 import dashboardRouter from './Routers/dashboardRouter.js';
@@ -61,6 +61,16 @@ app.use(cors({
   origin: true,
   credentials: true
 }));
+
+// Ensure Database connection is active before processing requests
+app.use(async (req, res, next) => {
+  try {
+    await ensureDbConnection();
+  } catch (err) {
+    console.error('Database connection wait failed:', err.message);
+  }
+  next();
+});
 
 // Request logger middleware
 app.use((req, res, next) => {

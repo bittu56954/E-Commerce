@@ -12,17 +12,17 @@ const Toast = () => {
       const id = Date.now() + Math.random().toString(36).substr(2, 9);
       const newToast = { id, message, type };
 
-      setToasts((prev) => [...prev, newToast]);
+      setToasts((prev) => [...prev, newToast]); 
 
       // Automatically remove toast after 4 seconds
       setTimeout(() => {
-        setToasts((prev) => prev.filter((t) => t.id !== id));
+        setToasts((prev) => prev.filter((t) => t.id !== id)); 
       }, 4000);
     };
 
-    window.addEventListener('showToast', handleShowToast);
+    window.addEventListener('showToast', handleShowToast); 
     return () => {
-      window.removeEventListener('showToast', handleShowToast);
+      window.removeEventListener('showToast', handleShowToast); 
     };
   }, []);
 

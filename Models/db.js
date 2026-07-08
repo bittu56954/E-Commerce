@@ -6,18 +6,20 @@ import path from 'path';
 dotenv.config();
 
 let isMongoConnected = false;
+let dbConnectionPromise = null;
 
 const mongoURI = process.env.MONGODB_URI;
 
 if (mongoURI) {
   console.log(`Connecting to MongoDB at: ${mongoURI}`);
-  mongoose.connect(mongoURI, { serverSelectionTimeoutMS: 5000 })
-    .then(async () => {
+  dbConnectionPromise = mongoose.connect(mongoURI, { serverSelectionTimeoutMS: 5000 })
+    .then(async (m) => {
       isMongoConnected = true;
       console.log('====================================================');
       console.log('🔌 DATABASE: Successfully connected to MongoDB! (Active)');
       console.log('====================================================');
       await syncLocalDataToMongo();
+      return m;
     })
     .catch((err) => {
       isMongoConnected = false;
@@ -31,6 +33,24 @@ if (mongoURI) {
   console.log('📂 PERSISTENCE: MONGODB_URI not found. Fallback local JSON storage active.');
   console.log('====================================================');
 }
+
+export const ensureDbConnection = async () => {
+  if (mongoose.connection.readyState === 1) {
+    return true;
+  }
+  if (!mongoURI) {
+    return false;
+  }
+  if (dbConnectionPromise) {
+    try {
+      await dbConnectionPromise;
+      return mongoose.connection.readyState === 1;
+    } catch (err) {
+      return false;
+    }
+  }
+  return false;
+};
 
 // MONGODB SCHEMAS
 const UserSchema = new mongoose.Schema({

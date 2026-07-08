@@ -443,5 +443,55 @@
       "transactionId": null,
       "methodType": "COD"
     }
+  },
+  {
+    "id": "ord-1783491681438",
+    "createdAt": "2026-07-08T06:21:21.438Z",
+    "status": "Pending",
+    "userId": "1782107853831",
+    "items": [
+      {
+        "id": "prod-5",
+        "name": "Farmhouse Garden Veggie Pizza",
+        "price": 329,
+        "quantity": 2,
+        "image": "https://images.unsplash.com/photo-1571066811602-71683a3f680d?q=80&w=600"
+      },
+      {
+        "id": "prod-4",
+        "name": "Double Cheese Margherita",
+        "price": 299,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600"
+      },
+      {
+        "id": "prod-17",
+        "name": "Cheesy Mozzarella Melt Burger",
+        "price": 159,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=600"
+      },
+      {
+        "id": "dining-6",
+        "name": "Corner House Ice Cream",
+        "price": 400,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?q=80&w=600"
+      }
+    ],
+    "totalAmount": 1592,
+    "customerDetails": {
+      "name": "Bittu kumar",
+      "phone": "9847722843",
+      "address": "Delhi",
+      "notes": ""
+    },
+    "couponApplied": null,
+    "paymentMethod": "COD",
+    "paymentStatus": "Pending",
+    "paymentDetails": {
+      "transactionId": null,
+      "methodType": "COD"
+    }
   }
 ]

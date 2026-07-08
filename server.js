@@ -21,7 +21,7 @@ import { nosqlInjectionGuard, xssSanitizer, csrfProtection } from './Middleware/
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Apply Helmet for Secure HTTP Headers (disabling contentSecurityPolicy in development if needed, or keeping default)
+// Apply Helmet for Secure HTTP Headers  (disabling contentSecurityPolicy in development if needed, or keeping default)
 app.use(helmet({
   contentSecurityPolicy: false // Keep it false to make sure front-end dynamic assets from dev server loads properly
 }));

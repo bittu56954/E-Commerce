@@ -13,8 +13,11 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   
   // Custom states for Zomato location bar
-  const [selectedLocation, setSelectedLocation] = useState("Bhilai, Chhattisgarh, Kurud Road, 490001");
+  const [selectedLocation, setSelectedLocation] = useState(
+    localStorage.getItem('currentLocation') || "Bhilai, Chhattisgarh, Kurud Road, 490001"
+  );
   const [localSearch, setLocalSearch] = useState("");
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const checkAuth = () => {
     const savedUser = localStorage.getItem('user');
@@ -88,6 +91,24 @@ const Navbar = () => {
     localStorage.setItem('theme', theme);
   }, [theme]);
 
+  // Sync location across components
+  useEffect(() => {
+    const handleLoc = (e) => {
+      setSelectedLocation(e.detail);
+    };
+    window.addEventListener('locationChange', handleLoc);
+    return () => {
+      window.removeEventListener('locationChange', handleLoc);
+    };
+  }, []);
+
+  const handleLocationInputChange = (e) => {
+    const val = e.target.value;
+    setSelectedLocation(val);
+    localStorage.setItem('currentLocation', val);
+    window.dispatchEvent(new CustomEvent('locationChange', { detail: val }));
+  };
+
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
@@ -103,10 +124,7 @@ const Navbar = () => {
 
   const handleCartClick = () => {
     if (location.pathname !== '/') {
-      navigate('/');
-      setTimeout(() => {
-        window.dispatchEvent(new Event('toggleCart'));
-      }, 300);
+      navigate('/', { state: { openCart: true } });
     } else {
       window.dispatchEvent(new Event('toggleCart'));
     }
@@ -134,6 +152,18 @@ const Navbar = () => {
         
         {/* Brand Logo styled in new Zomato branding */}
         <div className="lys-logo-block" onClick={() => navigate('/')}>
+          <svg className="lys-logo-icon" viewBox="0 0 100 100" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '4px', verticalAlign: 'middle' }}>
+            <defs>
+              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#ff4d4d" />
+                <stop offset="100%" stopColor="#f92c50" />
+              </linearGradient>
+            </defs>
+            <rect x="15" y="15" width="70" height="70" rx="20" fill="url(#logo-grad)" />
+            <path d="M38 52C34 52 32 48 34 44C36 40 40 40 43 42C44 36 49 33 54 35C59 37 60 41 59 45C63 44 67 46 67 50C67 54 64 56 61 56H39C36 56 38 52 38 52Z" fill="white" />
+            <path d="M42 58H58V65C58 66 57 67 56 67H44C43 67 42 66 42 65V58Z" fill="white" opacity="0.9" />
+            <line x1="44" y1="61" x2="56" y2="61" stroke="#f92c50" strokeWidth="2" strokeLinecap="round" />
+          </svg>
           <span className="lys-logo-text" style={{ textTransform: 'lowercase' }}>{storeName}</span>
         </div>
 
@@ -145,7 +175,7 @@ const Navbar = () => {
               <input 
                 type="text" 
                 value={selectedLocation} 
-                onChange={(e) => setSelectedLocation(e.target.value)} 
+                onChange={handleLocationInputChange} 
                 placeholder="Select location..."
               />
               <span className="location-chevron">▼</span>
@@ -206,7 +236,47 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile controls (theme + hamburger menu) */}
+        <div className="navbar-mobile-controls">
+          <button className="lys-theme-toggle" onClick={toggleTheme}>
+            {theme === 'dark' ? '☀️' : '🌙'}
+          </button>
+          <button className="lys-mobile-menu-toggle" onClick={() => setMobileMenuOpen(prev => !prev)}>
+            {mobileMenuOpen ? '✕' : '☰'}
+          </button>
+        </div>
+
       </div>
+
+      {/* Mobile Menu Dropdown Panel */}
+      {mobileMenuOpen && (
+        <div className="lys-mobile-menu-panel">
+          <NavLink className="mobile-action-link" to="/" onClick={() => setMobileMenuOpen(false)}>Delivery</NavLink>
+          <NavLink className="mobile-action-link" to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</NavLink>
+          <NavLink className="mobile-action-link" to="/contact" onClick={() => setMobileMenuOpen(false)}>Help</NavLink>
+          
+          {user && (
+            <NavLink className="mobile-action-link" to="/dashboard" onClick={() => setMobileMenuOpen(false)}>My Orders</NavLink>
+          )}
+
+          {user && user.isAdmin && (
+            <NavLink className="mobile-action-link mobile-admin-pill" to="/admin" onClick={() => setMobileMenuOpen(false)}>Admin 🛡️</NavLink>
+          )}
+
+          <button className="mobile-cart-btn" onClick={() => { handleCartClick(); setMobileMenuOpen(false); }}>
+            🛒 Cart {cartCount > 0 && <span className="mobile-cart-badge">{cartCount}</span>}
+          </button>
+
+          {user ? (
+            <button className="mobile-logout-btn" onClick={() => { handleLogout(); setMobileMenuOpen(false); }}>Logout</button>
+          ) : (
+            <div className="mobile-auth-row">
+              <NavLink className="mobile-auth-link" to="/login" onClick={() => setMobileMenuOpen(false)}>Log in</NavLink>
+              <NavLink className="mobile-auth-link mobile-signup-btn" to="/register" onClick={() => setMobileMenuOpen(false)}>Sign up</NavLink>
+            </div>
+          )}
+        </div>
+      )}
     </nav>
   );
 };

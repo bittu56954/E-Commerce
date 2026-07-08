@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { triggerToast } from './Toast';
 import './Home.css';
 
@@ -89,6 +89,7 @@ const defaultNightlifeSpots = (() => {
 
 const Home = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -102,6 +103,10 @@ const Home = () => {
   
   // Like Your Shop specific view state: 'landing', 'delivery', 'dining', 'nightlife'
   const [viewMode, setViewMode] = useState('landing');
+
+  const [currentLocation, setCurrentLocation] = useState(
+    localStorage.getItem('currentLocation') || "Bhilai, Chhattisgarh, Kurud Road, 490001"
+  );
   
   // Quick Filters state
   const [filterRating, setFilterRating] = useState(false);
@@ -279,6 +284,26 @@ const Home = () => {
     };
   }, []);
 
+  // Handle cross-page cart toggle state
+  useEffect(() => {
+    if (location.state && location.state.openCart) {
+      setCartOpen(true);
+      // Clear navigation state to prevent re-opening on manual refresh or back button
+      navigate(location.pathname, { replace: true, state: {} });
+    }
+  }, [location, navigate]);
+
+  // Synchronize location changes
+  useEffect(() => {
+    const handleLocationChange = (e) => {
+      setCurrentLocation(e.detail);
+    };
+    window.addEventListener('locationChange', handleLocationChange);
+    return () => {
+      window.removeEventListener('locationChange', handleLocationChange);
+    };
+  }, []);
+
   // Fetch products
   useEffect(() => {
     const fetchProducts = async () => {
@@ -304,9 +329,11 @@ const Home = () => {
   const parsePrice = (priceVal) => {
     if (typeof priceVal === 'number') return priceVal;
     if (typeof priceVal === 'string') {
-      const cleaned = priceVal.replace(/[^\d]/g, '');
-      const num = parseInt(cleaned, 10);
-      return isNaN(num) ? 0 : num;
+      const match = priceVal.replace(/,/g, '').match(/\d+/);
+      if (match) {
+        const num = parseInt(match[0], 10);
+        return isNaN(num) ? 0 : num;
+      }
     }
     return 0;
   };
@@ -552,6 +579,22 @@ const Home = () => {
     (prod.description || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Filter dining spots by location search query
+  const filteredDining = diningOutSpots.filter(spot => 
+    !currentLocation || 
+    (spot.location || '').toLowerCase().includes(currentLocation.toLowerCase()) ||
+    currentLocation.toLowerCase().includes((spot.location || '').toLowerCase())
+  );
+  const displayDining = filteredDining.length > 0 ? filteredDining : diningOutSpots;
+
+  // Filter nightlife spots by location search query
+  const filteredNightlife = nightlifeSpots.filter(spot => 
+    !currentLocation || 
+    (spot.location || '').toLowerCase().includes(currentLocation.toLowerCase()) ||
+    currentLocation.toLowerCase().includes((spot.location || '').toLowerCase())
+  );
+  const displayNightlife = filteredNightlife.length > 0 ? filteredNightlife : nightlifeSpots;
+
   if (filterRating) {
     filteredProducts = filteredProducts.filter(prod => prod.rating >= 4.7);
   }
@@ -616,13 +659,32 @@ const Home = () => {
 
             {/* Huge Search Box */}
             <div className="hero-search-container">
-              <div className="hero-loc-box">
+              <div className="hero-loc-box" style={{ flex: '1.2' }}>
                 <span className="loc-icon">📍</span>
-                <span className="loc-text">Bhilai, Chhattisgarh, Kurud Road, 490001</span>
+                <input 
+                  type="text" 
+                  value={currentLocation} 
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setCurrentLocation(val);
+                    localStorage.setItem('currentLocation', val);
+                    window.dispatchEvent(new CustomEvent('locationChange', { detail: val }));
+                  }}
+                  placeholder="Enter location..."
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    outline: 'none',
+                    color: '#334155',
+                    fontSize: '14px',
+                    width: '100%',
+                    fontWeight: '600'
+                  }}
+                />
                 <span className="loc-chevron">▼</span>
               </div>
               <div className="hero-search-separator"></div>
-              <div className="hero-input-box">
+              <div className="hero-input-box" style={{ flex: '1.8' }}>
                 <span className="lens-icon">🔍</span>
                 <input 
                   type="text" 
@@ -632,7 +694,27 @@ const Home = () => {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter') handleCardClick('delivery');
                   }}
+                  style={{ flex: 1 }}
                 />
+                <button 
+                  onClick={() => handleCardClick('delivery')}
+                  style={{
+                    background: 'linear-gradient(135deg, #e23744, #c0392b)',
+                    color: '#fff',
+                    border: 'none',
+                    padding: '8px 16px',
+                    borderRadius: '8px',
+                    fontSize: '13.5px',
+                    fontWeight: '700',
+                    cursor: 'pointer',
+                    marginLeft: '10px',
+                    boxShadow: '0 4px 10px rgba(226,55,68,0.25)',
+                    transition: 'all 0.2s ease',
+                    flexShrink: 0
+                  }}
+                >
+                  Search
+                </button>
               </div>
             </div>
           </div>
@@ -785,7 +867,7 @@ const Home = () => {
               {/* Right Side Products list */}
               <main className="lys-products-container">
                 <h2 className="delivery-catalog-title">
-                  Order Food Online in Bhilai, Chhattisgarh, Kurud Road, 490001
+                  Order Food Online in {currentLocation}
                 </h2>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '18px', flexWrap: 'wrap' }}>
                   <span style={{ 
@@ -862,7 +944,7 @@ const Home = () => {
         {/* B. DINING OUT MODE VIEW */}
         {viewMode === 'dining' && (
           <div className="lys-dining-view-layout">
-            <h2>Trending Dining Restaurants in Bengaluru</h2>
+            <h2>Trending Dining Restaurants in {currentLocation}</h2>
             <p className="dining-view-subtext">Book table reservations and view popular menus nearby</p>
             {user?.isAdmin && (
               <div className="admin-shortcut-bar" style={{
@@ -908,7 +990,7 @@ const Home = () => {
               </div>
             )}
             <div className="lys-restaurant-grid">
-              {diningOutSpots.map((spot, idx) => (
+              {displayDining.map((spot, idx) => (
                 <div 
                   className="lys-dish-card dining-spot-card" 
                   key={idx}
@@ -948,7 +1030,7 @@ const Home = () => {
         {/* C. NIGHTLIFE MODE VIEW */}
         {viewMode === 'nightlife' && (
           <div className="lys-dining-view-layout">
-            <h2>Nightlife & Club Outlets in Bengaluru</h2>
+            <h2>Nightlife & Club Outlets in {currentLocation}</h2>
             <p className="dining-view-subtext">Discover top pubs, bars, breweries, and night lounges</p>
             {user?.isAdmin && (
               <div className="admin-shortcut-bar" style={{
@@ -994,7 +1076,7 @@ const Home = () => {
               </div>
             )}
             <div className="lys-restaurant-grid">
-              {nightlifeSpots.map((spot, idx) => (
+              {displayNightlife.map((spot, idx) => (
                 <div 
                   className="lys-dish-card dining-spot-card" 
                   key={idx}

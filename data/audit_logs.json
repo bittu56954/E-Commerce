@@ -958,5 +958,21 @@
     "email": "krbittu803110@gmail.com",
     "ip": "::ffff:127.0.0.1",
     "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1783445827594-5r63u",
+    "timestamp": "2026-07-07T17:37:07.594Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "krbittu803110@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
+  },
+  {
+    "id": "log-1783446080880-u0p3l",
+    "timestamp": "2026-07-07T17:41:20.880Z",
+    "action": "USER_LOGIN_SUCCESS",
+    "email": "admin@gmail.com",
+    "ip": "::ffff:127.0.0.1",
+    "details": "Credentials verified. Direct login session established."
   }
 ]

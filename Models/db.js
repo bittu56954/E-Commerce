@@ -53,7 +53,7 @@ const UserSchema = new mongoose.Schema({
   bankName: { type: String, default: "" },
   bankAccountNumber: { type: String, default: "" },
   bankIfscCode: { type: String, default: "" },
-  
+
   // Security properties
   isVerified: { type: Boolean, default: false },
   otpEmailCode: { type: String, default: null },
@@ -157,7 +157,8 @@ const ContactSchema = new mongoose.Schema({
   id: { type: String, required: true, unique: true },
   name: { type: String, required: true },
   email: { type: String, required: true },
-  subject: { type: String, required: true },
+  phone: { type: String, default: "" },
+  currentLocation: { type: String, default: "" },
   message: { type: String, required: true },
   createdAt: { type: Date, default: Date.now }
 });

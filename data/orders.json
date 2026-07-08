@@ -414,5 +414,34 @@
       "transactionId": null,
       "methodType": "COD"
     }
+  },
+  {
+    "id": "ord-1783445879706",
+    "createdAt": "2026-07-07T17:37:59.706Z",
+    "status": "Delivered",
+    "userId": "1782107853831",
+    "items": [
+      {
+        "id": "prod-38",
+        "name": "Tangy Orange Sunrise Spritzer",
+        "price": 99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=600"
+      }
+    ],
+    "totalAmount": 104,
+    "customerDetails": {
+      "name": "Bittu kumar",
+      "phone": "9847722843",
+      "address": "Delhi",
+      "notes": ""
+    },
+    "couponApplied": null,
+    "paymentMethod": "COD",
+    "paymentStatus": "Pending",
+    "paymentDetails": {
+      "transactionId": null,
+      "methodType": "COD"
+    }
   }
 ]

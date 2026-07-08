@@ -1320,6 +1320,10 @@
 
 /* Responsive Overrides */
 @media (max-width: 992px) {
+  .lys-feature-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+    gap: 20px !important;
+  }
   .lys-delivery-split-grid {
     grid-template-columns: 1fr;
     gap: 24px;
